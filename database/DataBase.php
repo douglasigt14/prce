@@ -3,9 +3,9 @@
 class Database
 {
     private $host = 'localhost';
-    private $db   = 'prc_empreendimentos';
-    private $user = 'root';
-    private $pass = '';
+    private $db   = 'u517242272_prce';
+    private $user = 'u517242272_prce_root';
+    private $pass = '&SgVfW8s/';
     private $charset = 'utf8mb4';
 
     private $dsn;
