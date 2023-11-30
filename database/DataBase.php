@@ -2,10 +2,10 @@
 
 class Database
 {
-    private $host = 'localhost';
+    private $host = 'srv1056.hstgr.io';
     private $db   = 'u517242272_prce';
     private $user = 'u517242272_prce_root';
-    private $pass = '&SgVfW8s/';
+    private $pass = 'B&SgVfW8s/';
     private $charset = 'utf8mb4';
 
     private $dsn;
