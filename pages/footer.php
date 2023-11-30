@@ -76,21 +76,6 @@
         $('.circlechart').circlechart();
     });
     
-    const config = {
-        autoplay: true,
-        ui: {
-            image: "<?= Functions::urlBase('assets/images/capaSobre.jpg'); ?>",
-        },
-        sources: [
-            {
-                type: "mp4",
-                src: "<?= Functions::urlBase('assets/videos/home.mp4'); ?>",
-            }
-        ],
-    };
-    const element = document.getElementById('videoSobre');
-    const player = IndigoPlayer.init(element, config);
-    
     </script>
 
 </html>

@@ -2,16 +2,16 @@
 
 <div id="rootContato">
 
-    <img src="<?= Functions::urlBase('assets/images/capa-nest635.jpg'); ?>" class="w-100">
+    <img id="capa" class="w-100">
 
     <div class="container">
         <div class="row">
-            
+
             <div class="col-md-6 texto-form">
-                <h1>Fale com um dos nossos corretores</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pretium, ipsum consequat posuere vestibulum, turpis ex pharetra ante, et finibus tortor quam sit amet nibh. Quisque porta in urna et faucibus. Aenean mollis pharetra ex, in scelerisque nisl scelerisque sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec vitae urna sed nisi efficitur sodales vitae in erat. Maecenas augue ante, ullamcorper at posuere sed, congue non nibh. </p>
+                <h1 id="titulo"></h1>
+                <p id="texto"></p>
             </div>
-            
+
             <div class="col-md-6">
                 <form>
                     <div class="mb-4">
@@ -32,7 +32,8 @@
                     </div>
                     <div class="form-check mb-1">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">Ao me cadastrar estou de acordo com os <a href="#">termos de uso e política de privacide</a></label>
+                        <label class="form-check-label" for="flexCheckDefault">Ao me cadastrar estou de acordo com os <a
+                                href="#">termos de uso e política de privacide</a></label>
                     </div>
                     <button type="button" class="btn mt-4">Enviar</button>
                 </form>
@@ -42,5 +43,29 @@
     </div>
 
 </div>
-        
+
+<script>
+    const url = 'requests/select.php?table=contatos';
+
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro na solicitação: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data) {
+                console.log(data);
+                document.querySelector("#capa").src = data[0]['capa'];
+                document.querySelector("#titulo").innerHTML = data[0]['titulo'];
+                document.querySelector("#texto").innerHTML = data[0]['texto'];
+            }
+        })
+        .catch(error => {
+            // Manipula erros durante a solicitação
+            console.error('Erro durante a solicitação:', error);
+        });
+</script>
+
 <?php require_once __DIR__ . '/footer.php'; ?>

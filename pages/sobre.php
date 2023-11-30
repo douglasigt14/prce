@@ -1,10 +1,10 @@
-<?php 
-require_once __DIR__ . '/header.php'; 
+<?php
+require_once __DIR__ . '/header.php';
 ?>
 
 <div id="rootSobre">
 
-    <img src="<?= Functions::urlBase('assets/images/capaSobre.jpg'); ?>" id="foto-capa">
+    <img id="foto-capa">
 
     <div class="container part1">
         <div class="row">
@@ -13,7 +13,7 @@ require_once __DIR__ . '/header.php';
                 <h1 id='titulo1'></h1>
             </div>
             <div class="col-md-5">
-                <h3 id="texto1"> </h3>
+                <h3 id="texto1"></h3>
             </div>
             <div class="col-md-1">
                 <img src="<?= Functions::urlBase('assets/icons/seta1.svg'); ?>">
@@ -31,12 +31,11 @@ require_once __DIR__ . '/header.php';
             <div class="col-md-8 mx-auto" id="texto-video">
                 <div class="row">
                     <div class="col-md-6">
-                        <h1  id='titulo2'></h1>
+                        <h1 id='titulo2'></h1>
                     </div>
                     <div class="col-md-6">
-                        <p id='texto2'>
-                        </p>
-                        <p>A nossa missão é "gearar valor para os clientes e colaboradores, desenvolvendo empreendimentos singulares e com alma".</p>
+                        <p id='texto2'></p>
+                        <p id='texto3'></p>
                     </div>
                 </div>
             </div>
@@ -46,22 +45,22 @@ require_once __DIR__ . '/header.php';
     <div class="container-fluid part3">
         <div class="row">
             <div class="col-md-6">
-                <img src="<?= Functions::urlBase('assets/images/sobreDiferenciais.jpg'); ?>">
+                <img id='imagem-diferenciais'>
             </div>
             <div class="col-md-5 me-auto py-auto" id="texto-diferenciais">
-                <h1>Diferenciais construtivos</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia feugiat erat sit amet bibendum. Morbi luctus mi nisi, eu commodo est lacinia sed. Duis tristique pharetra efficitur. Sed volutpat, arcu ut lobortis interdum, velit orci vestibulum nunc, et convallis ligula lorem id quam. Morbi sed magna nisl. Nunc sed odio vel sapien posuere viverra eu vel arcu. Maecenas sem tortor, tempus a sodales ac, efficitur vitae magna. Quisque suscipit tellus ac arcu pulvinar porta. </p>
-                
+                <h1 id='titulo3'></h1>
+                <p id='texto4'></p>
+
                 <div class="diferencial">
                     <img src="<?= Functions::urlBase('assets/icons/personalizacao.svg'); ?>">
                     <div>
                         <h3>
                             <svg height="8" width="8">
-                                <circle cx="4" cy="4" r="4" stroke-width="3" fill="white"/>
-                            </svg> 
-                            Pesonalização
+                                <circle cx="4" cy="4" r="4" stroke-width="3" fill="white" />
+                            </svg>
+                            <span id='titulo_diferencial1'></span>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis ante vitae dolor dignissim viverra. In in turpis lacus. Etiam tristique lobortis lacinia. Duis venenatis hendrerit accumsan. Maecenas eros lectus, tincidunt et aliquam non, consequat non nulla.</p>
+                        <p id='texto_diferencial1'></p>
                     </div>
                 </div>
 
@@ -70,11 +69,11 @@ require_once __DIR__ . '/header.php';
                     <div>
                         <h3>
                             <svg height="8" width="8">
-                                <circle cx="4" cy="4" r="4" stroke-width="3" fill="white"/>
-                            </svg> 
-                            Gentileza urbana
+                                <circle cx="4" cy="4" r="4" stroke-width="3" fill="white" />
+                            </svg>
+                            <span id='titulo_diferencial2'></span>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis ante vitae dolor dignissim viverra. In in turpis lacus. Etiam tristique lobortis lacinia. Duis venenatis hendrerit accumsan. Maecenas eros lectus, tincidunt et aliquam non, consequat non nulla.</p>
+                        <p id='texto_diferencial2'></p>
                     </div>
                 </div>
 
@@ -83,11 +82,11 @@ require_once __DIR__ . '/header.php';
                     <div>
                         <h3>
                             <svg height="8" width="8">
-                                <circle cx="4" cy="4" r="4" stroke-width="3" fill="white"/>
-                            </svg> 
-                            Privacidade
+                                <circle cx="4" cy="4" r="4" stroke-width="3" fill="white" />
+                            </svg>
+                            <span id='titulo_diferencial3'></span>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis ante vitae dolor dignissim viverra. In in turpis lacus. Etiam tristique lobortis lacinia. Duis venenatis hendrerit accumsan. Maecenas eros lectus, tincidunt et aliquam non, consequat non nulla.</p>
+                        <p id='texto_diferencial3'></p>
                     </div>
                 </div>
 
@@ -96,11 +95,11 @@ require_once __DIR__ . '/header.php';
                     <div>
                         <h3>
                             <svg height="8" width="8">
-                                <circle cx="4" cy="4" r="4" stroke-width="3" fill="white"/>
-                            </svg> 
-                            Exclusividade
+                                <circle cx="4" cy="4" r="4" stroke-width="3" fill="white" />
+                            </svg>
+                            <span id='titulo_diferencial4'></span>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis ante vitae dolor dignissim viverra. In in turpis lacus. Etiam tristique lobortis lacinia. Duis venenatis hendrerit accumsan. Maecenas eros lectus, tincidunt et aliquam non, consequat non nulla.</p>
+                        <p id='texto_diferencial4'></p>
                     </div>
                 </div>
 
@@ -109,11 +108,11 @@ require_once __DIR__ . '/header.php';
                     <div>
                         <h3>
                             <svg height="8" width="8">
-                                <circle cx="4" cy="4" r="4" stroke-width="3" fill="white"/>
-                            </svg> 
-                            Design inteligente
+                                <circle cx="4" cy="4" r="4" stroke-width="3" fill="white" />
+                            </svg>
+                            <span id='titulo_diferencial5'></span>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis ante vitae dolor dignissim viverra. In in turpis lacus. Etiam tristique lobortis lacinia. Duis venenatis hendrerit accumsan. Maecenas eros lectus, tincidunt et aliquam non, consequat non nulla.</p>
+                        <p id='texto_diferencial5'></p>
                     </div>
                 </div>
 
@@ -122,11 +121,11 @@ require_once __DIR__ . '/header.php';
                     <div>
                         <h3>
                             <svg height="8" width="8">
-                                <circle cx="4" cy="4" r="4" stroke-width="3" fill="white"/>
-                            </svg> 
-                            Inovação
+                                <circle cx="4" cy="4" r="4" stroke-width="3" fill="white" />
+                            </svg>
+                            <span id='titulo_diferencial6'></span>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis ante vitae dolor dignissim viverra. In in turpis lacus. Etiam tristique lobortis lacinia. Duis venenatis hendrerit accumsan. Maecenas eros lectus, tincidunt et aliquam non, consequat non nulla.</p>
+                        <p id='texto_diferencial6'></p>
                     </div>
                 </div>
 
@@ -138,26 +137,26 @@ require_once __DIR__ . '/header.php';
         <img src="<?= Functions::urlBase('assets/icons/seta1.svg'); ?>">
     </div>
 
-    
-    
+
+
     <div class="part4">
 
-        <img src="<?= Functions::urlBase('assets/images/sobreProcessos.jpg'); ?>" id="foto-processos">
+        <img id="foto-processos">
 
         <div class="container part4-text">
             <div class="row">
                 <div class="col-md-6">
-                    <h1>Processos<br>construtivos</h1>
+                    <h1 id='titulo4'></h1>
                     <h3>
                         <ul>
-                            <li>Metodologia BIM</li>
-                            <li>Lean Construction</li>
+                            <li id='texto5'></li>
+                            <li id='texto6'></li>
                         </ul>
                     </h3>
                 </div>
                 <div class="col-md-6">
-                    <p>Na vanguarda da inovação, nos destacamos ao empregar ferramentas que definem o futuro da construção civil: Building Information Modeling (BIM) e o Lean Construction. Com essa abordagem, cada empreendimento é planejado e executado com máxima eficiência, precissão e economia de recursos.</p>
-                    <p>O uso dessas tecnologias não apenas eleva o padrão de qualidade, mas também demonstra o nosso compromisso com a excelência em cada detalhe. Cada empreendimento que desenvolvemos é uma promessa cumprida, respaldada pela nossa.</p>
+                    <p id='texto7'></p>
+                    <p id='texto8'></p>
                 </div>
             </div>
         </div>
@@ -169,35 +168,78 @@ require_once __DIR__ . '/header.php';
 <?php require_once __DIR__ . '/footer.php'; ?>
 
 <script>
-    const url = 'requests/select.php?table=sobre';
-
-   //Ser exclusivo é da nossa natureza
+    const url1 = 'requests/select.php?table=sobre';
 
     // Realiza a solicitação usando o fetch
-    fetch(url)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`Erro na solicitação: ${response.statusText}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        if(data){
-            
-            //document.querySelector("#capa").innerHTML = data[0]['capa'];
-            
-            for (let i = 1; i <= 2; i++) {//3
-                document.querySelector("#titulo"+i).innerHTML = data[0]['titulo'+i];
+    fetch(url1)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro na solicitação: ${response.statusText}`);
             }
+            return response.json();
+        })
+        .then(data => {
+            if (data) {
 
-            for (let i = 1; i <= 2; i++) {//11
-                 document.querySelector("#texto"+i).innerHTML = data[0]['texto'+i];
+                //document.querySelector("#capa").innerHTML = data[0]['capa'];
+                console.log(data);
+                for (let i = 1; i <= 4; i++) {//3
+                    document.querySelector("#titulo" + i).innerHTML = data[0]['titulo' + i];
+                }
+
+                for (let i = 1; i <= 8; i++) {//11
+                    document.querySelector("#texto" + i).innerHTML = data[0]['texto' + i];
+                }
+
+                document.querySelector("#foto-capa").src = data[0]['capa'];
+                document.querySelector("#imagem-diferenciais").src = data[0]['imagem1'];
+                document.querySelector("#foto-processos").src = data[0]['imagem2'];
+
+
+                const config = {
+                    autoplay: false,
+                    ui: {
+                        image: data[0]['capa'],
+                    },
+                    sources: [
+                        {
+                            type: "mp4",
+                            src: data[0]['video'],
+                        }
+                    ],
+                };
+                const element = document.querySelector('#videoSobre');
+                const player = IndigoPlayer.init(element, config);
             }
+        })
+        .catch(error => {
+            // Manipula erros durante a solicitação
+            console.error('Erro durante a solicitação:', error);
+        });
 
-        }
-    })
-    .catch(error => {
-        // Manipula erros durante a solicitação
-        console.error('Erro durante a solicitação:', error);
-  });
+    const url2 = 'requests/select.php?table=sobre_diferenciais';
+
+    fetch(url2)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro na solicitação: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data) {
+
+                //document.querySelector("#capa").innerHTML = data[0]['capa'];
+                for (let i = 0; i < 6; i++) {//3
+                    document.querySelector("#titulo_diferencial" + (i + 1)).innerHTML = data[i]['titulo'];
+                    document.querySelector("#texto_diferencial" + (i + 1)).innerHTML = data[i]['texto'];
+                }
+
+            }
+        })
+        .catch(error => {
+            // Manipula erros durante a solicitação
+            console.error('Erro durante a solicitação:', error);
+        });
+
 </script>
