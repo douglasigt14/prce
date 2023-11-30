@@ -171,21 +171,21 @@ require_once __DIR__ . '/header.php';
 <script>
     const url = 'requests/select.php?table=sobre';
 
+   //Ser exclusivo é da nossa natureza
+
     // Realiza a solicitação usando o fetch
     fetch(url)
     .then(response => {
         if (!response.ok) {
-        throw new Error(`Erro na solicitação: ${response.statusText}`);
+            throw new Error(`Erro na solicitação: ${response.statusText}`);
         }
-        
-        // Converte a resposta para JSON, se aplicável
         return response.json();
     })
     .then(data => {
         if(data){
-
-           // document.querySelector("#capa").innerHTML = data[0]['capa'];
-
+            
+            //document.querySelector("#capa").innerHTML = data[0]['capa'];
+            
             for (let i = 1; i <= 2; i++) {//3
                 document.querySelector("#titulo"+i).innerHTML = data[0]['titulo'+i];
             }
@@ -193,14 +193,6 @@ require_once __DIR__ . '/header.php';
             for (let i = 1; i <= 2; i++) {//11
                  document.querySelector("#texto"+i).innerHTML = data[0]['texto'+i];
             }
-
-            // for (let i = 1; i <= 6; i++) {//6
-            //     document.querySelector("#tituloDiferencial"+i).innerHTML = data[0]['tituloDiferencial'+i];
-            // }
-
-            // for (let i = 1; i <= 6; i++) {//6
-            //     document.querySelector("#textoDiferencial"+i).innerHTML = data[0]['textoDiferencial'+i];
-            // }
 
         }
     })
