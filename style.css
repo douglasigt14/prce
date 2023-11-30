@@ -1,0 +1,2477 @@
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('assets/fonts/DINPro-Light.ttf');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('assets/fonts/DINPro.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'DIN Pro';
+    src: url('assets/fonts/DINPro-Medium.ttf');
+    font-weight: 600;
+}
+
+:root {
+    --color-primary: #252029;
+    --color-secondary: #31b7bc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-primary {
+    background-color: var(--color-primary)!important;
+}
+
+.title {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+}
+
+.refletir {
+    transform: rotateY(180deg);
+}
+
+/****** SOBRE A FONTE ******
+DIN Pro - PARA TEXTOS E SUBTÍTULOS
+DIN Pro Light - PARA TÍTULOS
+DIN Pro Medium - PARA SUBTÍTULOS REDUZIDOS
+*******/
+
+/****** MENU PRINCIPAL ******/
+
+nav#menuPrincipal {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    font-family: 'DIN Pro';
+    font-weight: 400;
+}
+
+nav#menuPrincipal .navbar-toggler {
+    filter: invert(100%);
+    border-color: #FFFFFF!important;
+}
+
+nav#menuPrincipal .active span {
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.2rem;
+}
+
+nav#menuPrincipal img#logoMenu {
+    width: 9.5rem;
+}
+
+nav#menuPrincipal a {
+    font-size: 0.9rem;
+}
+
+nav#menuPrincipal img#iconPortalCliente {
+    width: 0.65rem;
+}
+/****** FIM MENU PRINCIPAL ******/
+
+/****** FOOTER ******/
+#footer {
+    background-color: #F1F1F1;
+    font-size: 0.8rem;
+}
+
+#footer footer {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+#footer #logoFooter {
+    width: 5rem;
+}
+
+#footer #divRedesSociais div {
+    font-size: 1rem!important;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 1.3rem;
+}
+
+#footer #divRedesSociais div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2em;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#footer #divRedesSociais div .resize-height {
+    height: 0.65rem;
+}
+
+#footer #divRedesSociais div .resize-width {
+    width: 0.65rem;
+}
+#footer .btn-portal-cliente {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'DIN Pro';
+    font-weight: 600;
+    font-size: 0.8rem!important;
+    background-color: var(--color-secondary);
+    padding: 0.5rem 0.8rem;
+    box-shadow: 1px 1px 5px rgba(49, 183, 188, 0.5);
+}
+
+#footer .btn-portal-cliente img {
+    filter: invert(100%);
+    width: 0.5rem;
+}
+/****** FIM FOOTER ******/
+
+/****** PÁGINA: HOME ******/
+    /****** VÍDEO E SETA ******/
+    div#divVideoHome {
+        padding: 0!important;
+    }
+
+    div#divSetaHome {
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div#divSetaHome img {
+        width: 5rem;
+        position: relative;
+        top: -2.35rem;
+    }
+    /****** FIM VÍDEO E SETA ******/
+
+    /****** EMPREENDIMENTOS ******/
+    div#divEmpreendimentos {
+        padding-top: 6rem;
+        padding-left: 10rem;
+    }
+
+    div#divEmpreendimentos .nav {
+        margin-top: 1.5rem;
+    }
+
+    div#divEmpreendimentos .nav .nav-link {
+        font-size: 0.9rem;
+        color: #FFFFFF!important;
+        text-decoration: none;
+        padding: 0!important;
+        padding-left: 0.3rem!important;
+        padding-right: 1.5rem!important;
+    }
+
+    div#divEmpreendimentos .nav .active span {
+        border-bottom: 2px solid var(--color-secondary);
+        padding-bottom: 0.2rem;
+    }
+
+    #divLoadEmpreendimentos .link-empreendimento {
+        text-decoration: none;
+    }
+
+    #divLoadEmpreendimentos .card {
+        background-color: transparent;
+        border: none!important;
+        width: 38rem;
+    }
+
+    #divLoadEmpreendimentos .card img {
+        border-radius: 0!important;
+    }
+
+    #divLoadEmpreendimentos .card .card-body {
+        padding: 1rem 1rem;
+    }
+
+    #divLoadEmpreendimentos .card .title-card {
+        color: #FFFFFF;
+        font-size: 2.5rem;
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        border-bottom: 2px solid var(--color-secondary);
+        padding-bottom: 1rem;
+        padding-right: 2rem;
+
+    }
+
+    #divLoadEmpreendimentos .card .status-card {
+        font-size: 1.1rem;
+        color: #FFFFFF;
+        font-family: 'DIN Pro';
+        font-weight: 600;
+        border: 1px solid var(--color-secondary);
+        padding: 0.2rem 1.4rem;
+        position: absolute;
+        right: 0;
+    }
+
+    #divBtns {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    #divBtns button {
+        background-color: transparent;
+        border: none;
+    }
+
+    #divBtns button img {
+        width: 4rem;
+    }
+
+    #divBtns #btnAnterior, #btnAnteriorEmpreendimentosEntregues {
+        margin-right: 1rem;
+    }
+    /****** FIM EMPREENDIMENTOS ******/
+
+
+    /****** FEEDBACKS ******/
+    #divFeedBacks {
+        margin-top: 10rem;
+        margin-bottom: 13rem;
+    }
+
+    #divFeedBacks .card {
+        background-color: transparent;
+        border: none!important;
+        padding: 2rem;
+    }
+
+    #divFeedBacks .card .aspas {
+        width: 2rem;
+        margin-left: calc(100% - 3.5rem);;
+    }
+
+    #divFeedBacks .card .text-feedback {
+        color: #FFFFFF;
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        text-align: left;
+        font-size: 0.9rem;
+    }
+    #divFeedBacks .card .infos-feedback {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    #divFeedBacks .card .image-feedback {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 1rem;
+    }
+    #divFeedBacks .card .image-feedback img {
+        width: 200%;
+    }
+
+    #divFeedBacks .card .infos-person-feedback {
+        color: #FFFFFF;
+        font-size: 0.9rem;
+    }
+
+    #divFeedBacks .card .infos-person-feedback .name-person-feedback {
+        color: #FFFFFF;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+    /****** FIM FEEDBACKS ******/
+/****** FIM PÁGINA: HOME ******/
+
+/****** PÁGINA: EMPREENDIMENTOS ******/
+#carousel .carousel-item img {
+    background-blend-mode: multiply;
+    opacity: 0.7;
+}
+
+#carousel .carousel-indicators {
+    position: relative!important;
+    flex-direction: column;
+    left: 0.7rem;
+}
+#carousel .carousel-indicators button {
+    border-radius: 50%!important;
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 0.5px solid #FFFFFF!important;
+    margin-bottom: 0.5rem;
+    background-color: transparent;
+}
+
+#carousel .carousel-indicators .active {
+    background-color: #FFFFFF!important;
+}
+
+#carousel .div-btns-control-carousel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 8rem;
+    z-index: 1;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+}
+
+#carousel .div-btns-control-carousel .btn-control-carousel {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 1.2rem;
+}
+
+#carousel .div-btns-control-carousel .btn-control-carousel img {
+    width: 4rem;
+}
+
+#carousel .carousel-caption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 8rem;
+    z-index: 1;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    flex-direction: column;
+    width: 23%;
+    padding: 0;
+    color: #fff;
+    background: 0 0;
+    border: 0;
+    
+}
+
+#carousel .carousel-caption h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'DIN Pro';
+    font-weight: 100;
+}
+
+#carousel .carousel-caption a {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    padding: 0.5rem 1rem;
+    border: 0.5px solid #FFFFFF;
+    width: 30%;
+    text-align: left;
+}
+
+#carousel .carousel-caption a .setaBtn {
+    position: absolute;
+    left: 24%;
+}
+
+#pageEmpreendimentos {
+    padding: 0!important;
+}
+
+#pageEmpreendimentos h1 {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 3.5rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+
+/*** MODELO NORMAL ***/
+#pageEmpreendimentos .empreendimento-obra {
+    width: 90%;
+    margin-left: auto;
+    position: static;
+    right: 0;
+    margin-bottom: 3rem;
+}
+
+#pageEmpreendimentos .empreendimento-obra .capa-empreendimento-obra {
+    width: 100%;
+}
+
+#pageEmpreendimentos .empreendimento-obra .detalhes-empreendimento-obra {
+    width: 80%;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    margin-top: 2rem;
+    margin-right: auto;
+}
+
+#pageEmpreendimentos .empreendimento-obra .logo-capa-empreendimento-obra {
+    width: 15rem;
+}
+
+#pageEmpreendimentos .empreendimento-obra .detalhes-empreendimento-obra div {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    margin-left: auto;
+    padding: 0;
+    color: #fff;
+    text-align: left;
+    background: 0 0;
+    border: 0;
+}
+
+#pageEmpreendimentos .empreendimento-obra span {
+    color: #FFFFFF;
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+#pageEmpreendimentos .empreendimento-obra .btn-empreendimento-obra {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    border: 0.5px solid #FFFFFF;
+    width: 25%;
+    text-align: left;
+    margin-top: 2.5rem;
+}
+
+#pageEmpreendimentos .empreendimento-obra .btn-empreendimento-obra img {
+    position: absolute;
+    right: 36%;
+}
+/*** FIM MODELO NORMAL ***/
+
+/*** MODELO INVERTER ***/
+#pageEmpreendimentos .empreendimento-obra-inverter {
+    width: 90%;
+    margin-right: auto;
+    position: static;
+    left: 0;
+    margin-bottom: 3rem;
+}
+#pageEmpreendimentos .empreendimento-obra-inverter .capa-empreendimento-obra {
+    width: 100%;
+}
+
+#pageEmpreendimentos .empreendimento-obra-inverter .detalhes-empreendimento-obra {
+    width: 80%;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    margin-top: 2rem;
+    margin-left: auto;
+}
+
+#pageEmpreendimentos .empreendimento-obra-inverter .logo-capa-empreendimento-obra {
+    width: 15rem;
+}
+
+#pageEmpreendimentos .empreendimento-obra-inverter .detalhes-empreendimento-obra div {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    margin-right: auto;
+    padding: 0;
+    color: #fff;
+    text-align: left;
+    background: 0 0;
+    border: 0;
+}
+
+#pageEmpreendimentos .empreendimento-obra-inverter span {
+    color: #FFFFFF;
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+#pageEmpreendimentos .empreendimento-obra-inverter .btn-empreendimento-obra {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    border: 0.5px solid #FFFFFF;
+    width: 25%;
+    text-align: left;
+    margin-top: 2.5rem;
+}
+
+#pageEmpreendimentos .empreendimento-obra-inverter .btn-empreendimento-obra img {
+    position: absolute;
+    left: 24%;
+}
+/*** MODELO INVERTER ***/
+
+#empreendimentos-entregues {
+    width: 90%;
+    margin-left: auto;
+    margin-top: 10rem;
+}
+
+#empreendimentos-entregues #carouselEmpreendimentosEntregues .card {
+    background-color: transparent!important;
+    border: none;
+    border-radius: 0;
+    width: 110%;
+}
+
+#empreendimentos-entregues #carouselEmpreendimentosEntregues .card .card-border {
+    width: 75%;
+    height: 2px;
+    margin-top: 0.5rem;
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+#empreendimentos-entregues #carouselEmpreendimentosEntregues .card .card-body {
+    padding-right: 0!important;
+    padding-left: 0!important;
+}
+
+#empreendimentos-entregues #carouselEmpreendimentosEntregues .card .status-empreendimentos-entregue {
+    font-family: 'DIN Pro';
+    font-weight: 400;
+    color: #848186;
+    font-size: 0.9rem;
+}
+
+#empreendimentos-entregues #carouselEmpreendimentosEntregues .card .name-empreendimentos-entregue {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    color: #FFFFFF;
+    font-size: 1.3rem;
+}
+
+#empreendimentos-entregues #carouselEmpreendimentosEntregues .card .localizacao-empreendimentos-entregue {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: 'DIN Pro';
+    font-weight: 400;
+    color: #848186;
+    font-size: 0.9rem;
+}
+
+#empreendimentos-entregues #carouselEmpreendimentosEntregues .card .localizacao-empreendimentos-entregue img {
+    width: 0.7rem;
+}
+
+/****** FIM PÁGINA: EMPREENDIMENTOS ******/
+
+/****** PÁGINA: EMPREENDIMENTO ******/
+
+#rootEmpreendimento {
+    background-color: #FFFFFF;
+}
+
+#divLogoEmpreendimento {
+    background-color: #7C865B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+#divLogoEmpreendimento img {
+    height: 6rem;
+}
+
+#rootEmpreendimento .part2 {
+    background-color: #E4E4E4;
+}
+
+#rootEmpreendimento .part2 .part2-texto {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 3rem;
+    padding-right: 6rem;
+    font-family: 'DIN Pro';
+}
+
+#rootEmpreendimento .part2 .part2-texto h1 {
+    width: 100%;
+    font-size: 3.5rem;
+    font-weight: 100;
+}
+
+#rootEmpreendimento .part2 .part2-texto p {
+    width: 80%;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+#rootEmpreendimento .part3 {
+    background-color: #FFFFFF;
+    padding-left: 7rem!important;
+    padding-right: 1rem!important;
+    padding-top: 7rem!important;
+    font-family: 'DIN Pro';
+}
+
+#rootEmpreendimento .part3 h2 {
+    font-size: 3.3rem;
+    font-weight: 100;
+}
+
+#rootEmpreendimento .part3 p {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+#rootEmpreendimento .part3 #selectPlantas button {
+    border: none!important;
+    border-radius: 0%!important;
+    padding-left: 0!important;
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-bottom: 2px solid #7C865B!important;
+}
+
+#rootEmpreendimento .part3 #selectPlantas button::after {
+    display: none!important;
+}
+
+#rootEmpreendimento .part3 #selectPlantas button img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    width: 1rem;
+    margin-left: 0.5rem;
+}
+
+#rootEmpreendimento .part3 #selectPlantas .dropdown-menu {
+    border: none!important;
+    border-radius: 0%!important;
+}
+
+#rootEmpreendimento .part3 #selectPlantas .dropdown-menu .dropdown-item {
+    padding: 0!important;
+    margin-bottom: 1.5rem!important;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #7C865B!important;
+}
+
+#rootEmpreendimento .part3 #selectPlantas .dropdown-menu .dropdown-item:focus {
+    background-color: rgba(0, 0, 0, 0.1)!important;
+    color: #000000!important;
+}
+
+.btnContato {
+    border: none;
+    border-radius: 0%!important;
+    color: #FFFFFF;
+    background-color: #7C865B!important;
+    font-size: 0.9rem!important;
+
+}
+
+#rootEmpreendimento .part3 #divBtnsPlantas {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5rem!important;
+}
+
+#rootEmpreendimento .part3 #divBtnsPlantas button {
+    background-color: transparent;
+    border: none;
+}
+
+#rootEmpreendimento .part3 #divBtnsPlantas button img {
+    width: 4rem;
+}
+
+#rootEmpreendimento .part3 #divBtnsPlantas #indexCarouselPlantas {
+    font-family: 'DIN Pro';
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: #7C865B!important;
+}
+
+#rootEmpreendimento .part3 #divBtnsPlantas #indexCarouselPlantas span {
+    font-size: 0.9rem!important;
+}
+
+#rootEmpreendimento .part4 {
+    padding-top: 6rem;
+    padding-left: 10rem;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+#rootEmpreendimento .part4 .title {
+    color: #000000;
+    font-size: 3.3rem;
+}
+
+#rootEmpreendimento .part4 #divLoadApartamentosDecorados .card {
+    background-color: transparent;
+    border: none!important;
+    width: 38rem;
+}
+
+#divLoadApartamentosDecorados a {
+    text-decoration: none;
+}
+
+#divLoadApartamentosDecorados .card img {
+    border-radius: 0!important;
+}
+
+#divLoadApartamentosDecorados .card .card-body {
+    padding: 1rem 0rem;
+}
+
+#divLoadApartamentosDecorados .card .descricao-card {
+    color: #000000;
+    font-size: 1.3rem;
+    font-family: 'DIN Pro';
+    font-weight: 600;
+    border-bottom: 2px solid #7C865B!important;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+
+}
+
+#divBtnsApartamentosDecorados {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+    background-color: #FFFFFF;
+}
+
+#divBtnsApartamentosDecorados button {
+    background-color: transparent;
+    border: none;
+}
+
+#divBtnsApartamentosDecorados button img {
+    width: 4rem;
+}
+
+#divBtnsApartamentosDecorados #indexApartamentosDecorados {
+    font-family: 'DIN Pro';
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: #7C865B!important;
+}
+
+#divBtnsApartamentosDecorados #indexApartamentosDecorados span {
+    font-size: 0.9rem!important;
+}
+
+#rootEmpreendimento .part5 {
+    background-image: url('assets/icons/grafismo.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: calc(50% - 1000px);
+    background-position-y: top;
+    margin-top: 6rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#rootEmpreendimento .part5 .title {
+    font-size: 3.3rem;
+    text-align: center;
+}
+
+#rootEmpreendimento .part5 .sub-title {
+    width: 36%;
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+
+#rootEmpreendimento .part5 .text-localizacao {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#rootEmpreendimento .part5 .text-localizacao img {
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+
+#rootEmpreendimento .part5 .text-localizacao p {
+    font-family: 'DIN Pro';
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0!important;
+    margin-right: 0.5rem!important;
+}
+
+#rootEmpreendimento .part5 .text-localizacao a {
+    padding: 0.3rem 1.5rem;
+    font-family: 'DIN Pro';
+    font-weight: 400;
+    font-size: 1.2rem;
+    background-color: #7C865B;
+    text-decoration: none;
+    border: none;
+    color: #FFFFFF;
+}
+
+#rootEmpreendimento .part5 .text-localizacao a:hover {
+    color: #000000;
+}
+
+#rootEmpreendimento .part5 #mapa {
+    width: 80%;
+}
+
+#rootEmpreendimento .part5 #mapa iframe {
+    width: 100%;
+    height: 35rem;
+}
+
+#rootEmpreendimento .part5 #divConhecaRegiao {
+    width: 80%!important;
+    background-color: #7C865B;
+    margin-top: 2rem;
+}
+
+#rootEmpreendimento .part5 #divConhecaRegiao .col-md-4 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 3rem!important;
+    padding-bottom: 3rem!important;
+    padding-left: 2.5rem!important;
+    padding-right: 2.5rem!important;
+    color: #FFFFFF;
+}
+
+#rootEmpreendimento .part5 #divConhecaRegiao .col-md-4 h1,
+#rootEmpreendimento .part5 #divConhecaRegiao .col-md-4 h6,
+#rootEmpreendimento .part5 #divConhecaRegiao .col-md-4 p {
+    text-align: left;
+}
+
+#rootEmpreendimento .part5 #divConhecaRegiao .col-md-4 h1 {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 3.5rem;
+}
+
+#rootEmpreendimento .part5 #divConhecaRegiao .col-md-4 h6 {
+    font-family: 'DIN Pro';
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+#rootEmpreendimento .part5 #divConhecaRegiao .col-md-4 p {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+#rootEmpreendimento .part5 #divConhecaRegiao .col-md-8 {
+    margin: 0!important;
+    padding: 0!important;
+}
+
+#divBtnsConhecaRegiao {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#divBtnsConhecaRegiao button {
+    background-color: transparent;
+    border: none;
+}
+
+#divBtnsConhecaRegiao button img {
+    width: 4rem;
+}
+
+#divBtnsConhecaRegiao #indexConhecaRegiao {
+    font-family: 'DIN Pro';
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: #FFFFFF!important;
+}
+
+#divBtnsConhecaRegiao #indexConhecaRegiao span {
+    font-size: 0.9rem!important;
+}
+
+
+#rootEmpreendimento .part6 {
+    padding-top: 6rem;
+    padding-left: 10rem;
+    background-color: #FFFFFF;
+}
+
+#rootEmpreendimento .part6 h1 {
+    color: #000000;
+    font-size: 3.3rem;    
+}
+
+#rootEmpreendimento .part6 #divLoadAreasComuns .card {
+    background-color: transparent;
+    border: none!important;
+    width: 38rem;
+}
+#rootEmpreendimento .part6 #divLoadAreasComuns .card .border-card {
+    width: 65%;
+    border-bottom: 2px solid #7C865B!important;
+    padding-top: 1rem;
+}
+
+#divBtnsAreasComuns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+    background-color: #FFFFFF;
+}
+
+#divBtnsAreasComuns button {
+    background-color: transparent;
+    border: none;
+}
+
+#divBtnsAreasComuns button img {
+    width: 4rem;
+}
+
+#divBtnsAreasComuns #indexAreasComuns {
+    font-family: 'DIN Pro';
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: #7C865B!important;
+}
+
+#divBtnsAreasComuns #indexAreasComuns span {
+    font-size: 0.9rem!important;
+}
+
+#rootEmpreendimento .part7 {
+    background-color: #FFFFFF;
+    padding: 0!important;
+    margin: 0!important;
+    margin-top: 6rem!important;
+}
+
+#rootEmpreendimento .part7 .col-md-8 img {
+    width: 100%;
+}
+
+#rootEmpreendimento .part7 #divEquipe {
+    background-color: #FFFFFF;
+    margin-top: 2rem;
+}
+
+#rootEmpreendimento .part7 #divEquipe .col-md-4 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 3rem!important;
+    padding-bottom: 3rem!important;
+    padding-left: 8rem!important;
+    padding-right: 2.5rem!important;
+    color: #000000;
+}
+
+#rootEmpreendimento .part7 #divEquipe .col-md-4 h1,
+#rootEmpreendimento .part7 #divEquipe .col-md-4 h6,
+#rootEmpreendimento .part7 #divEquipe .col-md-4 p {
+    text-align: left;
+}
+
+#rootEmpreendimento .part7 #divEquipe .col-md-4 h1 {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+#rootEmpreendimento .part7 #divEquipe .col-md-4 h5 {
+    font-family: 'DIN Pro';
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+#rootEmpreendimento .part7 #divEquipe .col-md-4 p {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+#rootEmpreendimento .part7 #divEquipe .col-md-8 {
+    margin: 0!important;
+    padding: 0!important;
+    overflow: hidden;
+}
+
+#rootEmpreendimento .part7 #divEquipe .col-md-8 .owl-carousel {
+    width: 100%!important;
+}
+
+#divBtnsEquipe {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#divBtnsEquipe button {
+    background-color: transparent;
+    border: none;
+}
+
+#divBtnsEquipe button img {
+    width: 4rem;
+}
+
+#divBtnsEquipe #indexEquipe {
+    font-family: 'DIN Pro';
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: #7C865B!important;
+}
+
+#divBtnsEquipe #indexEquipe span {
+    font-size: 0.9rem!important;
+}
+
+#rootEmpreendimento .part8 {
+    width: 100%;
+    background-color: #7C865B!important;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+#rootEmpreendimento .part8 .col-md-12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+#rootEmpreendimento .part8 .col-md-12 h1 {
+    color: #FFFFFF;
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 3.3rem;
+    text-align: center;
+}
+
+#rootEmpreendimento .part8 .col-md-12 p {
+    color: #FFFFFF;
+    width: 45%;
+    font-family: 'DIN Pro';
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+#rootEmpreendimento .part8 .col-md-3 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+#rootEmpreendimento .part8 .col-md-3 img {
+    width: 3rem;
+    margin-right: 1rem;
+}
+
+#rootEmpreendimento .part8 .col-md-3 h5 {
+    text-align: left;
+    color: #FFFFFF;
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 1.3rem;
+}
+
+#rootEmpreendimento .part9 {
+    width: 100%;
+    background-color: #3B4127;
+    padding-top: 5rem;
+}
+
+#rootEmpreendimento .part9 .col-md-12 {
+    padding-bottom: 3rem;
+}
+
+#rootEmpreendimento .part9 .col-md-12 h1 {
+    color: #FFFFFF;
+    font-family: 'DIN Pro';
+    font-weight: 400;
+    font-size: 3.3rem;
+    text-align: center;
+}
+
+#rootEmpreendimento .part9 .col-md-12 p {
+    color: #FFFFFF;
+    width: 100%;
+    font-family: 'DIN Pro';
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#rootEmpreendimento .part9 .col-md-4 #statusSecundarios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rootEmpreendimento .part9 .col-md-4 #statusGeral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#rootEmpreendimento .part9 #dadosGeraisEmpreendimento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#rootEmpreendimento .part9 #dadosGeraisEmpreendimento div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+#rootEmpreendimento .part9 #dadosGeraisEmpreendimento div p {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 0!important;
+    margin-bottom: 0.5rem!important;
+    color: #FFFFFF;
+}
+
+#rootEmpreendimento .part9 #dadosGeraisEmpreendimento div h5 {
+    font-family: 'DIN Pro';
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0!important;
+    color: #FFFFFF;
+}
+
+#imagensEvolucaoObra h2 {
+    font-family: 'DIN Pro';
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0!important;
+    color: #FFFFFF;
+    margin-top: 2rem!important;
+}
+
+#divBtnsEvolucaoObra {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+#divBtnsEvolucaoObra button {
+    background-color: transparent;
+    border: none;
+}
+
+#divBtnsEvolucaoObra button img {
+    width: 4rem;
+}
+
+#divBtnsEvolucaoObra #indexEvolucaoObra {
+    font-family: 'DIN Pro';
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: #FFFFFF!important;
+}
+
+#divBtnsEvolucaoObra #indexEvolucaoObra span {
+    font-size: 0.9rem!important;
+}
+
+#rootEmpreendimento .part10 {
+    background-image: url('assets/icons/grafismo.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+#rootEmpreendimento .part10 .texto-form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    align-content: flex-end;
+    padding-right: 4rem;
+}
+
+#rootEmpreendimento .part10 h1, 
+#rootEmpreendimento .part10 p {
+    width: 70%;
+    text-align: left;
+}
+
+#rootEmpreendimento .part10 h1 {
+    font-family: 'DIN Pro';
+    font-weight: 400;
+    font-size: 3.3rem;
+}
+
+#rootEmpreendimento .part10 p {
+    font-family: 'DIN Pro';
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+#rootEmpreendimento .part10 form {
+    width: 100%;
+    text-align: left;
+}
+
+#rootEmpreendimento .part10 form label {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 1.3rem;
+}
+
+#rootEmpreendimento .part10 form input,
+#rootEmpreendimento .part10 form select {
+    width: 70%;
+    background-color: #3B4127;
+    color: #FFFFFF;
+}
+
+#rootEmpreendimento .part10 form .form-check input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+#rootEmpreendimento .part10 form .form-check label {
+    width: 70%;
+    font-size: 1rem;
+}
+
+#rootEmpreendimento .part10 form .form-check a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+}
+
+#rootEmpreendimento .part10 form button {
+    background-color: #3B4127;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    border-radius: 0!important;
+    padding: 0.5rem 3rem;
+}
+
+/****** FIM PÁGINA: EMPREENDIMENTO ******/
+
+/****** PÁGINA: SOBRE ******/
+#rootSobre {
+    width: 100%;
+}
+
+#rootSobre #foto-capa {
+    width: 100%;
+    background-blend-mode: multiply;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+#rootSobre .part1 {
+    z-index: 999;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    right: 0;
+}
+
+#rootSobre .part1 .col-md-6,
+#rootSobre .part1 .col-md-5,
+#rootSobre .part1 .col-md-1 {
+    display: flex!important;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+#rootSobre .part1 .col-md-5 {
+    padding-right: 3rem;
+}
+
+#rootSobre .part1 .col-md-1 img {
+    width: 3.5rem;
+}
+
+#rootSobre .part1 p,
+#rootSobre .part1 h1,
+#rootSobre .part1 h3 {
+    color: #FFFFFF;
+}
+
+#rootSobre .part1 p {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 0.8rem;
+    margin: 0!important;
+}
+
+#rootSobre .part1 h1 {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 4rem;
+    margin: 0!important;
+}
+
+#rootSobre .part1 h3 {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 1.3rem;
+    margin: 0!important;
+}
+
+#rootSobre .part2 {
+    padding-top: 15rem;
+}
+
+#rootSobre .part2 #texto-video {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    margin-top: 3rem;
+}
+
+#rootSobre .part2 #texto-video .col-md-6:nth-child(1) {
+    padding-left: 7rem;
+}
+
+#rootSobre .part2 #texto-video .col-md-6:nth-child(2) {
+    padding-left: 2rem;
+    padding-right: 5rem;
+}
+
+#rootSobre .part2 h1,
+#rootSobre .part2 p {
+    color: #FFFFFF;
+}
+
+#rootSobre .part2 #texto-video h1 {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 3rem;
+}
+
+#rootSobre .part2 #texto-video p {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+
+#rootSobre .part3 {
+    padding: 0!important;
+    margin: 0!important;
+    margin-top: 8rem!important;
+    overflow-x: hidden;
+}
+
+#rootSobre .part3 img {
+    width: 100%;
+}
+
+#rootSobre .part3 #texto-diferenciais {
+    color: #FFFFFF;
+    padding-left: 3rem;
+}
+
+#rootSobre .part3 #texto-diferenciais h1 {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+#rootSobre .part3 #texto-diferenciais p {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+
+#rootSobre .part3 #texto-diferenciais .diferencial {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 1.6rem;
+}
+
+#rootSobre .part3 #texto-diferenciais .diferencial img {
+    height: 2.5rem;
+    width: auto;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
+}
+
+#rootSobre .part3 #texto-diferenciais .diferencial h3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'DIN Pro';
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+#rootSobre .part3 #texto-diferenciais .diferencial h3 svg {
+    margin-right: 0.5rem;
+}
+
+#rootSobre .part3 #texto-diferenciais .diferencial p {
+    width: 80%;
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+
+#rootSobre .seta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#rootSobre .seta img {
+    width: 3.5rem;
+}
+
+#rootSobre .part4 {
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+#rootSobre .part4 #foto-processos {
+    width: 100%;
+    background-blend-mode: multiply;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+#rootSobre .part4 .row {
+    display: flex;
+    align-content: flex-start!important;
+    align-items: flex-start!important;
+}
+
+#rootSobre .part4 .part4-text {
+    z-index: 999;
+    position: relative;
+    bottom: 4rem;
+    left: 0;
+    right: 0;
+}
+
+#rootSobre .part4 .col-md-6 {
+    display: flex!important;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+#rootSobre .part4 .col-md-6:nth-child(1) {
+    padding-left: 8rem;
+}
+
+#rootSobre .part4 .col-md-6:nth-child(2) {
+    padding-right: 8rem;
+}
+
+#rootSobre .part4 p,
+#rootSobre .part4 h1,
+#rootSobre .part4 h3 {
+    color: #FFFFFF;
+}
+
+#rootSobre .part4 .part4-text p:nth-child(1) {
+    margin-bottom: 1rem!important;
+}
+
+#rootSobre .part4 p {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 0.8rem;
+    margin: 0!important;
+}
+
+#rootSobre .part4 h1 {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 3.5rem;
+    margin: 0!important;
+}
+
+#rootSobre .part4 h3 {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 1.3rem;
+    margin: 0!important;
+    margin-top: 1rem!important;
+}
+
+/****** FIM PÁGINA: SOBRE ******/
+
+/****** PÁGINA: TRABALHE CONOSCO ******/
+#rootTrabalheConosco {
+    width: 100%;
+}
+
+#rootTrabalheConosco #fotoTrabalheConosco {
+    width: 100%;
+}
+
+#rootTrabalheConosco .col-md-12 {
+    color: #FFFFFF;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rootTrabalheConosco .col-md-12 h1 {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#rootTrabalheConosco .col-md-12 p {
+    width: 50%;
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#rootTrabalheConosco .col-md-12 a {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--color-secondary);
+    color: #FFFFFF;
+    margin-top: 2rem;
+    padding: 0.5rem 2rem;
+}
+
+/****** FIM PÁGINA: TRABALHE CONOSCO ******/
+
+/****** PÁGINA: CONTATO ******/
+
+#rootContato {
+    width: 100%;
+}
+
+#rootContato .row  {
+    margin-top: 3rem!important;
+    margin-bottom: 3rem!important;
+}
+
+#rootContato .texto-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    align-content: flex-end;
+    padding-right: 1rem;
+}
+
+#rootContato h1, 
+#rootContato p {
+    text-align: left;
+    color: #FFFFFF;
+}
+
+#rootContato h1 {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 3.3rem;
+    margin-bottom: 1rem;
+}
+
+#rootContato p {
+    font-family: 'DIN Pro';
+    font-weight: 400;
+    font-size: 0.8rem;
+    width: 70%;
+}
+
+#rootContato form {
+    width: 100%;
+    text-align: left;
+}
+
+#rootContato form label {
+    font-family: 'DIN Pro';
+    font-weight: 100;
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+
+#rootContato form input,
+#rootContato form textarea {
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+#rootContato form .form-check input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+}
+
+#rootContato form .form-check label {
+    width: 70%;
+    font-size: 1rem;
+    color: #FFFFFF;
+}   
+
+#rootContato form .form-check a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+#rootContato form button {
+    background-color: var(--color-secondary);
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    border-radius: 0!important;
+    padding: 0.5rem 3rem;
+}
+
+/****** FIM PÁGINA: CONTATO ******/
+
+
+/* Dispositivos móveis */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    /****** MENU PRINCIPAL ******/
+    nav#menuPrincipal {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        font-family: 'DIN Pro';
+    }
+    nav#menuPrincipal ul {
+        padding-top: 1rem;
+    }
+    /****** FIM MENU PRINCIPAL ******/
+
+    /****** FOOTER ******/
+    #footer {
+        font-size: 0.8rem;
+    }
+
+    #footer footer {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+    }
+
+    #footer #logoFooter {
+        width: 5rem;
+    }
+
+    #footer .footer-sub-menu {
+        text-align: center;
+    }
+
+    #footer #divRedesSociais {
+        text-align: center;
+    }
+
+    #footer #divRedesSociais div {
+        justify-content: center;
+    }
+
+    #footer .btn-portal-cliente {
+        text-decoration: none;
+        color: #000000;
+        font-family: 'DIN Pro';
+        font-weight: 600;
+        font-size: 0.8rem!important;
+        background-color: var(--color-secondary);
+        padding: 0.5rem 0.8rem;
+        box-shadow: 1px 1px 5px rgba(49, 183, 188, 0.5);
+    }
+
+    #footer .btn-portal-cliente img {
+        filter: invert(100%);
+        width: 0.5rem;
+    }
+    /****** FIM FOOTER ******/
+
+    /****** PÁGINA: HOME ******/
+        /****** VÍDEO E SETA ******/
+        div#divVideoHome {
+            margin-top: 5rem;
+        }
+        div#divSetaHome img {
+            width: 4rem;
+            position: relative;
+            top: -2.35rem;
+        }
+        /****** FIM VÍDEO E SETA ******/
+
+        /****** EMPREENDIMENTOS ******/
+        div#divEmpreendimentos {
+            padding-top: 3rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        div#divEmpreendimentos .nav .nav-link {
+            font-size: 0.8rem;
+            color: #FFFFFF!important;
+            text-decoration: none;
+            padding: 0!important;
+            padding-left: 0.3rem!important;
+            padding-right: 1.5rem!important;
+        }
+        
+        div#divEmpreendimentos .nav .active span {
+            border-bottom: 2px solid var(--color-secondary);
+            padding-bottom: 0.2rem;
+        }
+
+        #divLoadEmpreendimentos .link-empreendimento {
+            display:flex;
+            justify-content: center;
+        }
+        
+        #divLoadEmpreendimentos .card {
+            background-color: transparent;
+            width: 18rem;
+            border: none!important;
+            padding: 0rem;
+        }
+
+        #divLoadEmpreendimentos .card .card-body {
+            padding: 0rem;
+            padding-top: 1rem!important;
+        }
+        
+        #divLoadEmpreendimentos a {
+            text-decoration: none;
+        }
+        
+        #divLoadEmpreendimentos .card img {
+            border-radius: 0!important;
+        }
+        
+        #divLoadEmpreendimentos .card .title-card {
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-family: 'DIN Pro';
+            font-weight: 100;
+            border-bottom: 2px solid var(--color-secondary);
+            padding-bottom: 1rem;
+            padding-right: 2rem;
+        
+        }
+        
+        #divLoadEmpreendimentos .card .status-card {
+            font-size: 0.7rem;
+            color: #FFFFFF;
+            font-family: 'DIN Pro';
+            font-weight: 600;
+            border: 1px solid var(--color-secondary);
+            padding: 0.2rem 1.4rem;
+            position: absolute;
+            right: 0rem;
+        }
+
+        #divBtns button img {
+            width: 3rem;
+        }
+        /****** FIM EMPREENDIMENTOS ******/
+
+        /****** FEEDBACKS ******/
+        #divFeedBacks {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        #divFeedBacks .card {
+            padding: 0rem;
+        }
+
+        #divFeedBacks .card {
+            padding: 0rem;
+        }
+
+        
+
+        #divFeedBacks .card .aspas {
+            width: 2rem;
+            margin-left: calc(100% - 3.5rem);;
+        }
+
+        #divFeedBacks .card .text-feedback {
+            color: #FFFFFF;
+            font-family: 'DIN Pro';
+            font-weight: 100;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+        #divFeedBacks .card .infos-feedback {
+            width: 100%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        #divFeedBacks .card .image-feedback {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+        #divFeedBacks .card .image-feedback img {
+            width: 200%;
+        }
+
+        #divFeedBacks .card .infos-person-feedback {
+            color: #FFFFFF;
+            font-size: 0.9rem;
+        }
+        /****** FIM FEEDBACKS ******/
+    /****** FIM PÁGINA: HOME ******/
+
+    #rootTrabalheConosco .col-md-12 p {
+        width: 90%;
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 0.8rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    /****** PÁGINA: SOBRE ******/
+    #rootSobre {
+        width: 100%;
+    }
+
+    #rootSobre #foto-capa {
+        width: 100%;
+        background-blend-mode: multiply;
+        opacity: 0.7;
+        z-index: 1;
+    }
+
+    #rootSobre .part1 {
+        z-index: 999;
+        position: absolute;
+        bottom: 8rem;
+        left: 0;
+        right: 0;
+    }
+
+    #rootSobre .part1 .col-md-6,
+    #rootSobre .part1 .col-md-5,
+    #rootSobre .part1 .col-md-1 {
+        display: flex!important;
+        align-items: flex-start;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    #rootSobre .part1 .col-md-5 {
+        padding-right: 3rem;
+    }
+
+    #rootSobre .part1 .col-md-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    #rootSobre .part1 .col-md-1 img {
+        width: 3.5rem;
+    }
+
+    #rootSobre .part1 p {
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 0.8rem;
+        margin: 0!important;
+    }
+
+    #rootSobre .part1 h1 {
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 2rem;
+        margin: 0!important;
+    }
+
+    #rootSobre .part1 h3 {
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 1rem;
+        margin: 0!important;
+    }
+
+    #rootSobre .part2 {
+        padding-top: 30rem;
+    }
+
+    #rootSobre .part2 #texto-video {
+        display: flex;
+        justify-content: flex-start;
+        align-content: flex-start;
+        margin-top: 3rem;
+    }
+
+    #rootSobre .part2 #texto-video .col-md-6:nth-child(1) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    #rootSobre .part2 #texto-video .col-md-6:nth-child(1) p:nth-child(1) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #rootSobre .part2 #texto-video .col-md-6:nth-child(2) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #rootSobre .part2 h1,
+    #rootSobre .part2 p {
+        color: #FFFFFF;
+    }
+
+    #rootSobre .part2 #texto-video h1 {
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 3rem;
+    }
+
+    #rootSobre .part2 #texto-video p {
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 0.8rem;
+    }
+
+    #rootSobre .part3 {
+        padding: 0!important;
+        margin: 0!important;
+        margin-top: 8rem!important;
+        overflow-x: hidden;
+    }
+
+    #rootSobre .part3 img {
+        width: 100%;
+    }
+
+    #rootSobre .part3 #texto-diferenciais {
+        color: #FFFFFF;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    #rootSobre .part3 #texto-diferenciais h1 {
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #rootSobre .part3 #texto-diferenciais p {
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 0.8rem;
+    }
+
+    #rootSobre .part3 #texto-diferenciais .diferencial {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 1.6rem;
+    }
+
+    #rootSobre .part3 #texto-diferenciais .diferencial img {
+        height: 2.5rem;
+        width: auto;
+        margin-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 2rem;
+    }
+
+    #rootSobre .part3 #texto-diferenciais .diferencial h3 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-family: 'DIN Pro';
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+
+    #rootSobre .part3 #texto-diferenciais .diferencial h3 svg {
+        margin-right: 0.5rem;
+    }
+
+    #rootSobre .part3 #texto-diferenciais .diferencial p {
+        width: 80%;
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 0.8rem;
+    }
+
+    #rootSobre .seta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    #rootSobre .seta img {
+        width: 3.5rem;
+    }
+
+    #rootSobre .part4 {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    #rootSobre .part4 #foto-processos {
+        width: 100%;
+        background-blend-mode: multiply;
+        opacity: 0.7;
+        z-index: 1;
+    }
+
+    #rootSobre .part4 .row {
+        display: flex;
+        align-content: flex-start!important;
+        align-items: flex-start!important;
+    }
+
+    #rootSobre .part4 .part4-text {
+        z-index: 999;
+        position: relative;
+        bottom: 4rem;
+        left: 0;
+        right: 0;
+    }
+
+    #rootSobre .part4 .col-md-6 {
+        display: flex!important;
+        align-items: flex-start;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    #rootSobre .part4 .col-md-6:nth-child(1) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #rootSobre .part4 .col-md-6:nth-child(2) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #rootSobre .part4 p,
+    #rootSobre .part4 h1,
+    #rootSobre .part4 h3 {
+        color: #FFFFFF;
+    }
+
+    #rootSobre .part4 .part4-text p:nth-child(1) {
+        margin-bottom: 1rem!important;
+    }
+
+    #rootSobre .part4 p {
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 0.8rem;
+        margin: 0!important;
+    }
+
+    #rootSobre .part4 h1 {
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 2rem;
+        margin: 0!important;
+    }
+
+    #rootSobre .part4 h3 {
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 1.3rem;
+        margin: 0!important;
+        margin-top: 1rem!important;
+    }
+
+    /****** FIM PÁGINA: SOBRE ******/
+
+    /****** PÁGINA: EMPREENDIMENTOS ******/
+    #carousel {
+        display: none;
+    }
+
+    #pageEmpreendimentos {
+        padding: 0!important;
+        margin-top: 8rem;
+    }
+
+    #pageEmpreendimentos h1 {
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 3.5rem;
+        color: #FFFFFF;
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 5rem;
+    }
+
+    /*** MODELO NORMAL ***/
+    #pageEmpreendimentos .empreendimento-obra {
+        width: 90%;
+        margin-left: auto;
+        position: static;
+        right: 0;
+        margin-bottom: 3rem;
+    }
+
+    #pageEmpreendimentos .empreendimento-obra .capa-empreendimento-obra {
+        width: 100%;
+    }
+
+    #pageEmpreendimentos .empreendimento-obra .detalhes-empreendimento-obra {
+        width: 90%;
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
+        margin-top: 2rem;
+        margin-right: 0rem;
+    }
+
+    #pageEmpreendimentos .empreendimento-obra .logo-capa-empreendimento-obra {
+        width: 7rem;
+    }
+
+    #pageEmpreendimentos .empreendimento-obra .detalhes-empreendimento-obra div {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        margin-left: 1rem;
+        padding: 0;
+        color: #fff;
+        text-align: left;
+        background: 0 0;
+        border: 0;
+    }
+
+    #pageEmpreendimentos .empreendimento-obra span {
+        color: #FFFFFF;
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        text-align: left;
+        font-size: 0.5rem;
+        text-overflow: ellipsis;
+    }
+
+    #pageEmpreendimentos .empreendimento-obra .btn-empreendimento-obra {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-decoration: none;
+        color: #FFFFFF;
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 0.5rem;
+        padding: 0.5rem 1rem;
+        border: 0.5px solid #FFFFFF;
+        width: 50%;
+        text-align: left;
+        margin-left: 1rem;
+        margin-top: 0rem;
+    }
+
+    #pageEmpreendimentos .empreendimento-obra .btn-empreendimento-obra img {
+        position: absolute;
+        right: 3%;
+        width: 2rem;
+    }
+    /*** FIM MODELO NORMAL ***/
+
+    /*** MODELO INVERTER ***/
+    #pageEmpreendimentos .empreendimento-obra-inverter {
+        width: 90%;
+        margin-right: auto;
+        position: static;
+        left: 0;
+        margin-bottom: 3rem;
+    }
+    #pageEmpreendimentos .empreendimento-obra-inverter .capa-empreendimento-obra {
+        width: 100%;
+    }
+
+    #pageEmpreendimentos .empreendimento-obra-inverter .detalhes-empreendimento-obra {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: flex-start;
+        margin-top: 2rem;
+    }
+
+    #pageEmpreendimentos .empreendimento-obra-inverter .logo-capa-empreendimento-obra {
+        width: 7rem;
+    }
+
+    #pageEmpreendimentos .empreendimento-obra-inverter .detalhes-empreendimento-obra div {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: row;
+        width: 50%;
+        margin-right: 1rem;
+        padding: 0;
+        color: #fff;
+        text-align: left;
+        background: 0 0;
+        border: 0;
+    }
+
+    #pageEmpreendimentos .empreendimento-obra-inverter span {
+        width: 100%;
+        color: #FFFFFF;
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        text-align: left;
+        font-size: 0.5rem;
+    }
+
+    #pageEmpreendimentos .empreendimento-obra-inverter .btn-empreendimento-obra {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-decoration: none;
+        color: #FFFFFF;
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        font-size: 0.5rem;
+        padding: 0.5rem 1rem;
+        border: 0.5px solid #FFFFFF;
+        width: 50%;
+        text-align: left;
+        margin-top: 0rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #pageEmpreendimentos .empreendimento-obra-inverter .btn-empreendimento-obra img {
+        position: absolute;
+        left: 46%;
+        width: 2rem;
+    }
+    /*** MODELO INVERTER ***/
+
+    #empreendimentos-entregues {
+        width: 100%;
+        margin-left: auto;
+        margin-top: 5rem;
+        padding: 1rem;
+    }
+
+    #empreendimentos-entregues #carouselEmpreendimentosEntregues .card {
+        background-color: transparent!important;
+        border: none;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    #empreendimentos-entregues #carouselEmpreendimentosEntregues .card .card-border {
+        width: 75%;
+        height: 2px;
+        margin-top: 0.5rem;
+        border-bottom: 2px solid var(--color-secondary);
+    }
+
+    #empreendimentos-entregues #carouselEmpreendimentosEntregues .card .card-body {
+        padding-right: 0!important;
+        padding-left: 0!important;
+    }
+
+    #empreendimentos-entregues #carouselEmpreendimentosEntregues .card .status-empreendimentos-entregue {
+        font-family: 'DIN Pro';
+        font-weight: 400;
+        color: #848186;
+        font-size: 0.9rem;
+    }
+
+    #empreendimentos-entregues #carouselEmpreendimentosEntregues .card .name-empreendimentos-entregue {
+        font-family: 'DIN Pro';
+        font-weight: 100;
+        color: #FFFFFF;
+        font-size: 1.3rem;
+    }
+
+    #empreendimentos-entregues #carouselEmpreendimentosEntregues .card .localizacao-empreendimentos-entregue {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-family: 'DIN Pro';
+        font-weight: 400;
+        color: #848186;
+        font-size: 0.9rem;
+    }
+
+    #empreendimentos-entregues #carouselEmpreendimentosEntregues .card .localizacao-empreendimentos-entregue img {
+        width: 0.7rem;
+    }
+
+    /****** FIM PÁGINA: EMPREENDIMENTOS ******/
+
+}
+  
+/* iPads e Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {}
+  
+/* Telas pequenas e Notebooks */
+@media screen and (min-width: 769px) and (max-width: 1024px) {}
+  
+/* Telas grandes e Desktops */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {}
+  
+/* Telas muito grandes e TVs */
+@media screen and (min-width: 1201px) {}
