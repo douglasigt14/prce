@@ -51,7 +51,15 @@ class Functions {
 
     static function bibliotecaImages($dir = "") {
         $pasta = 'assets/uploads/'.$dir; 
+        
+        if (!is_dir($pasta)) {
+            echo "";
+        }
+        return;
+        
         $diretorio = dir($pasta);
+
+        
         $index = 1;
 
         while ($arquivo = $diretorio -> read()) {

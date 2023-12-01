@@ -305,6 +305,57 @@ include_once 'functions.php';
     <script type="text/javascript" src="<?= Functions::urlBase('assets/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
     <script type="text/javascript" src="<?= Functions::urlBase('assets/fontawesome/js/all.min.js'); ?>"></script>
 
+    <script>
+      const siteRoot = window.location.origin;
+      const url = `${siteRoot}/requests/select.php?table=sobre`;
+          fetch(url)
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error(`Erro na solicitação: ${response.statusText}`);
+              }
+              return response.json();
+          })
+          .then(data => {
+              if(data){
+                  for (let i = 1; i <= 4; i++) {//3
+                      document.querySelector("#titulo"+i).value = data[0]['titulo'+i];
+                  }
+
+                  for (let i = 1; i <= 11; i++) {//11
+                        document.querySelector("#texto"+i).value = data[0]['texto'+i];
+                  }
+
+              }
+          })
+          .catch(error => {
+              console.error('Erro durante a solicitação:', error);
+          });
+
+
+          const urlDiferenciais = `${siteRoot}/requests/select.php?table=sobre_diferenciais`;
+          fetch(url)
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error(`Erro na solicitação: ${response.statusText}`);
+              }
+              return response.json();
+          })
+          .then(data => {
+              if(data){
+                  for (let i = 1; i <= 4; i++) {//3
+                      document.querySelector("#titulo"+i).value = data[0]['titulo'+i];
+                  }
+
+                  for (let i = 1; i <= 11; i++) {//11
+                        document.querySelector("#texto"+i).value = data[0]['texto'+i];
+                  }
+
+              }
+          })
+          .catch(error => {
+              console.error('Erro durante a solicitação:', error);
+          });
+    </script>
     <script type="text/javascript">
     $(document).ready(function() {
 
