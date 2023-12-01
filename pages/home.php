@@ -4,7 +4,7 @@
 
         <div class="container-fluid bg-primary" id="divVideoHome">
             <video autoplay class="w-100" id="videoHome">
-                <source src="<?= Functions::urlBase('assets/videos/home.mp4'); ?>" type="video/mp4">
+                <source id="video" type="video/mp4">
             </video>
         </div>
 
@@ -173,3 +173,28 @@
         </div>
 
         <?php require_once __DIR__ . '/footer.php'; ?>
+
+        <script>
+    const url1 = 'requests/select.php?table=home_data';
+
+    // Realiza a solicitação usando o fetch
+    fetch(url1)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro na solicitação: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data) {
+                console.log(data);
+                document.querySelector("#video").src = data[0]['video'];
+            }
+        })
+        .catch(error => {
+            // Manipula erros durante a solicitação
+            console.error('Erro durante a solicitação:', error);
+        });
+
+    
+</script>
