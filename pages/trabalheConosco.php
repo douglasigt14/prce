@@ -1,22 +1,43 @@
 <?php require_once __DIR__ . '/header.php'; ?>
 <div id="rootTrabalheConosco">
 
-    <img src="<?= Functions::urlBase('assets/images/trabalheConosco.jpg'); ?>" id="fotoTrabalheConosco">
+    <img id="fotoTrabalheConosco">
 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Trabalhe conosco</h1>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rhoncus nisi ut scelerisque vulputate. Sed vel lobortis ligula. Etiam placerat libero risus, dapibus posuere turpis commodo a. Curabitur ex urna, egestas quis orci quis, congue aliquam sapien. Sed nec elit non nisl venenatis mattis nec non libero. Phasellus mi felis, commodo eu nisi a, varius tristique tortor. Nullam consectetur, ligula lobortis consectetur maximus, purus risus consectetur turpis, vitae blandit odio mi ac quam. Sed ut metus tortor. 
-                    <br>
-                    Nullam eu lacinia dui, sed pharetra ligula. In fermentum, libero vel feugiat suscipit, nisl leo malesuada massa, a pretium ligula leo a libero. Vestibulum nisi felis, sagittis in congue ut, efficitur sed mi. Nunc iaculis at tellus sit amet posuere. Etiam hendrerit, arcu sit amet rutrum viverra, enim risus consectetur libero, sed cursus neque diam in velit.
-                </p>
-                <a href="#">Conheça nossas vagas</a>
+                <h1 id="titulo"></h1>
+                <p id="texto"></p>
+                <a id="link"><span id="botao-texto"></span></a>
             </div>
         </div>
     </div>
 
 </div>
+
+<script>
+    const url = 'requests/select.php?table=trabalhe_conosco';
+
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro na solicitação: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data) {
+                document.querySelector("#fotoTrabalheConosco").src = data[0]['capa'];
+                document.querySelector("#titulo").innerHTML = data[0]['titulo'];
+                document.querySelector("#texto").innerHTML = data[0]['texto'];
+                document.querySelector("#botao-texto").innerHTML = data[0]['botao_texto'];
+                document.querySelector("#link").href = data[0]['botao_link'];
+            }
+        })
+        .catch(error => {
+            // Manipula erros durante a solicitação
+            console.error('Erro durante a solicitação:', error);
+        });
+</script>
 
 <?php require_once __DIR__ . '/footer.php'; ?>
