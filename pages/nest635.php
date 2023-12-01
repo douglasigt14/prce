@@ -263,7 +263,9 @@ hmtl, body {
                         <div class="col-md-4">
                                 <h1>Equipe</h1>
                                 <h5>A5 ARQUITETURA</h5>
+                                <!-- adicionar elemento na tabela -->
                                 <h5>interiores</h5>
+                                <!-- adicionar elemento na tabela -->
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis feugiat libero. Suspendisse venenatis lacus non urna pulvinar, vitae vestibulum tellus pharetra. Sed vitae nisi augue. Ut at fringilla mi.</p>
                                 <div id="divBtnsEquipe">
                                         <button id="btnAnteriorEquipe" class="refletir">
@@ -295,7 +297,7 @@ hmtl, body {
                 <div class="container">
                         <div class="row">
                                 <div class="col-md-12">
-                                        <h1>Diferencias</h1>
+                                        <h1>Diferenciais</h1>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel dictum orci, at sodales erat. Nulla sollicitudin mattis nulla, id auctor nibh. Pellentesque vitae ipsum risus. Vivamus malesuada vestibulum metus, vel condimentum dolor dignissim vel.</p>
                                 </div>
                         </div>
@@ -396,7 +398,7 @@ hmtl, body {
                         <div class="row">
 
                                 <div class="col-md-12">
-                                        <h1>Evolução da obras</h1>
+                                        <h1>Evolução das obras</h1>
                                         <p>Última atualização: Agosto 2023</p>
                                 </div>
                                 
