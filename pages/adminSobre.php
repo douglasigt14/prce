@@ -100,32 +100,36 @@ include_once 'functions.php';
               </div>
 
               <div class="row g-3 mb-3 align-items-center">
-                <div class="col-6">
-                  <label for="texto1" class="form-label fw-bold">Texto 1</label>
-                  <input type="text" class="form-control" id="texto1">
+                  <div class="col-6">
+                    <label for="titulo1" class="form-label fw-bold">Titulo 1</label>
+                    <input type="text" class="form-control" id="titulo1">
+                  </div>   
+                  <div class="col-6">
+                      <label for="texto1" class="form-label fw-bold">Texto 1</label>
+                      <textarea class="form-control" id="texto1" rows="3"></textarea>
+                  </div>             
                 </div>
-                <div class="col-6">
-                  <label for="titulo1" class="form-label fw-bold">Titulo 1</label>
-                  <input type="text" class="form-control" id="titulo1">
+              
+
+              <div class="row g-3 mb-3 align-items-center">
+                <div class="col-12">
+                  <label for="texto2" class="form-label fw-bold">Texto 2</label>
+                  <input type="text" class="form-control" id="texto2">
+                </div>      
+              </div>
+
+              <div class="row g-3 mb-3 align-items-center">  
+                <div class="col-12 align-items-center">
+                  <label for="#" class="form-label fw-bold">Vídeo:</label>
+                  <button type="button" class="btn btn-primary m-0 ms-1 w-auto" data-bs-toggle="modal" data-bs-target="#modalVideo">Selecionar novo vídeo</button>              
                 </div>
               </div>
 
               <div class="row g-3 mb-3 align-items-center">
                 <div class="col-12">
-                  <label for="texto2" class="form-label fw-bold">Texto 2</label>
-                  <textarea class="form-control" id="texto2" rows="3"></textarea>
-                </div>      
-              </div>
-
-              <div class="row g-3 mb-3 align-items-center">  
-                <div class="col-6 align-items-center">
-                  <label for="#" class="form-label fw-bold">Vídeo:</label>
-                  <button type="button" class="btn btn-primary m-0 ms-1 w-auto" data-bs-toggle="modal" data-bs-target="#modalVideo">Selecionar novo vídeo</button>              
-                </div>
-                <div class="col-6">
-                  <label for="titulo2" class="form-label fw-bold">Titulo 2</label>
-                  <input type="text" class="form-control" id="titulo2">
-                </div>
+                    <label for="titulo2" class="form-label fw-bold">Titulo 2</label>
+                    <input type="text" class="form-control" id="titulo2">
+                  </div>
               </div>
 
               <div class="row g-3 mb-3 align-items-center">
@@ -150,7 +154,7 @@ include_once 'functions.php';
               <div class="row g-3 mb-3 align-items-center">
                 <div class="col-12">
                   <label for="texto7" class="form-label fw-bold">Texto 7</label>
-                  <textarea class="form-control" id="texto2" rows="3"></textarea>
+                  <textarea class="form-control" id="texto7" rows="3"></textarea>
                 </div> 
               </div>
 
@@ -304,6 +308,83 @@ include_once 'functions.php';
     <script type="text/javascript" src="<?= Functions::urlBase('assets/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
     <script type="text/javascript" src="<?= Functions::urlBase('assets/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
     <script type="text/javascript" src="<?= Functions::urlBase('assets/fontawesome/js/all.min.js'); ?>"></script>
+
+
+    <script>
+
+    let root = window.location.origin;
+    const url1 = root+'/requests/select.php?table=sobre';
+
+    // Realiza a solicitação usando o fetch
+    fetch(url1)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro na solicitação: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data) {
+                //document.querySelector("#capa").innerHTML = data[0]['capa'];
+                console.log(data);
+                for (let i = 1; i <= 4; i++) {//3
+                    document.querySelector("#titulo" + i).value = data[0]['titulo' + i];
+                }
+
+                for (let i = 1; i <= 8; i++) {//11
+                    document.querySelector("#texto" + i).value = data[0]['texto' + i];
+                }
+
+                // document.querySelector("#foto-capa").src = data[0]['capa'];
+                // document.querySelector("#imagem-diferenciais").src = data[0]['imagem1'];
+                // document.querySelector("#foto-processos").src = data[0]['imagem2'];
+
+
+                // const config = {
+                //     autoplay: false,
+                //     ui: {
+                //         image: data[0]['capa'],
+                //     },
+                //     sources: [
+                //         {
+                //             type: "mp4",
+                //             src: data[0]['video'],
+                //         }
+                //     ],
+                // };
+                // const element = document.querySelector('#videoSobre');
+                // const player = IndigoPlayer.init(element, config);
+            }
+        })
+        .catch(error => {
+            // Manipula erros durante a solicitação
+            console.error('Erro durante a solicitação:', error);
+        });
+
+    const url2 = root+'/requests/select.php?table=sobre_diferenciais';
+
+    fetch(url2)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro na solicitação: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data) {
+                // for (let i = 0; i < 6; i++) {//3
+                //     document.querySelector("#titulo_diferencial" + (i + 1)).value = data[i]['titulo'];
+                //     document.querySelector("#texto_diferencial" + (i + 1)).value = data[i]['texto'];
+                // }
+
+            }
+        })
+        .catch(error => {
+            // Manipula erros durante a solicitação
+            console.error('Erro durante a solicitação:', error);
+        });
+
+</script>
 
     <script type="text/javascript">
     $(document).ready(function() {
