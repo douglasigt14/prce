@@ -12,7 +12,7 @@
 
 <div class="container-fluid" id="divEmpreendimentos">
 
-    <h1 class="title text-white">Empreendimentos</h1>
+<h1 id="titulo1" class="title text-white"></h1>
 
     <ul class="nav">
         <li class="nav-item">
@@ -108,7 +108,7 @@
 
 <div class="container" id="divFeedBacks">
 
-    <h2 id="titulo" class="title text-white text-center mb-5"></h2>
+    <h2 id="titulo2" class="title text-white text-center mb-5"></h2>
 
     <div class="owl-carousel" id="carouselFeedBacks">
 
@@ -187,7 +187,8 @@
             if (data) {
                 console.log(data);
                 document.querySelector("#video").src = data[0]['video'];
-                document.querySelector("#titulo").innerHTML = data[0]['titulo'];
+                document.querySelector("#titulo1").innerHTML = data[0]['titulo1'];
+                document.querySelector("#titulo2").innerHTML = data[0]['titulo2'];
             }
         })
         .catch(error => {
