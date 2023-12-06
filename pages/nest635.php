@@ -176,7 +176,7 @@ hmtl, body {
                         <a id="rota-localizacao">Ver rota</a>
                 </div>
                 <div id="mapa">
-                        <iframe id="mapa-localizacao" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.355847500895!2d-51.91505012474418!3d-23.447625357423437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd09e4a3c9caf%3A0x8f5d681cebee4b03!2sR.%20Paraguai%20-%20Zona%2008%2C%20Maring%C3%A1%20-%20PR%2C%2087050-715!5e0!3m2!1spt-BR!2sbr!4v1700347009871!5m2!1spt-BR!2sbr" id="mapa-localizacao" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
                 <div class="row" id="divConhecaRegiao">
@@ -545,9 +545,9 @@ hmtl, body {
             if (data) {
 
                 console.log(data);
-                document.querySelector("#capa").innerHTML = data[0]['capa'];
-                document.querySelector("#logo").innerHTML = data[0]['logo'];
-                document.querySelector("#imagem1").innerHTML = data[0]['imagem1'];
+                document.querySelector("#capa").src = data[0]['capa'];
+                document.querySelector("#logo").src = data[0]['logo'];
+                document.querySelector("#imagem1").src = data[0]['imagem1'];
                 document.querySelector("#titulo1").innerHTML = data[0]['titulo1'];
                 document.querySelector("#texto1").innerHTML = data[0]['texto1'];
                 document.querySelector("#titulo-plantas").innerHTML = data[0]['titulo_plantas'];
