@@ -150,67 +150,67 @@ include_once 'functions.php';
 
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-6">
-                <label for="tituloDiferencial1" class="form-label fw-bold">Titulo Diferencial 1</label>
-                <input type="text" class="form-control" id="tituloDiferencial1">
+                <label for="titulo_diferencial1" class="form-label fw-bold">Titulo Diferencial 1</label>
+                <input type="text" class="form-control" id="titulo_diferencial1">
               </div>
               <div class="col-6">
-                <label for="textoDiferencial1" class="form-label fw-bold">Texto Diferencial 1</label>
-                <textarea class="form-control" id="textoDiferencial1" rows="3"></textarea>
-              </div>
-            </div>
-
-            <div class="row g-3 mb-3 align-items-center">
-              <div class="col-6">
-                <label for="tituloDiferencial2" class="form-label fw-bold">Titulo Diferencial 2</label>
-                <input type="text" class="form-control" id="tituloDiferencial2">
-              </div>
-              <div class="col-6">
-                <label for="textoDiferencial2" class="form-label fw-bold">Texto Diferencial 2</label>
-                <textarea class="form-control" id="textoDiferencial2" rows="3"></textarea>
+                <label for="texto_diferencial1" class="form-label fw-bold">Texto Diferencial 1</label>
+                <textarea class="form-control" id="texto_diferencial1" rows="3"></textarea>
               </div>
             </div>
 
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-6">
-                <label for="tituloDiferencial3" class="form-label fw-bold">Titulo Diferencial 3</label>
-                <input type="text" class="form-control" id="tituloDiferencial3">
+                <label for="titulo_diferencial2" class="form-label fw-bold">Titulo Diferencial 2</label>
+                <input type="text" class="form-control" id="titulo_diferencial2">
               </div>
               <div class="col-6">
-                <label for="textoDiferencial3" class="form-label fw-bold">Texto Diferencial 3</label>
-                <textarea class="form-control" id="textoDiferencial3" rows="3"></textarea>
-              </div>
-            </div>
-
-            <div class="row g-3 mb-3 align-items-center">
-              <div class="col-6">
-                <label for="tituloDiferencial4" class="form-label fw-bold">Titulo Diferencial 4</label>
-                <input type="text" class="form-control" id="tituloDiferencial4">
-              </div>
-              <div class="col-6">
-                <label for="textoDiferencial4" class="form-label fw-bold">Texto Diferencial 4</label>
-                <textarea class="form-control" id="textoDiferencial4" rows="3"></textarea>
+                <label for="texto_diferencial2" class="form-label fw-bold">Texto Diferencial 2</label>
+                <textarea class="form-control" id="texto_diferencial2" rows="3"></textarea>
               </div>
             </div>
 
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-6">
-                <label for="tituloDiferencial5" class="form-label fw-bold">Titulo Diferencial 5</label>
-                <input type="text" class="form-control" id="tituloDiferencial5">
+                <label for="titulo_diferencial3" class="form-label fw-bold">Titulo Diferencial 3</label>
+                <input type="text" class="form-control" id="titulo_diferencial3">
               </div>
               <div class="col-6">
-                <label for="textoDiferencial5" class="form-label fw-bold">Texto Diferencial 5</label>
-                <textarea class="form-control" id="textoDiferencial5" rows="3"></textarea>
+                <label for="texto_diferencial3" class="form-label fw-bold">Texto Diferencial 3</label>
+                <textarea class="form-control" id="texto_diferencial3" rows="3"></textarea>
               </div>
             </div>
 
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-6">
-                <label for="tituloDiferencial6" class="form-label fw-bold">Titulo Diferencial 6</label>
-                <input type="text" class="form-control" id="tituloDiferencial6">
+                <label for="titulo_diferencial4" class="form-label fw-bold">Titulo Diferencial 4</label>
+                <input type="text" class="form-control" id="titulo_diferencial4">
               </div>
               <div class="col-6">
-                <label for="textoDiferencial6" class="form-label fw-bold">Texto Diferencial 6</label>
-                <textarea class="form-control" id="textoDiferencial6" rows="3"></textarea>
+                <label for="texto_diferencial4" class="form-label fw-bold">Texto Diferencial 4</label>
+                <textarea class="form-control" id="texto_diferencial4" rows="3"></textarea>
+              </div>
+            </div>
+
+            <div class="row g-3 mb-3 align-items-center">
+              <div class="col-6">
+                <label for="titulo_diferencial5" class="form-label fw-bold">Titulo Diferencial 5</label>
+                <input type="text" class="form-control" id="titulo_diferencial5">
+              </div>
+              <div class="col-6">
+                <label for="texto_diferencial5" class="form-label fw-bold">Texto Diferencial 5</label>
+                <textarea class="form-control" id="texto_diferencial5" rows="3"></textarea>
+              </div>
+            </div>
+
+            <div class="row g-3 mb-3 align-items-center">
+              <div class="col-6">
+                <label for="titulo_diferencial6" class="form-label fw-bold">Titulo Diferencial 6</label>
+                <input type="text" class="form-control" id="titulo_diferencial6">
+              </div>
+              <div class="col-6">
+                <label for="texto_diferencial6" class="form-label fw-bold">Texto Diferencial 6</label>
+                <textarea class="form-control" id="texto_diferencial6" rows="3"></textarea>
               </div>
             </div>
 
@@ -373,10 +373,10 @@ include_once 'functions.php';
         })
         .then(data => {
           if (data) {
-            // for (let i = 0; i < 6; i++) {//3
-            //     document.querySelector("#titulo_diferencial" + (i + 1)).value = data[i]['titulo'];
-            //     document.querySelector("#texto_diferencial" + (i + 1)).value = data[i]['texto'];
-            // }
+            for (let i = 0; i < 6; i++) {//3
+                document.querySelector("#titulo_diferencial" + (i + 1)).value = data[i]['titulo'];
+                document.querySelector("#texto_diferencial" + (i + 1)).value = data[i]['texto'];
+            }
 
           }
         })
