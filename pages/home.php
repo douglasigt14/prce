@@ -1,7 +1,7 @@
 <?php require_once __DIR__ . '/header.php'; ?>
 
 <div class="container-fluid bg-primary" id="divVideoHome">
-    <video autoplay class="w-100" id="videoHome">
+    <video autoplay poster="assets\images\capaSobre.jpg" class="w-100" id="videoHome">
         <source id="video" type="video/mp4">
     </video>
 </div>
