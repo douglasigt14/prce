@@ -96,7 +96,7 @@ include_once 'functions.php';
               
               <div class="col-6">
                   <label class="form-label fw-bold">Capa</label> <br>
-                    <input type="file" name="arquivo" /> 
+                    <input type="file" name="foto-capa" /> 
                     <input type="hidden" name="dir" value="/sobre/capa">
                     <img id="foto-capa" class="img-fluid mt-3">
               </div>
@@ -134,8 +134,9 @@ include_once 'functions.php';
                 <div  class="col-6" id="selecaoImagemDiferenciais">
                 <label class="form-label fw-bold">Imagem Diferenciais</label>
                 <div class="w-100 mt-4 mb-4">
-                  <input type="file" name="arquivo" />
-                  <input type="hidden" name="dir" value="/sobre/capa">
+                  <input type="file" name="foto-diferenciais" />
+                  <input type="hidden" name="dir" value="/sobre/diferenciais">
+                  <img id="foto-diferenciais" class="img-fluid mt-3">
                 </div>
               </div>
                <div class="col-6">
@@ -219,23 +220,29 @@ include_once 'functions.php';
               <?= Functions::bibliotecaImages(); ?>
             </div>
 
-
             <div class="row g-3 mb-3 align-items-center">
-              
-              <div class="col-3">
+              <div class="col-6">
+                <label for="titulo4" class="form-label fw-bold">Titulo 4</label>
+                <input type="text" class="form-control" id="titulo4"><br>
+
                 <label for="texto5" class="form-label fw-bold">Texto 5</label>
-                <input type="text" class="form-control" id="texto5">
-              </div>
-              <div class="col-3">
+                <input type="text" class="form-control" id="texto5"><br>
+
                 <label for="texto6" class="form-label fw-bold">Texto 6</label>
                 <input type="text" class="form-control" id="texto6">
+              </div>
+              <div class="col-6">
+                  <label for="texto7" class="form-label fw-bold">Texto 7</label>
+                    <textarea class="form-control" id="texto7" rows="3"></textarea><br>
+
+                    <label for="texto8" class="form-label fw-bold">Texto 8</label>
+                <textarea class="form-control" id="texto8" rows="3"></textarea>
               </div>
             </div>
 
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-12">
-                <label for="texto7" class="form-label fw-bold">Texto 7</label>
-                <textarea class="form-control" id="texto7" rows="3"></textarea>
+                
               </div>
             </div>
 
@@ -243,28 +250,7 @@ include_once 'functions.php';
             <div class="row g-3 mb-3 align-items-center">
              
               <div class="col-6">
-                <label for="texto8" class="form-label fw-bold">Texto 8</label>
-                <textarea class="form-control" id="texto8" rows="3"></textarea>
-              </div>
-            </div>
-
-
-            <div class="row g-3 mb-3 align-items-center">
-              <div class="col-6">
-                <label for="titulo4" class="form-label fw-bold">Titulo 4</label>
-                <input type="text" class="form-control" id="titulo4">
-              </div>
-              <div class="col-6">
-                <label for="texto9" class="form-label fw-bold">Texto 9</label>
-                <input type="text" class="form-control" id="texto9">
-              </div>
-              <div class="col-6">
-                <label for="texto10" class="form-label fw-bold">Texto 10</label>
-                <input type="text" class="form-control" id="texto10">
-              </div>
-              <div class="col-6">
-                <label for="texto11" class="form-label fw-bold">Texto 11</label>
-                <textarea class="form-control" id="texto11" rows="3"></textarea>
+          
               </div>
             </div>
 
