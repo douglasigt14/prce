@@ -49,7 +49,7 @@
                 <div class="w-100 mt-4 mb-4">
                   <input type="file" name="foto-diferenciais" />
                   <input type="hidden" name="dir" value="/sobre/diferenciais">
-                  <img id="foto-diferenciais" class="img-fluid mt-3">
+                  <img id="foto-diferenciais" class="img-diferenciais img-fluid mt-3">
                 </div>
               </div>
               <div class="col-6">
@@ -287,7 +287,7 @@
             }
 
             document.querySelector("#foto-capa").src = root + "/" + data[0]['capa'];
-            // document.querySelector("#imagem-diferenciais").src = data[0]['imagem1'];
+            document.querySelector("#foto-diferenciais").src = root + "/" +data[0]['imagem1'];
             // document.querySelector("#foto-processos").src = data[0]['imagem2'];
 
 
