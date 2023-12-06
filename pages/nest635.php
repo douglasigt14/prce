@@ -9,20 +9,20 @@ hmtl, body {
 
 <div id="rootEmpreendimento">
         <div class="container-fluid p-0 m-0 part1">
-                <img src="<?= Functions::urlBase('assets/images/capa-nest635.jpg'); ?>" class="w-100">
+                <img id="capa" class="w-100">
                 <div class="w-100" id="divLogoEmpreendimento">
-                        <img src="<?= Functions::urlBase('assets/images/logoNest635.png'); ?>">
+                        <img id="logo">
                 </div>
         </div>
 
         <div class="container-fluid p-0 m-0 part2">
                 <div class="row">
                         <div class="col-md-7 part2-imagem">
-                                <img src="<?= Functions::urlBase('assets/images/nest635-i2.jpg'); ?>" class="w-100">
+                                <img id="imagem1" class="w-100">
                         </div>
                         <div class="col-md-5 part2-texto">
-                                <h1>Um novo conceito de se viver bem</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus metus rutrum tristique sagittis. Etiam sit amet placerat metus, vehicula sagittis lacus. Morbi ornare ante eu ligula pretium, non rhoncus est cursus. Phasellus aliquet elementum est, elementum semper metus venenatis quis. Vestibulum sed diam et quam semper cursus. Donec tincidunt tincidunt sapien, dictum euismod neque dignissim a.</p>
+                                <h1 id="titulo1"></h1>
+                                <p id="texto1"></p>
                         </div>
                 </div>
         </div>
@@ -30,13 +30,9 @@ hmtl, body {
         <div class="container-fluid p-0 m-0 part3">
                 <div class="row">
                         <div class="col-md-3">
-                                <h2>Plantas</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rhoncus metus rutrum tristique sagittis. Etiam sit amet placerat metus, vehicula sagittis lacus.</p>
-                                <p class="pt-3">
-                                        <strong>Em obras - Zona 08</strong><br>
-                                        R. Paraguai, 598 -Zona 08<br>
-                                        Arquitetura - A5 Arquitetura
-                                </p>
+                                <h2 id="titulo-plantas"></h2>
+                                <p id="texto-plantas"></p>
+                                <p id="endereco" class="pt-3"></p>
                         
                                 <div class="btn-group" id="selectPlantas">
                                         <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
@@ -172,15 +168,15 @@ hmtl, body {
         </div>
         
         <div class="container-fluid part5" id="divMapaRegiao">
-                <h1 class="title">Uma localização<br>estratégica muda tudo</h1>
-                <p class="sub-title">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam, nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+                <h1 id="titulo-localizacao" class="title"></h1>
+                <p id="texto-localizacao" class="sub-title"></p>
                 <div class="text-localizacao">
                         <img src="<?= Functions::urlBase('assets/icons/pinLocalizacao.svg'); ?>">
-                        <p>R. Paraguai, 598 - Zona 08</p>
-                        <a href="https://maps.google.com/maps/dir//R.+Paraguai+-+Zona+08+Maring%C3%A1+-+PR+87050-715/@-23.4476303,-51.9124752,17z/data=!4m5!4m4!1m0!1m2!1m1!1s0x94ecd09e4a3c9caf:0x8f5d681cebee4b03">Ver rota</a>
+                        <p id="localizacao"></p>
+                        <a id="rota-localizacao">Ver rota</a>
                 </div>
                 <div id="mapa">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.355847500895!2d-51.91505012474418!3d-23.447625357423437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd09e4a3c9caf%3A0x8f5d681cebee4b03!2sR.%20Paraguai%20-%20Zona%2008%2C%20Maring%C3%A1%20-%20PR%2C%2087050-715!5e0!3m2!1spt-BR!2sbr!4v1700347009871!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.355847500895!2d-51.91505012474418!3d-23.447625357423437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd09e4a3c9caf%3A0x8f5d681cebee4b03!2sR.%20Paraguai%20-%20Zona%2008%2C%20Maring%C3%A1%20-%20PR%2C%2087050-715!5e0!3m2!1spt-BR!2sbr!4v1700347009871!5m2!1spt-BR!2sbr" id="mapa-localizacao" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
                 <div class="row" id="divConhecaRegiao">
@@ -262,9 +258,9 @@ hmtl, body {
                 <div class="row" id="divEquipe">
                         <div class="col-md-4">
                                 <h1>Equipe</h1>
-                                <h5>A5 ARQUITETURA</h5>
-                                <h5>interiores</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis feugiat libero. Suspendisse venenatis lacus non urna pulvinar, vitae vestibulum tellus pharetra. Sed vitae nisi augue. Ut at fringilla mi.</p>
+                                <h5 id="titulo-equipe"></h5>
+                                <h5 id="subtitulo-equipe"></h5>
+                                <p id="texto-equipe"></p>
                                 <div id="divBtnsEquipe">
                                         <button id="btnAnteriorEquipe" class="refletir">
                                                 <img src="<?= Functions::urlBase('assets/icons/seta4.svg'); ?>">
@@ -295,8 +291,8 @@ hmtl, body {
                 <div class="container">
                         <div class="row">
                                 <div class="col-md-12">
-                                        <h1>Diferencias</h1>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel dictum orci, at sodales erat. Nulla sollicitudin mattis nulla, id auctor nibh. Pellentesque vitae ipsum risus. Vivamus malesuada vestibulum metus, vel condimentum dolor dignissim vel.</p>
+                                        <h1 id="titulo-diferenciais"></h1>
+                                        <p id="texto-diferenciais"></p>
                                 </div>
                         </div>
                         
@@ -396,8 +392,8 @@ hmtl, body {
                         <div class="row">
 
                                 <div class="col-md-12">
-                                        <h1>Evolução da obras</h1>
-                                        <p>Última atualização: Agosto 2023</p>
+                                        <h1 id="titulo-evolucaoObra"></h1>
+                                        <p id="texto-evolucaoObra"></p>
                                 </div>
                                 
                                 <div class="col-md-4" id="statusSecundarios">
@@ -466,19 +462,19 @@ hmtl, body {
                                 <div class="col-md-12" id="dadosGeraisEmpreendimento">
                                         <div>
                                                 <p>Área do terreno</p>
-                                                <h5>3.360m<sup>2</sup></h5>
+                                                <h5 id="areaTerreno-evolucaoObra"></h5>
                                         </div>
                                         <div>
                                                 <p>Área total</p>
-                                                <h5>22.728m<sup>2</sup></h5>
+                                                <h5 id="areaTotal-evolucaoObra"></h5>
                                         </div>
                                         <div>
                                                 <p>Tipologias</p>
-                                                <h5>105m<sup>2</sup> a 119m<sup>2</sup></h5>
+                                                <h5 id="tipologias-evolucaoObra"></h5>
                                         </div>
                                         <div>
                                                 <p>unidades</p>
-                                                <h5>100</h5>
+                                                <h5 id="unidades-evolucaoObra"></h5>
                                         </div>
                                 </div>
 
@@ -491,8 +487,8 @@ hmtl, body {
                         <div class="row">
 
                                 <div class="col-md-6 texto-form">
-                                        <h1>Conheça mais sobre o Nest 635</h1>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pretium, ipsum consequat posuere vestibulum, turpis ex pharetra ante, et finibus tortor quam sit amet nibh. Quisque porta in urna et faucibus. Aenean mollis pharetra ex, in scelerisque nisl scelerisque sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec vitae urna sed nisi efficitur sodales vitae in erat. Maecenas augue ante, ullamcorper at posuere sed, congue non nibh. </p>
+                                        <h1 id="titulo-formulario"></h1>
+                                        <p id="texto-formulario"></p>
                                 </div>
 
                                 <div class="col-md-6">
@@ -533,3 +529,78 @@ hmtl, body {
 </div>
 
 <?php require_once __DIR__ . '/footer.php'; ?>
+
+<script>
+    const url1 = 'requests/select.php?table=empreendimentos';
+
+    // Realiza a solicitação usando o fetch
+    fetch(url1)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro na solicitação: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data) {
+
+                console.log(data);
+                document.querySelector("#capa").src = data[0]['capa'];
+                document.querySelector("#logo").src = data[0]['logo'];
+                document.querySelector("#imagem1").src = data[0]['imagem1'];
+                document.querySelector("#titulo1").innerHTML = data[0]['titulo1'];
+                document.querySelector("#texto1").innerHTML = data[0]['texto1'];
+                document.querySelector("#titulo-plantas").innerHTML = data[0]['titulo_plantas'];
+                document.querySelector("#texto-plantas").innerHTML = data[0]['texto_plantas'];
+                document.querySelector("#endereco").innerHTML = data[0]['endereco'];
+                document.querySelector("#titulo-localizacao").innerHTML = data[0]['titulo_localizacao'];
+                document.querySelector("#texto-localizacao").innerHTML = data[0]['texto_localizacao'];
+                document.querySelector("#localizacao").innerHTML = data[0]['localizacao'];
+                document.querySelector("#rota-localizacao").href = data[0]['rota_localizacao'];
+                document.querySelector("#mapa-localizacao").src = data[0]['mapa_localizacao'];
+                document.querySelector("#titulo-equipe").innerHTML = data[0]['titulo_equipe'];
+                document.querySelector("#subtitulo-equipe").innerHTML = data[0]['subtitulo_equipe'];
+                document.querySelector("#texto-equipe").innerHTML = data[0]['texto_equipe'];
+                document.querySelector("#titulo-diferenciais").innerHTML = data[0]['titulo_diferenciais'];
+                document.querySelector("#texto-diferenciais").innerHTML = data[0]['texto_diferenciais'];
+                document.querySelector("#titulo-evolucaoObra").innerHTML = data[0]['titulo_evolucaoObra'];
+                document.querySelector("#texto-evolucaoObra").innerHTML = data[0]['texto_evolucaoObra'];
+                document.querySelector("#areaTerreno-evolucaoObra").innerHTML = data[0]['areaTerreno_evolucaoObra'];
+                document.querySelector("#areaTotal-evolucaoObra").innerHTML = data[0]['areaTotal_evolucaoObra'];
+                document.querySelector("#tipologias-evolucaoObra").innerHTML = data[0]['tipologias_evolucaoObra'];
+                document.querySelector("#unidades-evolucaoObra").innerHTML = data[0]['unidades_evolucaoObra'];
+                document.querySelector("#titulo-formulario").innerHTML = data[0]['titulo_formulario'];
+                document.querySelector("#texto-formulario").innerHTML = data[0]['texto_formulario'];
+                
+            }
+        })
+        .catch(error => {
+            // Manipula erros durante a solicitação
+            console.error('Erro durante a solicitação:', error);
+        });
+
+//     const url2 = 'requests/select.php?table=sobre_diferenciais';
+
+//     fetch(url2)
+//         .then(response => {
+//             if (!response.ok) {
+//                 throw new Error(`Erro na solicitação: ${response.statusText}`);
+//             }
+//             return response.json();
+//         })
+//         .then(data => {
+//             if (data) {
+
+//                 for (let i = 0; i < 6; i++) {//3
+//                     document.querySelector("#titulo_diferencial" + (i + 1)).innerHTML = data[i]['titulo'];
+//                     document.querySelector("#texto_diferencial" + (i + 1)).innerHTML = data[i]['texto'];
+//                 }
+
+//             }
+//         })
+//         .catch(error => {
+//             // Manipula erros durante a solicitação
+//             console.error('Erro durante a solicitação:', error);
+//         });
+
+</script>
