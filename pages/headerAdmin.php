@@ -45,26 +45,26 @@ include_once 'functions.php';
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link link-body-emphasis">
+            <a href="<?= Functions::urlBase('admin/contato'); ?>" class="nav-link link-body-emphasis">
               <i class="fa-solid fa-address-book me-1"></i>
               Contato
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link link-body-emphasis">
+            <a href="<?= Functions::urlBase('admin/trabalheconosco'); ?>" class="nav-link link-body-emphasis">
               <i class="fa-solid fa-briefcase me-1"></i>
               Trabalhe conosco
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link link-body-emphasis">
+            <a href="<?= Functions::urlBase('admin/empreendimentos'); ?>" class="nav-link link-body-emphasis">
               <i class="fa-solid fa-building me-1"></i>
               Empreendimentos
             </a>
           </li>
           </li>
           <li>
-            <a href="#" class="nav-link link-body-emphasis">
+            <a href="<?= Functions::urlBase('admin/info'); ?>" class="nav-link link-body-emphasis">
               <i class="fa-solid fa-sitemap me-1"></i>
               Informações gerais
             </a>
