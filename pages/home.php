@@ -1,9 +1,7 @@
 <?php require_once __DIR__ . '/header.php'; ?>
 
 <div class="container-fluid bg-primary" id="divVideoHome">
-    <video autoplay poster="assets\images\capaSobre.jpg" class="w-100" id="videoHome">
-        <source id="video" type="video/mp4">
-    </video>
+    <div id="video"></div>
 </div>
 
 <div class="container-fluid" id="divSetaHome">
@@ -186,7 +184,7 @@
         .then(data => {
             if (data) {
                 console.log(data);
-                document.querySelector("#video").src = data[0]['video'];
+                document.querySelector("#video").innerHTML = '<video autoplay class="w-100" id="videoHome"><source id="video" type="video/mp4" src="'+data[0]['video']+'"></video>';
                 document.querySelector("#titulo1").innerHTML = data[0]['titulo1'];
                 document.querySelector("#titulo2").innerHTML = data[0]['titulo2'];
             }
