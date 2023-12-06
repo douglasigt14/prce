@@ -23,7 +23,14 @@ class Functions {
 
     static function bibliotecaVideoHome($dir = "") {
         $pasta = 'assets/uploads/'.$dir; 
+
+        if (!is_dir($pasta)) {
+            echo "";
+        }
+        return;
+
         $diretorio = dir($pasta);
+
         $index = 1;
         $formatosVideoPermitidos = ['mp4', 'avi', 'mkv', 'mov', 'wmv', 'flv', 'webm', 'mpeg', 'mpg', '3gp', 'ogg', 'qt', 'swf', 'rm', 'asf', 'm4v', 'm2v', 'mpg2', 'mpg4', 'ts'];
         while ($arquivo = $diretorio -> read()) {
