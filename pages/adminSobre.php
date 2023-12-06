@@ -263,8 +263,6 @@
               console.error('Erro durante a solicitação:', error);
           });
     </script>
-    <script type="text/javascript">
-    $(document).ready(function() {
 
     <script>
       let root = window.location.origin;
