@@ -1,91 +1,4 @@
-<?php
-
-include_once 'functions.php';
-
-include_once 'functions.php';
-
-?>
-
-<!doctype html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin · PRC Empreendimentos</title>
-  <link href="<?= Functions::urlBase('assets/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
-  <link href="<?= Functions::urlBase('assets/fontawesome/css/all.min.css'); ?>" rel="stylesheet">
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico">
-
-  <!-- Custom styles for this template -->
-  <link href="<?= Functions::urlBase('pages/css/admin.css'); ?>" rel="stylesheet">
-
-</head>
-
-<body>
-  <main class="d-flex flex-nowrap">
-
-    <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" style="width: 280px;" id="menuHome">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <img src="<?= Functions::urlBase('assets/icons/logoPRC2.svg'); ?>" class="w-100" id="logo">
-      </a>
-      <hr>
-      <ul class="nav nav-pills flex-column mb-auto">
-        <ul class="nav nav-pills flex-column mb-auto">
-          <li class="nav-item">
-            <a href="<?= Functions::urlBase('admin'); ?>" class="nav-link link-body-emphasis">
-              <i class="fa-solid fa-house me-1"></i>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="<?= Functions::urlBase('admin/sobre'); ?>" class="nav-link active link-body-emphasis">
-              <i class="fa-solid fa-circle-info me-1"></i>
-              Sobre
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link link-body-emphasis">
-              <i class="fa-solid fa-address-book me-1"></i>
-              Contato
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link link-body-emphasis">
-              <i class="fa-solid fa-briefcase me-1"></i>
-              Trabalhe conosco
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link link-body-emphasis">
-              <i class="fa-solid fa-building me-1"></i>
-              Empreendimentos
-            </a>
-          </li>
-          </li>
-          <li>
-            <a href="#" class="nav-link link-body-emphasis">
-              <i class="fa-solid fa-sitemap me-1"></i>
-              Informações gerais
-            </a>
-          </li>
-          <li>
-            <a href="<?= Functions::urlBase('admin/uploads'); ?>" class="nav-link link-body-emphasis">
-              <i class="fa-solid fa-upload"></i>
-              Upload
-            </a>
-          </li>
-          <hr>
-          <li>
-            <a href="#" class="nav-link link-body-emphasis">
-              <i class="fa-solid fa-right-from-bracket"></i>
-              Sair
-            </a>
-          </li>
-        </ul>
-    </div>
+<?php require_once __DIR__ . '/headerAdmin.php'; ?>
 
     <div class="container p-3">
       <div class="row mt-5">
@@ -93,19 +6,19 @@ include_once 'functions.php';
           <input type="hidden" name="rota" value="/admin/sobre">
           <div class="col-md-12">
             <div class="row align-items-center mt-4 mb-4" id="selecaoCapa">
-              
+
               <div class="col-6">
-                  <label class="form-label fw-bold">Capa</label> <br>
-                    <input type="file" name="foto-capa" /> 
-                    <input type="hidden" name="dir" value="/sobre/capa">
-                    <img id="foto-capa" class="img-fluid mt-3">
+                <label class="form-label fw-bold">Capa</label> <br>
+                <input type="file" name="foto-capa" />
+                <input type="hidden" name="dir" value="/sobre/capa">
+                <img id="foto-capa" class="img-fluid mt-3">
               </div>
               <div class="col-6">
-                  <label for="titulo1" class="form-label fw-bold">Titulo 1</label>
-                  <input type="text" class="form-control" id="titulo1">
-                  <br>
-                  <label for="texto1" class="form-label fw-bold">Texto 1</label>
-                  <textarea class="form-control" id="texto1" rows="3"></textarea>
+                <label for="titulo1" class="form-label fw-bold">Titulo 1</label>
+                <input type="text" name="titulo1" class="form-control" id="titulo1">
+                <br>
+                <label for="texto1" name="texto1" class="form-label fw-bold">Texto 1</label>
+                <textarea class="form-control" id="texto1" rows="3"></textarea>
               </div>
             </div>
 
@@ -118,20 +31,20 @@ include_once 'functions.php';
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-4">
                 <label for="titulo2" class="form-label fw-bold">Titulo 2</label>
-                <input type="text" class="form-control" id="titulo2">
+                <input type="text" name="titulo1" class="form-control" id="titulo2">
               </div>
               <div class="col-4">
                 <label for="texto2" class="form-label fw-bold">Texto 2</label>
                 <input type="text" class="form-control" id="texto2">
               </div>
-                <div class="col-4">
-                      <label for="texto3" class="form-label fw-bold">Texto 3</label>
-                       <textarea class="form-control" id="texto3" rows="3"></textarea>
-               </div>
+              <div class="col-4">
+                <label for="texto3" class="form-label fw-bold">Texto 3</label>
+                <textarea class="form-control" id="texto3" rows="3"></textarea>
+              </div>
             </div>
 
             <div class="row g-3 mb-3 align-items-center">
-                <div  class="col-6" id="selecaoImagemDiferenciais">
+              <div class="col-6" id="selecaoImagemDiferenciais">
                 <label class="form-label fw-bold">Imagem Diferenciais</label>
                 <div class="w-100 mt-4 mb-4">
                   <input type="file" name="foto-diferenciais" />
@@ -139,13 +52,13 @@ include_once 'functions.php';
                   <img id="foto-diferenciais" class="img-fluid mt-3">
                 </div>
               </div>
-               <div class="col-6">
-                  <label for="titulo3" class="form-label fw-bold">Titulo 3</label>
-                  <input type="text" class="form-control" id="titulo3">
-                  <br>
-                  <label for="texto4" class="form-label fw-bold">Texto 4</label>
-                  <textarea class="form-control" id="texto4" rows="3"></textarea>
-                </div>
+              <div class="col-6">
+                <label for="titulo3" class="form-label fw-bold">Titulo 3</label>
+                <input type="text" class="form-control" id="titulo3">
+                <br>
+                <label for="texto4" class="form-label fw-bold">Texto 4</label>
+                <textarea class="form-control" id="texto4" rows="3"></textarea>
+              </div>
             </div>
 
 
@@ -232,25 +145,25 @@ include_once 'functions.php';
                 <input type="text" class="form-control" id="texto6">
               </div>
               <div class="col-6">
-                  <label for="texto7" class="form-label fw-bold">Texto 7</label>
-                    <textarea class="form-control" id="texto7" rows="3"></textarea><br>
+                <label for="texto7" class="form-label fw-bold">Texto 7</label>
+                <textarea class="form-control" id="texto7" rows="3"></textarea><br>
 
-                    <label for="texto8" class="form-label fw-bold">Texto 8</label>
+                <label for="texto8" class="form-label fw-bold">Texto 8</label>
                 <textarea class="form-control" id="texto8" rows="3"></textarea>
               </div>
             </div>
 
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-12">
-                
+
               </div>
             </div>
 
 
             <div class="row g-3 mb-3 align-items-center">
-             
+
               <div class="col-6">
-          
+
               </div>
             </div>
 
@@ -322,7 +235,7 @@ include_once 'functions.php';
               document.querySelector("#texto" + i).value = data[0]['texto' + i];
             }
 
-            document.querySelector("#foto-capa").src = root+"/"+data[0]['capa'];
+            document.querySelector("#foto-capa").src = root + "/" + data[0]['capa'];
             // document.querySelector("#imagem-diferenciais").src = data[0]['imagem1'];
             // document.querySelector("#foto-processos").src = data[0]['imagem2'];
 
@@ -359,9 +272,9 @@ include_once 'functions.php';
         })
         .then(data => {
           if (data) {
-            for (let i = 0; i < 6; i++) {//3
-                document.querySelector("#titulo_diferencial" + (i + 1)).value = data[i]['titulo'];
-                document.querySelector("#texto_diferencial" + (i + 1)).value = data[i]['texto'];
+            for (let i = 0; i < 6; i++) { //3
+              document.querySelector("#titulo_diferencial" + (i + 1)).value = data[i]['titulo'];
+              document.querySelector("#texto_diferencial" + (i + 1)).value = data[i]['texto'];
             }
 
           }
