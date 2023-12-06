@@ -11,14 +11,14 @@
                 <label class="form-label fw-bold">Capa</label> <br>
                 <input type="file" name="foto-capa" />
                 <input type="hidden" name="dir" value="/sobre/capa">
-                <img id="foto-capa" class="img-fluid mt-3">
+                <img name="capa" id="capa" class="img-fluid mt-3">
               </div>
               <div class="col-6">
                 <label for="titulo1" class="form-label fw-bold">Titulo 1</label>
                 <input type="text" name="titulo1" class="form-control" id="titulo1">
                 <br>
-                <label for="texto1" name="texto1" class="form-label fw-bold">Texto 1</label>
-                <textarea class="form-control" id="texto1" rows="3"></textarea>
+                <label for="texto1" class="form-label fw-bold">Texto 1</label>
+                <textarea name="texto1" class="form-control" id="texto1" rows="3"></textarea>
               </div>
             </div>
 
@@ -31,15 +31,15 @@
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-4">
                 <label for="titulo2" class="form-label fw-bold">Titulo 2</label>
-                <input type="text" name="titulo1" class="form-control" id="titulo2">
+                <input type="text" name="titulo2" class="form-control" id="titulo2">
               </div>
               <div class="col-4">
                 <label for="texto2" class="form-label fw-bold">Texto 2</label>
-                <input type="text" class="form-control" id="texto2">
+                <input type="text" name="texto2" class="form-control" id="texto2">
               </div>
               <div class="col-4">
                 <label for="texto3" class="form-label fw-bold">Texto 3</label>
-                <textarea class="form-control" id="texto3" rows="3"></textarea>
+                <textarea name="texto3" class="form-control" id="texto3" rows="3"></textarea>
               </div>
             </div>
 
@@ -49,15 +49,15 @@
                 <div class="w-100 mt-4 mb-4">
                   <input type="file" name="foto-diferenciais" />
                   <input type="hidden" name="dir" value="/sobre/diferenciais">
-                  <img id="foto-diferenciais" class="img-diferenciais img-fluid mt-3">
+                  <img name="foto-diferenciais" id="foto-diferenciais" class="img-diferenciais img-fluid mt-3">
                 </div>
               </div>
               <div class="col-6">
                 <label for="titulo3" class="form-label fw-bold">Titulo 3</label>
-                <input type="text" class="form-control" id="titulo3">
+                <input name="titulo3" type="text" class="form-control" id="titulo3">
                 <br>
                 <label for="texto4" class="form-label fw-bold">Texto 4</label>
-                <textarea class="form-control" id="texto4" rows="3"></textarea>
+                <textarea name="texto4" class="form-control" id="texto4" rows="3"></textarea>
               </div>
             </div>
 
@@ -65,66 +65,66 @@
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-6">
                 <label for="titulo_diferencial1" class="form-label fw-bold">Titulo Diferencial 1</label>
-                <input type="text" class="form-control" id="titulo_diferencial1">
+                <input name="titulo_diferencial1" type="text" class="form-control" id="titulo_diferencial1">
               </div>
               <div class="col-6">
                 <label for="texto_diferencial1" class="form-label fw-bold">Texto Diferencial 1</label>
-                <textarea class="form-control" id="texto_diferencial1" rows="3"></textarea>
+                <textarea name="texto_diferencial1" class="form-control" id="texto_diferencial1" rows="3"></textarea>
               </div>
             </div>
 
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-6">
                 <label for="titulo_diferencial2" class="form-label fw-bold">Titulo Diferencial 2</label>
-                <input type="text" class="form-control" id="titulo_diferencial2">
+                <input name="titulo_diferencial2" type="text" class="form-control" id="titulo_diferencial2">
               </div>
               <div class="col-6">
                 <label for="texto_diferencial2" class="form-label fw-bold">Texto Diferencial 2</label>
-                <textarea class="form-control" id="texto_diferencial2" rows="3"></textarea>
+                <textarea name="texto_diferencial2" class="form-control" id="texto_diferencial2" rows="3"></textarea>
               </div>
             </div>
 
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-6">
                 <label for="titulo_diferencial3" class="form-label fw-bold">Titulo Diferencial 3</label>
-                <input type="text" class="form-control" id="titulo_diferencial3">
+                <input name="titulo_diferencial3" type="text" class="form-control" id="titulo_diferencial3">
               </div>
               <div class="col-6">
                 <label for="texto_diferencial3" class="form-label fw-bold">Texto Diferencial 3</label>
-                <textarea class="form-control" id="texto_diferencial3" rows="3"></textarea>
+                <textarea name="texto_diferencial3" class="form-control" id="texto_diferencial3" rows="3"></textarea>
               </div>
             </div>
 
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-6">
                 <label for="titulo_diferencial4" class="form-label fw-bold">Titulo Diferencial 4</label>
-                <input type="text" class="form-control" id="titulo_diferencial4">
+                <input name="titulo_diferencial4" type="text" class="form-control" id="titulo_diferencial4">
               </div>
               <div class="col-6">
                 <label for="texto_diferencial4" class="form-label fw-bold">Texto Diferencial 4</label>
-                <textarea class="form-control" id="texto_diferencial4" rows="3"></textarea>
+                <textarea name="texto_diferencial4" class="form-control" id="texto_diferencial4" rows="3"></textarea>
               </div>
             </div>
 
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-6">
                 <label for="titulo_diferencial5" class="form-label fw-bold">Titulo Diferencial 5</label>
-                <input type="text" class="form-control" id="titulo_diferencial5">
+                <input name="titulo_diferencial5" type="text" class="form-control" id="titulo_diferencial5">
               </div>
               <div class="col-6">
                 <label for="texto_diferencial5" class="form-label fw-bold">Texto Diferencial 5</label>
-                <textarea class="form-control" id="texto_diferencial5" rows="3"></textarea>
+                <textarea name="texto_diferencial5" class="form-control" id="texto_diferencial5" rows="3"></textarea>
               </div>
             </div>
 
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-6">
                 <label for="titulo_diferencial6" class="form-label fw-bold">Titulo Diferencial 6</label>
-                <input type="text" class="form-control" id="titulo_diferencial6">
+                <input name="titulo_diferencial6" type="text" class="form-control" id="titulo_diferencial6">
               </div>
               <div class="col-6">
                 <label for="texto_diferencial6" class="form-label fw-bold">Texto Diferencial 6</label>
-                <textarea class="form-control" id="texto_diferencial6" rows="3"></textarea>
+                <textarea name="texto_diferencial6" class="form-control" id="texto_diferencial6" rows="3"></textarea>
               </div>
             </div>
 
@@ -136,20 +136,20 @@
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-6">
                 <label for="titulo4" class="form-label fw-bold">Titulo 4</label>
-                <input type="text" class="form-control" id="titulo4"><br>
+                <input name="titulo4" type="text" class="form-control" id="titulo4"><br>
 
                 <label for="texto5" class="form-label fw-bold">Texto 5</label>
-                <input type="text" class="form-control" id="texto5"><br>
+                <input name="texto5" type="text" class="form-control" id="texto5"><br>
 
                 <label for="texto6" class="form-label fw-bold">Texto 6</label>
-                <input type="text" class="form-control" id="texto6">
+                <input name="texto6" type="text" class="form-control" id="texto6">
               </div>
               <div class="col-6">
                 <label for="texto7" class="form-label fw-bold">Texto 7</label>
-                <textarea class="form-control" id="texto7" rows="3"></textarea><br>
+                <textarea name="texto7" class="form-control" id="texto7" rows="3"></textarea><br>
 
                 <label for="texto8" class="form-label fw-bold">Texto 8</label>
-                <textarea class="form-control" id="texto8" rows="3"></textarea>
+                <textarea name="texto8" class="form-control" id="texto8" rows="3"></textarea>
               </div>
             </div>
 
@@ -286,7 +286,7 @@
               document.querySelector("#texto" + i).value = data[0]['texto' + i];
             }
 
-            document.querySelector("#foto-capa").src = root + "/" + data[0]['capa'];
+            document.querySelector("#capa").src = root + "/" + data[0]['capa'];
             document.querySelector("#foto-diferenciais").src = root + "/" +data[0]['imagem1'];
             // document.querySelector("#foto-processos").src = data[0]['imagem2'];
 

@@ -7,9 +7,25 @@
             <div class="form mb-3 mt-3 w-100 d-flex align-items-center justify-content-center">
               <h4>Vídeo Principal:</h2>
               <button type="button" class="btn btn-primary m-0 ms-3" data-bs-toggle="modal" data-bs-target="#modalVideo">Selecionar novo vídeo</button>              
+              <div class="col-2"></div>
+              <video width="320" height="240" controls>
+                <source id="video" type="video/mp4">
+              </video>
+              <div class="col-2"></div>
             </div>
 
             <hr class="mt-5 mb-5">
+
+            <div class="row g-3 mb-3 align-items-center">
+                <div class="col-6">
+                        <label for="titulo1" class="form-label fw-bold">Titulo 1</label>
+                        <input type="text" name="titulo1" class="form-control" id="titulo1">
+                    </div>
+                    <div class="col-6">
+                        <label for="titulo2" class="form-label fw-bold">Titulo 1</label>
+                        <input type="text" name="titulo2" class="form-control" id="titulo2">
+                    </div>
+                </div>
 
             <div class="w-100 d-flex align-items-center justify-content-center">
               <h4 class="w-50">Comentários</h2>
@@ -207,6 +223,58 @@
       });
       
     });  
+
+    const root = window.location.origin;
+    const url1 = root + `/requests/select.php?table=home_data`;
+
+    // Realiza a solicitação usando o fetch
+    fetch(url1)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro na solicitação: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data) {
+                console.log(data);
+                document.querySelector("#video").src = root + "/" + data[0]['video'];
+                document.querySelector("#titulo1").value = data[0]['titulo1'];
+                document.querySelector("#titulo2").value = data[0]['titulo2'];
+            }
+        })
+        .catch(error => {
+            // Manipula erros durante a solicitação
+            console.error('Erro durante a solicitação:', error);
+        });
+
+    // const url2 = 'requests/select.php?table=comentarios';
+
+    // fetch(url2)
+    //     .then(response => {
+    //         if (!response.ok) {
+    //             throw new Error(`Erro na solicitação: ${response.statusText}`);
+    //         }
+    //         return response.json();
+    //     })
+    //     .then(data => {
+    //         if (data) {
+    //             console.log(data);
+    //             //document.querySelector("#capa").innerHTML = data[0]['capa'];
+    //             for (let i = 0; i <= 3; i++) {//3
+    //                 document.querySelector("#texto" + (i + 1)).innerHTML = data[i]['texto'];
+    //                 document.querySelector("#imagem" + (i + 1)).src = data[i]['imagem'];
+    //                 document.querySelector("#nome" + (i + 1)).innerHTML = data[i]['nome'];
+    //                 document.querySelector("#empreendimento" + (i + 1)).innerHTML = data[i]['nome_empreendimento'];
+    //             }
+
+    //         }
+    //     })
+    //     .catch(error => {
+    //         // Manipula erros durante a solicitação
+    //         console.error('Erro durante a solicitação:', error);
+    //     });
+
     </script>
   
   </body>
