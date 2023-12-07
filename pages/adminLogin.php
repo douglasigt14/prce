@@ -24,6 +24,8 @@ include_once 'functions.php';
             display: flex;
             justify-content: center;
             align-items: center;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(233, 233, 233, 1) 50%, rgba(255, 255, 255, 1) 100%);
         }
 
         .login-container {
@@ -37,17 +39,16 @@ include_once 'functions.php';
             padding: 20px;
             border-radius: 1rem;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
 
-        .login-form {
-            
+        .logo img {
+            width: 11rem;
+            margin-bottom: 3rem;
         }
 
-        h2 {
-            text-align: center;
-            color: #333333;
-            margin-bottom: 1rem;
-        }
+        .login-form {}
+
 
         label {
             display: block;
@@ -57,10 +58,14 @@ include_once 'functions.php';
 
         input {
             width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-            border: 1px solid #cccccc;
+            height: 2rem;
+            margin-bottom: 1rem;
+            border: 0.12rem solid #cccccc;
             border-radius: 3px;
+        }
+
+        input::placeholder {
+            padding-left: 0.2rem;
         }
 
         button {
@@ -82,13 +87,15 @@ include_once 'functions.php';
 <body>
     <div class="all">
         <div class="login-container">
-        <h2>Admin Login</h2>
+            <div class="logo">
+                <img src="<?= Functions::urlBase('assets/icons/logoPRC2.svg'); ?>">
+            </div>
             <form class="login-form">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" placeholder="Username" required>
 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
 
                 <button type="submit">Login</button>
             </form>
