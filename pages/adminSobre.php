@@ -1,12 +1,14 @@
 <?php require_once __DIR__ . '/headerAdmin.php'; ?>
 
-    <div class="container p-3">
-      <div class="row mt-5">
-        <form action="<?= Functions::urlBase('upload.php'); ?>" method="post" enctype="multipart/form-data">
+    <div class="conteiner-principal p-5">
+      <div class="row mt-3">
+      <h3>Sobre</h3>
+        <form action="<?= Functions::urlBase('requests/insert.php'); ?>" method="post" enctype="multipart/form-data">
           <input type="hidden" name="rota" value="/admin/sobre">
+          <input type="hidden" name="table" value="sobre">
           <div class="col-md-12">
             <div class="row align-items-center mt-4 mb-4" id="selecaoCapa">
-
+  
               <div class="col-6">
                 <label class="form-label fw-bold">Capa</label> <br>
                 <input type="file" name="foto-capa" />
@@ -43,7 +45,7 @@
               </div>
             </div>
 
-            <div class="row g-3 mb-3 align-items-center">
+            <div class="row g-3 mb-3 align-items-start">
               <div class="col-6" id="selecaoImagemDiferenciais">
                 <label class="form-label fw-bold">Imagem Diferenciais</label>
                 <div class="w-100 mt-4 mb-4">
@@ -53,80 +55,36 @@
                 </div>
               </div>
               <div class="col-6">
+                <br><br><br><br>
                 <label for="titulo3" class="form-label fw-bold">Titulo 3</label>
                 <input name="titulo3" type="text" class="form-control" id="titulo3">
                 <br>
                 <label for="texto4" class="form-label fw-bold">Texto 4</label>
-                <textarea name="texto4" class="form-control" id="texto4" rows="3"></textarea>
+                <textarea name="texto4" class="form-control" id="texto4" rows="3"></textarea><br>
+
+                
+                <?php 
+                  for ($i=1; $i <= 6; $i++) { 
+                ?>
+                <div class="row g-3 mb-3 align-items-center">
+                  <div class="col-6">
+                    <label for="titulo_diferencial<?php echo $i?>" class="form-label fw-bold">Titulo Diferencial <?php echo $i?></label>
+                    <input name="titulo_diferencial<?php echo $i?>" type="text" class="form-control" id="titulo_diferencial<?php echo $i?>">
+                  </div>
+                  <div class="col-6">
+                    <label for="texto_diferencial1" class="form-label fw-bold">Texto Diferencial <?php echo $i?></label>
+                    <textarea name="texto_diferencial<?php echo $i?>" class="form-control" id="texto_diferencial<?php echo $i?>" rows="3"></textarea>
+                  </div>
+                </div>
+                <?php 
+                  }
+                ?>
               </div>
             </div>
 
 
-            <div class="row g-3 mb-3 align-items-center">
-              <div class="col-6">
-                <label for="titulo_diferencial1" class="form-label fw-bold">Titulo Diferencial 1</label>
-                <input name="titulo_diferencial1" type="text" class="form-control" id="titulo_diferencial1">
-              </div>
-              <div class="col-6">
-                <label for="texto_diferencial1" class="form-label fw-bold">Texto Diferencial 1</label>
-                <textarea name="texto_diferencial1" class="form-control" id="texto_diferencial1" rows="3"></textarea>
-              </div>
-            </div>
+            
 
-            <div class="row g-3 mb-3 align-items-center">
-              <div class="col-6">
-                <label for="titulo_diferencial2" class="form-label fw-bold">Titulo Diferencial 2</label>
-                <input name="titulo_diferencial2" type="text" class="form-control" id="titulo_diferencial2">
-              </div>
-              <div class="col-6">
-                <label for="texto_diferencial2" class="form-label fw-bold">Texto Diferencial 2</label>
-                <textarea name="texto_diferencial2" class="form-control" id="texto_diferencial2" rows="3"></textarea>
-              </div>
-            </div>
-
-            <div class="row g-3 mb-3 align-items-center">
-              <div class="col-6">
-                <label for="titulo_diferencial3" class="form-label fw-bold">Titulo Diferencial 3</label>
-                <input name="titulo_diferencial3" type="text" class="form-control" id="titulo_diferencial3">
-              </div>
-              <div class="col-6">
-                <label for="texto_diferencial3" class="form-label fw-bold">Texto Diferencial 3</label>
-                <textarea name="texto_diferencial3" class="form-control" id="texto_diferencial3" rows="3"></textarea>
-              </div>
-            </div>
-
-            <div class="row g-3 mb-3 align-items-center">
-              <div class="col-6">
-                <label for="titulo_diferencial4" class="form-label fw-bold">Titulo Diferencial 4</label>
-                <input name="titulo_diferencial4" type="text" class="form-control" id="titulo_diferencial4">
-              </div>
-              <div class="col-6">
-                <label for="texto_diferencial4" class="form-label fw-bold">Texto Diferencial 4</label>
-                <textarea name="texto_diferencial4" class="form-control" id="texto_diferencial4" rows="3"></textarea>
-              </div>
-            </div>
-
-            <div class="row g-3 mb-3 align-items-center">
-              <div class="col-6">
-                <label for="titulo_diferencial5" class="form-label fw-bold">Titulo Diferencial 5</label>
-                <input name="titulo_diferencial5" type="text" class="form-control" id="titulo_diferencial5">
-              </div>
-              <div class="col-6">
-                <label for="texto_diferencial5" class="form-label fw-bold">Texto Diferencial 5</label>
-                <textarea name="texto_diferencial5" class="form-control" id="texto_diferencial5" rows="3"></textarea>
-              </div>
-            </div>
-
-            <div class="row g-3 mb-3 align-items-center">
-              <div class="col-6">
-                <label for="titulo_diferencial6" class="form-label fw-bold">Titulo Diferencial 6</label>
-                <input name="titulo_diferencial6" type="text" class="form-control" id="titulo_diferencial6">
-              </div>
-              <div class="col-6">
-                <label for="texto_diferencial6" class="form-label fw-bold">Texto Diferencial 6</label>
-                <textarea name="texto_diferencial6" class="form-control" id="texto_diferencial6" rows="3"></textarea>
-              </div>
-            </div>
 
             <div class="row" id="selecaoImagemFinal">
               <label class="form-label fw-bold">Imagem</label>
@@ -160,26 +118,28 @@
             </div>
 
 
-            <div class="row g-3 mb-3 align-items-center">
-
-              <div class="col-6">
-
-              </div>
-            </div>
-
-            <div class="row g-3 mb-3 align-items-center">
-              <div class="col-12">
-                <button type="submit" class="btn btn-success btn-lg w-100">Salvar</button>
-              </div>
-            </div>
 
           </div>
 
-      </div>
+      
+       
+        </div>
 
     </div>
     </div>
     </div>
+
+    <footer class="fixed-bottom  text-light text-center p-3">
+        <div class="row">
+          <div class="col-10"></div>
+          <div class="col-2">
+                  <button type="submit" class="btn btn-save btn-success">Salvar</button>
+              </form>
+          </div>
+          
+        </div>
+  </footer>
+
 
     <!-- Modal Video -->
     <div class="modal" tabindex="-1" id="modalVideo">
@@ -201,7 +161,6 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" id="btnSalvarBDVideo">Salvar</button>
-            </form>
           </div>
         </div>
       </div>
