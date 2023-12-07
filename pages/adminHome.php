@@ -8,9 +8,7 @@
               <h4>Vídeo Principal:</h2>
               <button type="button" class="btn btn-primary m-0 ms-3" data-bs-toggle="modal" data-bs-target="#modalVideo">Selecionar novo vídeo</button>              
               <div class="col-2"></div>
-              <video width="320" height="240" controls>
-                <source id="video" type="video/mp4">
-              </video>
+              <video id="videoHome" autoplay height="360" width="340"></video>
               <div class="col-2"></div>
             </div>
 
@@ -238,7 +236,7 @@
         .then(data => {
             if (data) {
                 console.log(data);
-                document.querySelector("#video").src = root + "/" + data[0]['video'];
+                document.querySelector("#videoHome").innerHTML = '<source id="video" type="video/mp4" src="' + root + "/" + data[0]['video']+'">';
                 document.querySelector("#titulo1").value = data[0]['titulo1'];
                 document.querySelector("#titulo2").value = data[0]['titulo2'];
             }

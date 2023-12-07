@@ -3,7 +3,8 @@
 class Router
 {
     private $routes = array(
-        "admin" => "adminHome",
+        "admin" => "adminLogin",
+        "admin/home" => "adminHome",
         "admin/uploads" => "adminUploads",
         "admin/sobre" => "adminSobre",
         "admin/contato" => "adminContato",

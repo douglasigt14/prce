@@ -33,7 +33,7 @@ include_once 'functions.php';
       <ul class="nav nav-pills flex-column mb-auto">
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="<?= Functions::urlBase('admin'); ?>" class="nav-link link-body-emphasis">
+            <a href="<?= Functions::urlBase('admin/home'); ?>" class="nav-link link-body-emphasis">
               <i class="fa-solid fa-house me-1"></i>
               Home
             </a>
