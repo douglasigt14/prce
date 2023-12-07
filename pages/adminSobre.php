@@ -3,9 +3,8 @@
     <div class="conteiner-principal p-5">
       <div class="row mt-3">
       <h3>Sobre</h3>
-        <form action="<?= Functions::urlBase('requests/insert.php'); ?>" method="post" enctype="multipart/form-data">
+        <form action="<?= Functions::urlBase('requests/insertSobre.php'); ?>" method="post" enctype="multipart/form-data">
           <input type="hidden" name="rota" value="/admin/sobre">
-          <input type="hidden" name="table" value="sobre">
           <div class="col-md-12">
             <div class="row align-items-center mt-4 mb-4" id="selecaoCapa">
   
@@ -46,7 +45,7 @@
             </div>
 
             <div class="row g-3 mb-3 align-items-start">
-              <div class="col-6" id="selecaoImagemDiferenciais">
+              <div class="col-5" id="selecaoImagemDiferenciais">
                 <label class="form-label fw-bold">Imagem Diferenciais</label>
                 <div class="w-100 mt-4 mb-4">
                   <input type="file" name="foto-diferenciais" />
@@ -54,8 +53,7 @@
                   <img name="foto-diferenciais" id="foto-diferenciais" class="img-diferenciais img-fluid mt-3">
                 </div>
               </div>
-              <div class="col-6">
-                <br><br><br><br>
+              <div class="col-7">
                 <label for="titulo3" class="form-label fw-bold">Titulo 3</label>
                 <input name="titulo3" type="text" class="form-control" id="titulo3">
                 <br>
