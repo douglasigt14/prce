@@ -1,12 +1,13 @@
 <?php require_once __DIR__ . '/headerAdmin.php'; ?>
 
-    <div class="container p-3">
+    <div class="conteiner-principal p-5">
       <div class="row mt-5">
-        <form action="<?= Functions::urlBase('upload.php'); ?>" method="post" enctype="multipart/form-data">
+        <form action="<?= Functions::urlBase('requests/insert.php'); ?>" method="post" enctype="multipart/form-data">
           <input type="hidden" name="rota" value="/admin/sobre">
+          <input type="hidden" name="table" value="sobre">
           <div class="col-md-12">
             <div class="row align-items-center mt-4 mb-4" id="selecaoCapa">
-
+  
               <div class="col-6">
                 <label class="form-label fw-bold">Capa</label> <br>
                 <input type="file" name="foto-capa" />
@@ -160,26 +161,28 @@
             </div>
 
 
-            <div class="row g-3 mb-3 align-items-center">
-
-              <div class="col-6">
-
-              </div>
-            </div>
-
-            <div class="row g-3 mb-3 align-items-center">
-              <div class="col-12">
-                <button type="submit" class="btn btn-success btn-lg w-100">Salvar</button>
-              </div>
-            </div>
 
           </div>
 
-      </div>
+      
+       
+        </div>
 
     </div>
     </div>
     </div>
+
+    <footer class="fixed-bottom  text-light text-center p-3">
+        <div class="row">
+          <div class="col-10"></div>
+          <div class="col-2">
+                  <button type="submit" class="btn btn-save btn-success">Salvar</button>
+              </form>
+          </div>
+          
+        </div>
+  </footer>
+
 
     <!-- Modal Video -->
     <div class="modal" tabindex="-1" id="modalVideo">
@@ -201,7 +204,6 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" id="btnSalvarBDVideo">Salvar</button>
-            </form>
           </div>
         </div>
       </div>
