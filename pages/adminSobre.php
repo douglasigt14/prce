@@ -5,7 +5,6 @@
       <h3>Sobre</h3>
         <form action="<?= Functions::urlBase('requests/insertSobre.php'); ?>" method="post" enctype="multipart/form-data">
           <input type="hidden" name="rota" value="/admin/sobre">
-          <input type="hidden" name="table" value="sobre">
           <div class="col-md-12">
             <div class="row align-items-center mt-4 mb-4" id="selecaoCapa">
   
