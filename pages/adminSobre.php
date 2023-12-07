@@ -3,7 +3,7 @@
     <div class="conteiner-principal p-5">
       <div class="row mt-3">
       <h3>Sobre</h3>
-        <form action="<?= Functions::urlBase('requests/insert.php'); ?>" method="post" enctype="multipart/form-data">
+        <form action="<?= Functions::urlBase('requests/insertSobre.php'); ?>" method="post" enctype="multipart/form-data">
           <input type="hidden" name="rota" value="/admin/sobre">
           <input type="hidden" name="table" value="sobre">
           <div class="col-md-12">
