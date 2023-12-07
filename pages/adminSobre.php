@@ -46,7 +46,7 @@
             </div>
 
             <div class="row g-3 mb-3 align-items-start">
-              <div class="col-6" id="selecaoImagemDiferenciais">
+              <div class="col-5" id="selecaoImagemDiferenciais">
                 <label class="form-label fw-bold">Imagem Diferenciais</label>
                 <div class="w-100 mt-4 mb-4">
                   <input type="file" name="foto-diferenciais" />
@@ -54,8 +54,7 @@
                   <img name="foto-diferenciais" id="foto-diferenciais" class="img-diferenciais img-fluid mt-3">
                 </div>
               </div>
-              <div class="col-6">
-                <br><br><br><br>
+              <div class="col-7">
                 <label for="titulo3" class="form-label fw-bold">Titulo 3</label>
                 <input name="titulo3" type="text" class="form-control" id="titulo3">
                 <br>
