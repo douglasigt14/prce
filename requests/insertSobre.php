@@ -7,14 +7,10 @@ $rota = $_POST["rota"] ?? "";
 
 $pdo = new Database();
 
-$payloadSobre = [
-    "titulo" => $_POST['titulo'],
-    "texto" => $_POST['texto']
-];
+$payloadSobre = [];
 
 for ($i=1; $i <= 4; $i++) { 
     $payloadSobre['titulo'.$i] =   $_POST['titulo'.$i];
-    $payload['x'] = 10;
 }
 
 for ($i=1; $i <= 8; $i++) { 
