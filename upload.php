@@ -1,7 +1,7 @@
 <?php 
 
 $baseDir = "assets" . DIRECTORY_SEPARATOR . "uploads" . DIRECTORY_SEPARATOR;
-$uploadDir = $_POST["dir"] ?? "/admin/uploads";
+$uploadDir = $_POST["dir"] ?? "";
 $rota = $_POST["rota"] ?? "";
 
 // Verifica se a pasta de destino existe, se não, cria-a

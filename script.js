@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    
     /*** HOME ***/
     $('html').on('click', function() {
         $('#videoHome').trigger('play');

@@ -5,29 +5,34 @@
       <h3>Sobre</h3>
         <form action="<?= Functions::urlBase('requests/insertSobre.php'); ?>" method="post" enctype="multipart/form-data">
           <input type="hidden" name="rota" value="/admin/sobre">
+          <input type="hidden" name="dir" value="sobre">
           <div class="col-md-12">
             <div class="row align-items-center mt-4 mb-4" id="selecaoCapa">
-  
+                <div class="col-3"></div>
               <div class="col-6">
                 <label class="form-label fw-bold">Capa</label> <br>
-                <input type="file" name="foto-capa" />
-                <input type="hidden" name="dir" value="/sobre/capa">
+                <input type="file" class="form-control" name="foto-capa" />
                 <img name="capa" id="capa" class="img-fluid mt-3">
               </div>
+              <div class="col-3"></div>
+            </div>
+            <div class="row align-items-center mb-4">
               <div class="col-6">
                 <label for="titulo1" class="form-label fw-bold">Titulo 1</label>
                 <input type="text" name="titulo1" class="form-control" id="titulo1">
-                <br>
+              </div>
+              <div class="col-6">
                 <label for="texto1" class="form-label fw-bold">Texto 1</label>
                 <textarea name="texto1" class="form-control" id="texto1" rows="3"></textarea>
               </div>
             </div>
-
             <div class="row g-3 mb-3 align-items-center">
+              <div class="col-3"></div>
               <div class="col-6 align-items-center">
-                <label for="#" class="form-label fw-bold">Vídeo:</label>
-                <button type="button" class="btn btn-primary m-0 ms-1 w-auto" data-bs-toggle="modal" data-bs-target="#modalVideo">Selecionar novo vídeo</button>
+                <label for="#" class="form-label fw-bold">Vídeo:</label><br>
+                <input type="file" class="form-control" name="video" />
               </div>
+              <div class="col-3"></div>
             </div>
             <div class="row g-3 mb-3 align-items-center">
               <div class="col-4">
@@ -48,9 +53,8 @@
               <div class="col-5" id="selecaoImagemDiferenciais">
                 <label class="form-label fw-bold">Imagem Diferenciais</label>
                 <div class="w-100 mt-4 mb-4">
-                  <input type="file" name="foto-diferenciais" />
-                  <input type="hidden" name="dir" value="/sobre/diferenciais">
-                  <img name="foto-diferenciais" id="foto-diferenciais" class="img-diferenciais img-fluid mt-3">
+                  <input type="file" class="form-control" name="foto-diferenciais" />
+                  <img  id="foto-diferenciais" class="img-diferenciais img-fluid mt-3">
                 </div>
               </div>
               <div class="col-7">
@@ -85,11 +89,17 @@
 
 
             <div class="row" id="selecaoImagemFinal">
-              <label class="form-label fw-bold">Imagem</label>
-              <?= Functions::bibliotecaImages(); ?>
+              <div class="col-3"></div>
+              <div class="col-6">
+                <label class="form-label fw-bold">Imagem</label>
+                <input type="file" class="form-control" name="foto-processos" />
+                <img  id="foto-processos" class="img-diferenciais img-fluid mt-3">
+              </div>
+              <div class="col-3"></div>
+              
             </div>
 
-            <div class="row g-3 mb-3 align-items-center">
+            <div class="row g-3 mb-3 mt-3 align-items-center">
               <div class="col-6">
                 <label for="titulo4" class="form-label fw-bold">Titulo 4</label>
                 <input name="titulo4" type="text" class="form-control" id="titulo4"><br>
@@ -185,9 +195,14 @@
                       document.querySelector("#titulo"+i).value = data[0]['titulo'+i];
                   }
 
-                  for (let i = 1; i <= 11; i++) {//11
+                  for (let i = 1; i <= 8; i++) {//11
                         document.querySelector("#texto"+i).value = data[0]['texto'+i];
                   }
+
+                  document.querySelector("#capa").src = siteRoot + "/" + data[0]['capa'];
+                  document.querySelector("#foto-diferenciais").src = siteRoot + "/" +data[0]['imagem1'];
+                  document.querySelector("#foto-processos").src = siteRoot + "/" +data[0]['imagem2'];
+
 
               }
           })
@@ -196,100 +211,29 @@
           });
 
 
-          const urlDiferenciais = `${siteRoot}/requests/select.php?table=sobre_diferenciais`;
-          fetch(url)
-          .then(response => {
-              if (!response.ok) {
-                  throw new Error(`Erro na solicitação: ${response.statusText}`);
-              }
-              return response.json();
-          })
-          .then(data => {
-              if(data){
-                  for (let i = 1; i <= 4; i++) {//3
-                      document.querySelector("#titulo"+i).value = data[0]['titulo'+i];
-                  }
+        const url2 = `${siteRoot}/requests/select.php?table=sobre_diferenciais`;
 
-                  for (let i = 1; i <= 11; i++) {//11
-                        document.querySelector("#texto"+i).value = data[0]['texto'+i];
-                  }
-
-              }
-          })
-          .catch(error => {
-              console.error('Erro durante a solicitação:', error);
-          });
-    </script>
-
-    <script>
-      let root = window.location.origin;
-      const url1 = root + '/requests/select.php?table=sobre';
-
-      // Realiza a solicitação usando o fetch
-      fetch(url1)
+        fetch(url2)
         .then(response => {
-          if (!response.ok) {
-            throw new Error(`Erro na solicitação: ${response.statusText}`);
-          }
-          return response.json();
+            if (!response.ok) {
+                throw new Error(`Erro na solicitação: ${response.statusText}`);
+            }
+            return response.json();
         })
         .then(data => {
-          if (data) {
-            for (let i = 1; i <= 4; i++) { //3
-              document.querySelector("#titulo" + i).value = data[0]['titulo' + i];
+            if (data) {
+
+                //document.querySelector("#capa").innerHTML = data[0]['capa'];
+                for (let i = 0; i < 6; i++) {//3
+                    document.querySelector("#titulo_diferencial" + (i + 1)).value = data[i]['titulo'];
+                    document.querySelector("#texto_diferencial" + (i + 1)).value = data[i]['texto'];
+                }
+
             }
-
-            for (let i = 1; i <= 8; i++) { //11
-              document.querySelector("#texto" + i).value = data[0]['texto' + i];
-            }
-
-            document.querySelector("#capa").src = root + "/" + data[0]['capa'];
-            document.querySelector("#foto-diferenciais").src = root + "/" +data[0]['imagem1'];
-            // document.querySelector("#foto-processos").src = data[0]['imagem2'];
-
-
-            // const config = {
-            //     autoplay: false,
-            //     ui: {
-            //         image: data[0]['capa'],
-            //     },
-            //     sources: [
-            //         {
-            //             type: "mp4",
-            //             src: data[0]['video'],
-            //         }
-            //     ],
-            // };
-            // const element = document.querySelector('#videoSobre');
-            // const player = IndigoPlayer.init(element, config);
-          }
         })
         .catch(error => {
-          // Manipula erros durante a solicitação
-          console.error('Erro durante a solicitação:', error);
-        });
-
-      const url2 = root + '/requests/select.php?table=sobre_diferenciais';
-
-      fetch(url2)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`Erro na solicitação: ${response.statusText}`);
-          }
-          return response.json();
-        })
-        .then(data => {
-          if (data) {
-            for (let i = 0; i < 6; i++) { //3
-              document.querySelector("#titulo_diferencial" + (i + 1)).value = data[i]['titulo'];
-              document.querySelector("#texto_diferencial" + (i + 1)).value = data[i]['texto'];
-            }
-
-          }
-        })
-        .catch(error => {
-          // Manipula erros durante a solicitação
-          console.error('Erro durante a solicitação:', error);
+            // Manipula erros durante a solicitação
+            console.error('Erro durante a solicitação:', error);
         });
     </script>
 
@@ -371,7 +315,6 @@
           var empreendimento = $("#selectEmpreendimento option:selected").val();
           var comentario = $("#textComentario").val();
 
-          console.log(nameImagem + "\n" + nome + "\n" + empreendimento + "\n" + comentario);
 
         });
 

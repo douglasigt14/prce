@@ -1,8 +1,8 @@
 <?php require_once __DIR__ . '/header.php'; ?>
 
 <div class="container-fluid bg-primary" id="divVideoHome">
-<video class="w-100" id="videoHome">
-    
+<video class="w-100" id="videoHome" src="" autoplay>
+
 </video>
 </div>
 
@@ -173,6 +173,7 @@
 <?php require_once __DIR__ . '/footer.php'; ?>
 
 <script>
+    
     const url1 = 'requests/select.php?table=home_data';
 
     // Realiza a solicitação usando o fetch
@@ -185,8 +186,8 @@
         })
         .then(data => {
             if (data) {
-                console.log(data);
-                document.querySelector("#videoHome").innerHTML = '<source id="video" type="video/mp4" src="'+data[0]['video']+'">';
+                document.querySelector("#videoHome").src  = data[0]['video'];// ;'<source id="video" type="video/mp4" src="'+data[0]['video']+'">';
+                document.querySelector("#videoHome").click();
                 document.querySelector("#titulo1").innerHTML = data[0]['titulo1'];
                 document.querySelector("#titulo2").innerHTML = data[0]['titulo2'];
             }
