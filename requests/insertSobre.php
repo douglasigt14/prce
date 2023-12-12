@@ -58,5 +58,3 @@ function uploadImg($file, $dirP){
 
 
 
-
-

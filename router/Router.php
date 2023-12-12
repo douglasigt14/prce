@@ -9,7 +9,7 @@ class Router
         "admin/sobre" => "adminSobre",
         "admin/contato" => "adminContato",
         "admin/trabalheconosco" => "adminTrabalheConosco",
-        // "admin/empreendimentos" => "adminEmpreendimentos",
+        "admin/empreendimentos" => "adminEmpreendimentos",
         // "admin/info" => "adminInfo",
         "home" => "home",
         "empreendimentos" => "empreendimentos",
