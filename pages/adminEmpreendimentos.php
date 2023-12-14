@@ -7,9 +7,44 @@
       <input type="hidden" name="rota" value="/admin/sobre">
       <input type="hidden" name="dir" value="sobre">
       <div class="col-md-12">
-        <div class="row align-items-center mt-4 mb-4" id="selecaoCapa">
+        <div class="row align-items-center mt-4 mb-4">
           <div class="table-responsive mt-1">
-            <h5>Carrousel Empreendimentos</h5>
+            <h5>Carrousel de Empreendimentos</h5>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Empreendimento</th>
+                  <th scope="col">Imagem</th>
+                  <th scope="col">texto</th>
+                  <th scope="col">link</th>
+                  <th scope="col"> </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>@mdo</td>
+                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                  <td>@mdo</td>
+                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row align-items-center mb-4">
+          <div class="table-responsive mt-1">
+            <h5>Mural de Empreendimentos</h5>
             <table class="table table-striped">
               <thead>
                 <tr>
@@ -39,9 +74,9 @@
             </table>
           </div>
         </div>
-        <div class="row align-items-center mb-4">
+        <div class="row align-items-center mt-4 mb-4">
           <div class="table-responsive mt-1">
-            <h5>Carrousel Empreendimentos</h5>
+            <h5>Cards de Empreendimentos Entregues</h5>
             <table class="table table-striped">
               <thead>
                 <tr>
@@ -251,25 +286,19 @@
                 <tr>
                   <th scope="col">ID</th>
                   <th scope="col">Empreendimento</th>
-                  <th scope="col">Imagem</th>
-                  <th scope="col">texto</th>
-                  <th scope="col">link</th>
+                  <td></td>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td scope="row">1</td>
                   <td>NEST635</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                  <td>@mdo</td>
+                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
                 </tr>
                 <tr>
                   <td scope="row">2</td>
                   <td>HAUS44</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                  <td>@mdo</td>
+                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
                 </tr>
               </tbody>
             </table>

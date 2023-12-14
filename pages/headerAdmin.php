@@ -13,10 +13,8 @@ include_once 'functions.php';
   <title>Admin · PRC Empreendimentos</title>
   <link href="<?= Functions::urlBase('assets/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
   <link href="<?= Functions::urlBase('assets/fontawesome/css/all.min.css'); ?>" rel="stylesheet">
-
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico">
-
   <!-- Custom styles for this template -->
   <link href="<?= Functions::urlBase('pages/css/admin.css'); ?>" rel="stylesheet">
 
@@ -67,12 +65,6 @@ include_once 'functions.php';
             <a href="<?= Functions::urlBase('admin/info'); ?>" class="nav-link link-body-emphasis">
               <i class="fa-solid fa-sitemap me-1"></i>
               Informações gerais
-            </a>
-          </li>
-          <li>
-            <a href="<?= Functions::urlBase('admin/uploads'); ?>" class="nav-link link-body-emphasis">
-              <i class="fa-solid fa-upload"></i>
-              Upload
             </a>
           </li>
           <hr>

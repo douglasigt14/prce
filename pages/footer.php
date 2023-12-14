@@ -1,8 +1,8 @@
-        <div class="container-fluid ps-5 pe-5" id="footer">
+<div class="container-fluid ps-5 pe-5" id="footer">
             <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top">
                 <div class="col-md-3 mb-2 d-flex align-items-center justify-content-center">
                     <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-                        <img src="<?= Functions::urlBase('assets/icons/logoPRCvertical.svg'); ?>" id="logoFooter">
+                    <img id="logoFooter">
                     </a>
                 </div>
                 <div class="col-md-2 mb-2 footer-sub-menu">
@@ -33,29 +33,29 @@
 
                     <div>
 
-                        <a href="">
+                        <a id="link-facebook">
                             <img src="<?= Functions::urlBase('assets/icons/facebook.svg'); ?>" class="resize-height">
                         </a>
 
-                        <a href="">
+                        <a id="link-instagram">
                             <img src="<?= Functions::urlBase('assets/icons/instagram.svg'); ?>" class="resize-width">
                         </a>
 
-                        <a href="">
+                        <a id="link-linkedin">
                             <img src="<?= Functions::urlBase('assets/icons/linkedin.svg'); ?>" class="resize-height">
                         </a>
 
-                        <a href="">
+                        <a id="link-email">
                             <img src="<?= Functions::urlBase('assets/icons/email.svg') ?>" class="resize-width">
                         </a>
 
-                        <a href="">
+                        <a id="link-youtube">
                             <img src="<?= Functions::urlBase('assets/icons/youtube.svg'); ?>" class="resize-width">
                         </a>
 
                     </div>
         
-                    <a href="#" class="btn-portal-cliente">
+                    <a id="link-portal-cliente" class="btn-portal-cliente">
                         Portal do cliente <img src="<?= Functions::urlBase('assets/icons/portalCliente.svg'); ?>" class="ms-1">
                     </a>
 
@@ -77,5 +77,33 @@
     });
     
     </script>
+
+<script>
+    const urlfoot = 'requests/select.php?table=footer';
+    console.log(url);
+    fetch(urlfoot)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro na solicitação: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data) {
+                console.log(data);
+                document.querySelector("#logoFooter").src = data[0]['logo'];
+                document.querySelector("#link-facebook").href = data[0]['link_facebook'];
+                document.querySelector("#link-instagram").href = data[0]['link_instagram'];
+                document.querySelector("#link-linkedin").href = data[0]['link_linkedin'];
+                document.querySelector("#link-email").href = data[0]['link_email'];
+                document.querySelector("#link-youtube").href = data[0]['link_youtube'];
+                document.querySelector("#link-portal-cliente").href = data[0]['link_portal_cliente'];
+            }
+        })
+        .catch(error => {
+            // Manipula erros durante a solicitação
+            console.error('Erro durante a solicitação:', error);
+        });
+</script>
 
 </html>

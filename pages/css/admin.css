@@ -32,12 +32,17 @@ main .container {
     width: 50%;
     margin-bottom: 1rem;
 }
-.conteiner-principal{
+.conteiner-principal {
     display: flex;
     width: 100%;
     overflow-y: scroll;
     margin-bottom: 100px;
 }
-.btn-save{
+.btn-save {
     width: 100% !important;
+}
+
+.icon-pencil {
+    width: 0.2rem;
+    height: 0.2rem;
 }
