@@ -79,7 +79,8 @@
     </script>
 
 <script>
-    const urlfoot = 'requests/select.php?table=footer';
+    siteRoot = window.location.origin;
+    const urlfoot = siteRoot+'/requests/select.php?table=footer';
     console.log(url);
     fetch(urlfoot)
         .then(response => {
@@ -91,7 +92,7 @@
         .then(data => {
             if (data) {
                 console.log(data);
-                document.querySelector("#logoFooter").src = data[0]['logo'];
+                document.querySelector("#logoFooter").src = siteRoot + "/" +data[0]['logo'];
                 document.querySelector("#link-facebook").href = data[0]['link_facebook'];
                 document.querySelector("#link-instagram").href = data[0]['link_instagram'];
                 document.querySelector("#link-linkedin").href = data[0]['link_linkedin'];

@@ -66,7 +66,8 @@ include_once 'functions.php';
     </nav>
 
     <script>
-    const url = 'requests/select.php?table=header';
+    let siteRoot = window.location.origin;
+    const url = siteRoot+'/requests/select.php?table=header';
 
     fetch(url)
         .then(response => {
@@ -78,7 +79,7 @@ include_once 'functions.php';
         .then(data => {
             if (data) {
                 console.log(data);
-                document.querySelector("#logoMenu").src = data[0]['logo'];
+                document.querySelector("#logoMenu").src = siteRoot + "/" +data[0]['logo'];
                 document.querySelector("#link-portal-cliente").href = data[0]['link_portal_cliente'];
             }
         })

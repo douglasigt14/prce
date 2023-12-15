@@ -38,7 +38,7 @@
                         <div class="col-6">
                             <label class="form-label fw-bold">Logo</label> <br>
                             <input type="file" class="form-control" name="logo-footer" />
-                            <img name="logo-footer" id="logo-footer" class="img-fluid mt-3">
+                            <img name="logo-footer" id="logoFooter" class="img-fluid mt-3">
                         </div>
                         <div class="col-3"></div>
                     </div>
@@ -196,7 +196,6 @@
             if (data) {
                 console.log(data);
                 document.querySelector("#logo-adm").src = root + "/" + data[0]['logo'];
-                console.log(document.querySelector("#logo-adm").src)
                 document.querySelector("#link-portal-cliente").value = data[0]['link_portal_cliente'];
             }
         })
@@ -216,7 +215,7 @@
         .then(data => {
             if (data) {
                 console.log(data);
-                document.querySelector("#logoFooter").src = data[0]['logo'];
+                document.querySelector("#logoFooter").src = root + "/" + data[0]['logo'];
                 document.querySelector("#link-facebook").value = data[0]['link_facebook'];
                 document.querySelector("#link-instagram").value = data[0]['link_instagram'];
                 document.querySelector("#link-linkedin").value = data[0]['link_linkedin'];

@@ -1,4 +1,10 @@
-<?php require_once __DIR__ . '/header.php'; ?>
+<?php 
+require_once __DIR__ . '/header.php'; 
+
+    $pdo = new Database();
+    $rows = $pdo->select("empreendimentos");
+
+?>
 
 <div id="carousel" class="carousel carousel-white slide">
     <div class="carousel-inner">
@@ -12,7 +18,7 @@
             </div>
         </div>
 
-        <div class="carousel-item active" data-bs-interval="10000">
+        <div class="carousel-item" data-bs-interval="10000">
             <img src="<?= Functions::urlBase('assets/images/slide.jpg'); ?>" class="d-block w-100">
             <div class="carousel-caption">
                 <h1>HAUS 44 - Ouse, aprecie a vida.</h1>
@@ -21,7 +27,7 @@
             </div>
         </div>
 
-        <div class="carousel-item active" data-bs-interval="10000">
+        <div class="carousel-item" data-bs-interval="10000">
             <img src="<?= Functions::urlBase('assets/images/slide.jpg'); ?>" class="d-block w-100">
             <div class="carousel-caption">
                 <h1>NEST 635 - Viva a sua natureza</h1>
@@ -31,6 +37,14 @@
         </div>
 
     </div>
+
+    <?php
+        for ($i=0; $i < sizeof($rows); $i++) { 
+    ?>
+        <h1 style="color: white"><?php echo $rows[$i]['name'] ?> </h1>
+    <?php
+        }
+    ?>
 
     <div class="div-btns-control-carousel">
         <button class="btn-control-carousel" type="button" data-bs-target="#carousel" data-bs-slide="prev">

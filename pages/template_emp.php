@@ -531,7 +531,8 @@ hmtl, body {
 <?php require_once __DIR__ . '/footer.php'; ?>
 
 <script>
-    const url1 = 'requests/select.php?table=empreendimentos';
+    siteRoot = window.location.origin;
+    const url1 = siteRoot+'/requests/select.php?table=empreendimentos&id=1';
 
     // Realiza a solicitação usando o fetch
     fetch(url1)
@@ -545,9 +546,9 @@ hmtl, body {
             if (data) {
 
                 console.log(data);
-                document.querySelector("#capa").src = data[0]['capa'];
-                document.querySelector("#logo").src = data[0]['logo'];
-                document.querySelector("#imagem1").src = data[0]['imagem1'];
+                document.querySelector("#capa").src = siteRoot + "/" +data[0]['capa'];
+                document.querySelector("#logo").src = siteRoot + "/" +data[0]['logo'];
+                document.querySelector("#imagem1").src = siteRoot + "/" +data[0]['imagem1'];
                 document.querySelector("#titulo1").innerHTML = data[0]['titulo1'];
                 document.querySelector("#texto1").innerHTML = data[0]['texto1'];
                 document.querySelector("#titulo-plantas").innerHTML = data[0]['titulo_plantas'];

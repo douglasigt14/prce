@@ -1,5 +1,7 @@
 <?php
 
+include 'database/DataBase.php';
+
 class Router
 {
     private $routes = array(
@@ -14,10 +16,10 @@ class Router
         "home" => "home",
         "empreendimentos" => "empreendimentos",
         "sobre" => "sobre",
-        "nest635" => "nest635",
         "trabalheConosco" => "trabalheConosco",
         "contato" => "contato",
     );
+
 
     public function run(string $requestUri) {
         $route = substr($requestUri, 1);
@@ -29,6 +31,13 @@ class Router
     }
 
     private function buildRoute($route) {
+        $pdo = new Database();
+        $rows = $pdo->select("empreendimentos");
+
+        foreach ($rows as $row) {
+            $this->routes["empreendimentos/".$row['id']] = "template_emp";
+        }
+
         if (array_key_exists($route, $this->routes)) {
             session_start();
             $_SESSION['currentPage'] = $this->routes[$route];
