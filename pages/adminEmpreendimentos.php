@@ -1,7 +1,7 @@
 <?php require_once __DIR__ . '/headerAdmin.php'; ?>
 
 <div class="conteiner-principal p-5">
-  <div class="row mt-3">
+  <div class="row w-100 mt-3">
     <h3>Empreendimentos</h3>
     <form action="<?= Functions::urlBase('requests/insertSobre.php'); ?>" method="post" enctype="multipart/form-data">
       <input type="hidden" name="rota" value="/admin/sobre">
@@ -53,6 +53,7 @@
                   <th scope="col">Imagem</th>
                   <th scope="col">texto</th>
                   <th scope="col">link</th>
+                  <th scope="col"> </th>
                 </tr>
               </thead>
               <tbody>
@@ -62,6 +63,7 @@
                   <td>Otto</td>
                   <td>@mdo</td>
                   <td>@mdo</td>
+                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
                 </tr>
                 <tr>
                   <td scope="row">2</td>
@@ -69,6 +71,7 @@
                   <td>Thornton</td>
                   <td>@fat</td>
                   <td>@mdo</td>
+                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
                 </tr>
               </tbody>
             </table>
@@ -85,6 +88,7 @@
                   <th scope="col">Imagem</th>
                   <th scope="col">texto</th>
                   <th scope="col">link</th>
+                  <th scope="col"> </th>
                 </tr>
               </thead>
               <tbody>
@@ -94,6 +98,7 @@
                   <td>Otto</td>
                   <td>@mdo</td>
                   <td>@mdo</td>
+                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
                 </tr>
                 <tr>
                   <td scope="row">2</td>
@@ -101,6 +106,7 @@
                   <td>Thornton</td>
                   <td>@fat</td>
                   <td>@mdo</td>
+                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
                 </tr>
               </tbody>
             </table>

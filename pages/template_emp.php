@@ -531,8 +531,19 @@ hmtl, body {
 <?php require_once __DIR__ . '/footer.php'; ?>
 
 <script>
+        // Obtém a URL da rota atual
+        let currentURL = window.location.href;
+
+        // Usa uma expressão regular para extrair o número do ID
+        let match = currentURL.match(/\/(\d+)$/);
+        
+        let id = 1;
+        if (match) {
+           id = match[1];
+        }
+
     siteRoot = window.location.origin;
-    const url1 = siteRoot+'/requests/select.php?table=empreendimentos&id=1';
+    const url1 = siteRoot+'/requests/select.php?table=empreendimentos&id='+id;
 
     // Realiza a solicitação usando o fetch
     fetch(url1)
