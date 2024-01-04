@@ -1,10 +1,9 @@
 <?php
 
-require_once '../database/Database.php';
+include_once 'database.php';
 
 $username = $_POST['username'];
 
 $password = $_POST['password'];
 
-$pdo = new Database();
 

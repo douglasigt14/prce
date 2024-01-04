@@ -1,9 +1,5 @@
 <?php 
 require_once __DIR__ . '/header.php'; 
-
-    $pdo = new Database();
-    $rows = $pdo->select("empreendimentos");
-
 ?>
 
 <div id="carousel" class="carousel carousel-white slide">
@@ -37,14 +33,6 @@ require_once __DIR__ . '/header.php';
         </div>
 
     </div>
-
-    <?php
-        for ($i=0; $i < sizeof($rows); $i++) { 
-    ?>
-        <h1 style="color: white"><?php echo $rows[$i]['name'] ?> </h1>
-    <?php
-        }
-    ?>
 
     <div class="div-btns-control-carousel">
         <button class="btn-control-carousel" type="button" data-bs-target="#carousel" data-bs-slide="prev">

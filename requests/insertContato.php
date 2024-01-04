@@ -1,11 +1,10 @@
 <?php
 
-require_once '../database/Database.php';
+include_once 'database.php';
 
 $rota = $_POST["rota"] ?? "";
 $dir = $_POST['dir'] ?? "/admin/uploads";
 
-$pdo = new Database();
 
 $payloadSobre = [];
 
@@ -18,7 +17,7 @@ if(isset($_FILES['capa']) && $_FILES['capa']['name'] != ""){
     $payloadSobre['capa'] = uploadImg($_FILES['capa'], $dir);
 }
 
-$rows = $pdo->update("contatos",$payloadSobre, [ "id" => 1]);
+$rows = update("contatos",$payloadSobre, [ "id" => 1]);
 
 header("location: " .$rota);
 function uploadImg($file, $dirP){

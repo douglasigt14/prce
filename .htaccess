@@ -7,6 +7,7 @@ RewriteBase /
 # Se o diretório ou arquivos digitados na URL não existirem, seguir a RewriteRule
 RewriteCond %{REQUEST_FILENAME} !-d       
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/requests/.*\.php$
 
 # Rewrite Rule, redirecionar todas as requests para o index.php 
 RewriteRule ^(.+)$ index.php [QSA,L]
@@ -16,13 +17,6 @@ Options All -Indexes
 
 # Mensagem de erro personalizada para bloqueio do acesso direto a diretórios e arquivos 
 ErrorDocument 403 /index.php
-
-# Bloqueia todos os arquivos PHP, com exceção do index.
-<Files *.php>
-    Order Deny,Allow
-    Deny from all
-    Allow from 127.0.0.1
-</Files>
 
 <Files index.php>
     Order Allow,Deny

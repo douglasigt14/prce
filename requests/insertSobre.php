@@ -1,11 +1,10 @@
 <?php
 
-require_once '../database/Database.php';
+include_once 'database.php';
 
 $rota = $_POST["rota"] ?? "";
 $dir = $_POST['dir'] ?? "/admin/uploads";
 
-$pdo = new Database();
 
 $payloadSobre = [];
 
@@ -25,7 +24,7 @@ if(isset($_FILES['foto-diferenciais'])  && $_FILES['foto-diferenciais']['name'] 
     
 }
 
-$rows = $pdo->update("sobre",$payloadSobre, [ "id" => 1]);
+$rows = update("sobre",$payloadSobre, [ "id" => 1]);
 
 for ($i=1; $i <= 6; $i++) { 
     $payloadDiferenciais = [
@@ -33,7 +32,7 @@ for ($i=1; $i <= 6; $i++) {
         "texto" =>  $_POST['texto_diferencial'.$i]
     ]; 
 
-    $rows = $pdo->update("sobre_diferenciais",$payloadDiferenciais, ['id' => $i] );
+    $rows = update("sobre_diferenciais",$payloadDiferenciais, ['id' => $i] );
 }
 
 header("location: " .$rota);
