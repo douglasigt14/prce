@@ -1,119 +1,60 @@
 <?php require_once __DIR__ . '/headerAdmin.php'; ?>
 
 <div class="conteiner-principal p-5">
-  <div class="row mt-3">
+  <div class="row mt-3 w-100">
     <h3>Empreendimentos</h3>
     <form action="<?= Functions::urlBase('requests/insertSobre.php'); ?>" method="post" enctype="multipart/form-data">
       <input type="hidden" name="rota" value="/admin/sobre">
       <input type="hidden" name="dir" value="sobre">
       <div class="col-md-12">
-        <div class="row align-items-center mt-4 mb-4">
-          <div class="table-responsive mt-1">
-            <h5>Carrousel de Empreendimentos</h5>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Empreendimento</th>
-                  <th scope="col">Imagem</th>
-                  <th scope="col">texto</th>
-                  <th scope="col">link</th>
-                  <th scope="col"> </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                  <td>@mdo</td>
-                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
-                </tr>
-                <tr>
-                  <td scope="row">2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                  <td>@mdo</td>
-                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="row align-items-center mb-4">
-          <div class="table-responsive mt-1">
-            <h5>Mural de Empreendimentos</h5>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Empreendimento</th>
-                  <th scope="col">Imagem</th>
-                  <th scope="col">texto</th>
-                  <th scope="col">link</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <td scope="row">2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                  <td>@mdo</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="row align-items-center mt-4 mb-4">
-          <div class="table-responsive mt-1">
-            <h5>Cards de Empreendimentos Entregues</h5>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Empreendimento</th>
-                  <th scope="col">Imagem</th>
-                  <th scope="col">texto</th>
-                  <th scope="col">link</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <td scope="row">2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                  <td>@mdo</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
         <div class="w-100 d-flex align-items-center justify-content-center">
           <h4 class="w-50">Empreendimentos</h2>
             <button type="button" class="btn btn-primary w-50 mt-3 mb-3" data-bs-toggle="modal"
               data-bs-target="#modalEmpreendimentos">Adicionar novo Empreendimento</button>
         </div>
 
-        <div class="modal" tabindex="-1" id="modalEmpreendimentos">
+       
+        <div class="row align-items-center mb-4">
+          <div class="col-12" >
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Empreendimento</th>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">1</td>
+                  <td>NEST635</td>
+                  <td><i class="fa fa-edit"></i> </td>
+                  <td> <i class="fa fa-trash"></i></td>
+                </tr>
+                <tr>
+                  <td scope="row">2</td>
+                  <td>HAUS44</td>
+                  <td><i class="fa fa-edit"></i> </td>
+                  <td> <i class="fa fa-trash"></i></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+  </div>
+
+</div>
+</div>
+</div>
+
+<!-- Modal -->
+<div class="modal" tabindex="-1" id="modalEmpreendimentos">
           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
             <div class="modal-content">
               <div class="modal-header">
@@ -278,43 +219,6 @@
             </div>
           </div>
         </div>
-        <div class="row align-items-center mb-4">
-          <div class="table-responsive mt-1">
-            <h5>Empreendimentos Cadastrados</h5>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Empreendimento</th>
-                  <td></td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>NEST635</td>
-                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
-                </tr>
-                <tr>
-                  <td scope="row">2</td>
-                  <td>HAUS44</td>
-                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-
-      </div>
-
-
-
-  </div>
-
-</div>
-</div>
-</div>
 
 <footer class="fixed-bottom  text-light text-center p-3">
   <div class="row">
