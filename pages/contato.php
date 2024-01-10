@@ -45,9 +45,9 @@
 </div>
 
 <script>
-    const url = 'requests/select.php?table=contatos';
+    const urlContato = 'requests/select.php?table=contatos';
 
-    fetch(url)
+    fetch(urlContato)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Erro na solicitação: ${response.statusText}`);
