@@ -1,7 +1,7 @@
 <?php
 class Functions {
 
-    static function urlBase(string $file = '', string $baseUrl = 'prce.douglasrocha.tech') {
+    static function urlBase(string $file = '', string $baseUrl = 'prce.local.com') {
         $urlBase = !empty($_SERVER['HTTPS']) ? 'https://' : 'http://';
         $urlBase .= $baseUrl ?: $_SERVER['SERVER_NAME'];
     

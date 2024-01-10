@@ -8,7 +8,6 @@ $dir = $_POST['dir'] ?? "/admin/uploads";
 
 $payloadSobre = [];
 
-
     $payloadSobre['titulo'] =   $_POST['titulo'];
     $payloadSobre['texto'] =   $_POST['texto'];
     $payloadSobre['botao_texto'] =   $_POST['botao-texto'];
