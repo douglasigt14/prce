@@ -6,6 +6,7 @@ class Router
 {
     private $routes = array(
         "login" => "adminLogin",
+        "logout" => "logout",
         "admin" => "adminHome",
         "admin/home" => "adminHome",
         "admin/uploads" => "adminUploads",
@@ -27,7 +28,7 @@ class Router
 
         // Verifica se o usuário está autenticado para rotas protegidas
         if ($this->isRouteProtected($route) && !isset($_SESSION['user_authenticated'])) {
-            header("Location: /admin");
+            header("Location: /login");
             exit;
         }
 

@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 
 // Finaliza a sessão
 session_destroy();
