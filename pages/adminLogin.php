@@ -24,7 +24,7 @@ include_once 'functions.php';
             <div class="logo">
                 <img src="<?= Functions::urlBase('assets/icons/logoPRC2.svg'); ?>">
             </div>
-            <form action="validacao-login.php" method="post" class="login-form">
+            <form action="<?= Functions::urlBase('requests/validacao-login.php'); ?>" method="post" class="login-form">
                 <label for="username" class="label">Username:</label>
                 <input type="text" id="username" class="input form-control" name="username" placeholder="Username" required>
 

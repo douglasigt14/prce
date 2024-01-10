@@ -69,7 +69,7 @@ include_once 'functions.php';
           </li>
           <hr>
           <li>
-            <a href="#" class="nav-link link-body-emphasis">
+            <a href="<?= Functions::urlBase('logout'); ?>"class="nav-link link-body-emphasis">
               <i class="fa-solid fa-right-from-bracket"></i>
               Sair
             </a>
