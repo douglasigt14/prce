@@ -1,9 +1,5 @@
-<?php
-require_once __DIR__ . '/header.php';
-
-$pdo = new Database();
-$rows = $pdo->select("empreendimentos");
-
+<?php 
+require_once __DIR__ . '/header.php'; 
 ?>
 
 <div id="carousel" class="carousel carousel-white slide">

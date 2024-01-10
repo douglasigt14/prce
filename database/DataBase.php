@@ -124,27 +124,3 @@ class Database
         }
     }
 }
-
-/* example usage
-$pdo = new Database();
-
-$pdo->insert('your_table', [
-    'column1' => 'value1',
-    'column2' => 'value2',
-]);
-
-$rows = $pdo->select('your_table', [
-    'column1' => 'value1',
-]);
-
-$pdo->update('your_table', [
-    'column1' => 'new_value1',
-    'column2' => 'new_value2',
-], [
-    'column1' => 'value1',
-]);
-
-$pdo->delete('your_table', [
-    'column1' => 'new_value1',
-]);
-*/
