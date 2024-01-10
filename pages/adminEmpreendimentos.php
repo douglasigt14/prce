@@ -1,4 +1,10 @@
-<?php require_once __DIR__ . '/headerAdmin.php'; ?>
+<?php require_once __DIR__ . '/headerAdmin.php';
+
+
+$pdo = new Database();
+$empreendimentos = $pdo->select("carrousel_empreendimentos");
+
+?>
 
 <div class="conteiner-principal p-5">
   <div class="row w-100 mt-3">
@@ -9,319 +15,295 @@
       <div class="col-md-12">
         <div class="row align-items-center mt-4 mb-4">
           <div class="table-responsive mt-1">
-            <h5>Carrousel de Empreendimentos</h5>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Empreendimento</th>
-                  <th scope="col">Imagem</th>
-                  <th scope="col">texto</th>
-                  <th scope="col">link</th>
-                  <th scope="col"> </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                  <td>@mdo</td>
-                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
-                </tr>
-                <tr>
-                  <td scope="row">2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                  <td>@mdo</td>
-                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="row align-items-center mb-4">
-          <div class="table-responsive mt-1">
-            <h5>Mural de Empreendimentos</h5>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Empreendimento</th>
-                  <th scope="col">Imagem</th>
-                  <th scope="col">texto</th>
-                  <th scope="col">link</th>
-                  <th scope="col"> </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                  <td>@mdo</td>
-                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
-                </tr>
-                <tr>
-                  <td scope="row">2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                  <td>@mdo</td>
-                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="row align-items-center mt-4 mb-4">
-          <div class="table-responsive mt-1">
-            <h5>Cards de Empreendimentos Entregues</h5>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Empreendimento</th>
-                  <th scope="col">Imagem</th>
-                  <th scope="col">texto</th>
-                  <th scope="col">link</th>
-                  <th scope="col"> </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                  <td>@mdo</td>
-                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
-                </tr>
-                <tr>
-                  <td scope="row">2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                  <td>@mdo</td>
-                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="w-100 d-flex align-items-center justify-content-center">
-          <h4 class="w-50">Empreendimentos</h2>
-            <button type="button" class="btn btn-primary w-50 mt-3 mb-3" data-bs-toggle="modal"
-              data-bs-target="#modalEmpreendimentos">Adicionar novo Empreendimento</button>
-        </div>
-
-        <div class="modal" tabindex="-1" id="modalEmpreendimentos">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3 class="modal-title">Cadastrar empreendimento</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="w-100  d-flex align-items-center justify-content-between">
+              <div>
+                <h5>Carrousel de Empreendimentos</h5>
               </div>
-              <div class="modal-body">
-                <div class="container-fluid">
-                  <form action="<?= Functions::urlBase('requests/insertSobre.php'); ?>" method="post"
-                    enctype="multipart/form-data">
-                    <input type="hidden" name="rota" value="/admin/sobre">
-                    <input type="hidden" name="dir" value="sobre">
-                    <div class="row g-3 mb-3 align-items-start">
-                      <div class="col-5" id="selecaoImagemDiferenciais">
-                        <label class="form-label fw-bold">Thumbnail</label>
-                        <div class="w-100 mt-4 mb-4">
-                          <input type="file" class="form-control" name="foto-diferenciais" />
-                          <img id="thumbnail" class=" img-fluid mt-3">
-                        </div>
-                      </div>
-                      <div class="col-7">
-                        <label for="nome" class="form-label fw-bold">Nome</label>
-                        <input name="nome" type="text" class="form-control" id="titulo3">
-                        <br>
-                        <label for="descricao" class="form-label fw-bold">Descrição</label>
-                        <input name="descricao" class="form-control" id="texto4" rows="3"></input><br>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="row align-items-center mt-4 mb-4" id="selecaoCapa">
-                        <div class="col-6">
-                          <label class="form-label fw-bold">Capa</label> <br>
-                          <input type="file" class="form-control" name="capa" />
-                          <img name="capa" id="capa" class="img-fluid mt-3">
-                        </div>
-                        <div class="col-6">
-                          <label class="form-label fw-bold">Logo</label> <br>
-                          <input type="file" class="form-control" name="capa" />
-                          <img name="capa" id="capa" class="img-fluid mt-3">
-                        </div>
-                      </div>
-                      <div class="row g-3 mb-3 align-items-start">
-                        <div class="col-5" id="selecaoImagemDiferenciais">
-                          <label class="form-label fw-bold">Imagem 1</label>
-                          <div class="w-100 mt-4 mb-4">
-                            <input type="file" class="form-control" name="foto-diferenciais" />
-                            <img id="thumbnail" class=" img-fluid mt-3">
-                          </div>
-                        </div>
-                        <div class="col-7">
-                          <label for="nome" class="form-label fw-bold">Titulo 1</label>
-                          <input name="nome" type="text" class="form-control" id="titulo3">
-                          <br>
-                          <label for="descricao" class="form-label fw-bold">Texto 1</label>
-                          <input name="descricao" class="form-control" id="texto4" rows="3"></input><br>
-                        </div>
-                      </div>
-                      <div class="row align-items-center mb-4">
-                        <div class="col-6">
-                          <label for="titulo1" class="form-label fw-bold">Titulo-Plantas</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                        </div>
-                        <div class="col-6">
-                          <label for="texto1" class="form-label fw-bold">Texto-Plantas</label>
-                          <textarea name="texto1" class="form-control" id="texto1" rows="3"></textarea>
-                        </div>
-                      </div>
-                      <div class="row align-items-center mb-4">
-                        <div class="col-6">
-                          <label for="titulo1" class="form-label fw-bold">Endereço</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                        </div>
-                      </div>
-                      <div class="row align-items-center mb-4">
-                        <div class="col-6">
-                          <label for="titulo1" class="form-label fw-bold">Titulo-localização</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                          <label for="texto1" class="form-label fw-bold">Texto-localização</label>
-                          <textarea name="texto1" class="form-control" id="texto1" rows="3"></textarea>
-                        </div>
-                        <div class="col-6">
-                          <label for="titulo1" class="form-label fw-bold">Localização</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                          <label for="titulo1" class="form-label fw-bold">Rota-localização</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                          <label for="titulo1" class="form-label fw-bold">Mapa-localização</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="row align-items-center mb-4">
-                          <div class="col-6">
-                            <label for="titulo1" class="form-label fw-bold">Titulo</label>
-                            <input type="text" name="titulo1" class="form-control" id="titulo1">
-                          </div>
-                          <div class="col-6">
-                            <label for="titulo1" class="form-label fw-bold">Sub-titulo</label>
-                            <input type="text" name="titulo1" class="form-control" id="titulo1">
-                          </div>
-                        </div>
-                        <div class="row align-items-center mb-4">
-                          <label for="titulo1" class="form-label fw-bold">Texto-equipe</label>
-                          <textarea name="titulo1" class="form-control" id="titulo1" rows="3"></textarea>
-                        </div>
-                      </div>
-                      <div class="row align-items-center mb-4">
-                        <div class="col-6">
-                          <label for="titulo1" class="form-label fw-bold">Titulo-diferenciais</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                        </div>
-                        <div class="col-6">
-                          <label for="titulo1" class="form-label fw-bold">Texto-diferenciais</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                        </div>
-                      </div>
-                      <div class="row align-items-center mb-4">
-                        <div class="col-6">
-                          <label for="titulo1" class="form-label fw-bold">Titulo-evoluçãoObra</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                        </div>
-                        <div class="col-6">
-                          <label for="titulo1" class="form-label fw-bold">Texto-EvoluçãoObra</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                        </div>
-                      </div>
-                      <div class="row align-items-center mb-4">
-                        <div class="col-6">
-                          <label for="titulo1" class="form-label fw-bold">Status-texto</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                          <label for="texto1" class="form-label fw-bold">Status-Porcentagem</label>
-                          <textarea name="texto1" class="form-control" id="texto1" rows="3"></textarea>
-                          <label for="texto1" class="form-label fw-bold">Previsão de Entrega</label>
-                          <textarea name="texto1" class="form-control" id="texto1" rows="3"></textarea>
-                        </div>
-                        <div class="col-6">
-                          <label for="titulo1" class="form-label fw-bold">Área do terreno</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                          <label for="titulo1" class="form-label fw-bold">Área total</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                          <label for="titulo1" class="form-label fw-bold">Unidades</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                          <label for="titulo1" class="form-label fw-bold">Tipologias</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                        </div>
-                      </div>
-                      <div class="row align-items-center mb-4">
-                        <div class="col-6">
-                          <label for="titulo1" class="form-label fw-bold">Titulo-formulario</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                        </div>
-                        <div class="col-6">
-                          <label for="titulo1" class="form-label fw-bold">Texto-formulario</label>
-                          <input type="text" name="titulo1" class="form-control" id="titulo1">
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="btnSalvarBDComentario">Salvar</button>
-              </div>
+              <di>
+                <button type="button" class="btn btn-primary mt-3 mb-3" data-bs-toggle="modal"
+                  data-bs-target="#modalEmpreendimentos"><i class="fa fa-plus"></i></button>
+              </di>
             </div>
-          </div>
-        </div>
-        <div class="row align-items-center mb-4">
-          <div class="table-responsive mt-1">
-            <h5>Empreendimentos Cadastrados</h5>
+
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th scope="col">ID</th>
                   <th scope="col">Empreendimento</th>
-                  <td></td>
+                  <th scope="col">Imagem</th>
+                  <th scope="col">texto</th>
+                  <th scope="col">Editar</th>
+                  <th scope="col">Apagar</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td scope="row">1</td>
-                  <td>NEST635</td>
-                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
-                </tr>
-                <tr>
-                  <td scope="row">2</td>
-                  <td>HAUS44</td>
-                  <td><i class="fa fa-edit"></i>    <i class="fa fa-trash"></i></td>
-                </tr>
+                <?php
+                for ($i = 0; $i < sizeof($empreendimentos); $i++) {
+
+                  $pdo = new Database();
+                  $emp = $pdo->select("empreendimentos", ["id" => $empreendimentos[$i]['idEmpreendimento']]);
+                  $name = $emp[0]['name'] ?? 'NOT FOUND';
+                  ?>
+                  <tr>
+                    <td>
+                      <?php echo $name; ?>
+                    </td>
+                    <td>
+                      <?php echo $empreendimentos[$i]['imagem'] ?>
+                    </td>
+                    <td>
+                      <?php echo $empreendimentos[$i]['texto'] ?>
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#modalEmpreendimentos"><i class="fa fa-edit"></i></button>
+                    </td>
+                    <td>
+                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                        data-bs-target="#modalEmpreendimentos"><i class="fa fa-trash"></i></button>
+                    </td>
+                  </tr>
+                  <?php
+                }
+                ?>
               </tbody>
             </table>
           </div>
         </div>
 
-
+        <div class="w-100  d-flex align-items-center justify-content-between">
+          <div>
+            <h4>Empreendimentos</h2>
+          </div>
+          <di>
+            <button type="button" class="btn btn-primary mt-3 mb-3" data-bs-toggle="modal"
+              data-bs-target="#modalEmpreendimentos"><i class="fa fa-plus"></i></button>
+          </di>
+        </div>
       </div>
 
+      <div class="row align-items-center mb-4">
+        <div class="table-responsive mt-1">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Empreendimento</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Apagar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              for ($i = 0; $i < sizeof($empreendimentos); $i++) {
+
+                $pdo = new Database();
+                $emp = $pdo->select("empreendimentos", ["id" => $empreendimentos[$i]['idEmpreendimento']]);
+                $name = $emp[0]['name'] ?? 'NOT FOUND';
+                ?>
+                <tr>
+                  <td>
+                    <?php echo $name; ?>
+                  </td>
+                  <td>
+                    <?php echo $empreendimentos[$i]['imagem'] ?>
+                  </td>
+                  <td>
+                    <?php echo $empreendimentos[$i]['texto'] ?>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                      data-bs-target="#modalEmpreendimentos"><i class="fa fa-edit"></i></button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                      data-bs-target="#modalEmpreendimentos"><i class="fa fa-trash"></i></button>
+                  </td>
+                </tr>
+                <?php
+              }
+              ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
 
   </div>
 
+
+
+</div>
+
 </div>
 </div>
 </div>
 
+
+<div class="modal" tabindex="-1" id="modalEmpreendimentos">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Cadastrar empreendimento</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <form action="<?= Functions::urlBase('requests/insertSobre.php'); ?>" method="post"
+            enctype="multipart/form-data">
+            <input type="hidden" name="rota" value="/admin/sobre">
+            <input type="hidden" name="dir" value="sobre">
+            <div class="row g-3 mb-3 align-items-start">
+              <div class="col-5" id="selecaoImagemDiferenciais">
+                <label class="form-label fw-bold">Thumbnail</label>
+                <div class="w-100 mt-4 mb-4">
+                  <input type="file" class="form-control" name="foto-diferenciais" />
+                  <img id="thumbnail" class=" img-fluid mt-3">
+                </div>
+              </div>
+              <div class="col-7">
+                <label for="nome" class="form-label fw-bold">Nome</label>
+                <input name="nome" type="text" class="form-control" id="titulo3">
+                <br>
+                <label for="descricao" class="form-label fw-bold">Descrição</label>
+                <input name="descricao" class="form-control" id="texto4" rows="3"></input><br>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row align-items-center mt-4 mb-4" id="selecaoCapa">
+                <div class="col-6">
+                  <label class="form-label fw-bold">Capa</label> <br>
+                  <input type="file" class="form-control" name="capa" />
+                  <img name="capa" id="capa" class="img-fluid mt-3">
+                </div>
+                <div class="col-6">
+                  <label class="form-label fw-bold">Logo</label> <br>
+                  <input type="file" class="form-control" name="capa" />
+                  <img name="capa" id="capa" class="img-fluid mt-3">
+                </div>
+              </div>
+              <div class="row g-3 mb-3 align-items-start">
+                <div class="col-5" id="selecaoImagemDiferenciais">
+                  <label class="form-label fw-bold">Imagem 1</label>
+                  <div class="w-100 mt-4 mb-4">
+                    <input type="file" class="form-control" name="foto-diferenciais" />
+                    <img id="thumbnail" class=" img-fluid mt-3">
+                  </div>
+                </div>
+                <div class="col-7">
+                  <label for="nome" class="form-label fw-bold">Titulo 1</label>
+                  <input name="nome" type="text" class="form-control" id="titulo3">
+                  <br>
+                  <label for="descricao" class="form-label fw-bold">Texto 1</label>
+                  <input name="descricao" class="form-control" id="texto4" rows="3"></input><br>
+                </div>
+              </div>
+              <div class="row align-items-center mb-4">
+                <div class="col-6">
+                  <label for="titulo1" class="form-label fw-bold">Titulo-Plantas</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                </div>
+                <div class="col-6">
+                  <label for="texto1" class="form-label fw-bold">Texto-Plantas</label>
+                  <textarea name="texto1" class="form-control" id="texto1" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="row align-items-center mb-4">
+                <div class="col-6">
+                  <label for="titulo1" class="form-label fw-bold">Endereço</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                </div>
+              </div>
+              <div class="row align-items-center mb-4">
+                <div class="col-6">
+                  <label for="titulo1" class="form-label fw-bold">Titulo-localização</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                  <label for="texto1" class="form-label fw-bold">Texto-localização</label>
+                  <textarea name="texto1" class="form-control" id="texto1" rows="3"></textarea>
+                </div>
+                <div class="col-6">
+                  <label for="titulo1" class="form-label fw-bold">Localização</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                  <label for="titulo1" class="form-label fw-bold">Rota-localização</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                  <label for="titulo1" class="form-label fw-bold">Mapa-localização</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="row align-items-center mb-4">
+                  <div class="col-6">
+                    <label for="titulo1" class="form-label fw-bold">Titulo</label>
+                    <input type="text" name="titulo1" class="form-control" id="titulo1">
+                  </div>
+                  <div class="col-6">
+                    <label for="titulo1" class="form-label fw-bold">Sub-titulo</label>
+                    <input type="text" name="titulo1" class="form-control" id="titulo1">
+                  </div>
+                </div>
+                <div class="row align-items-center mb-4">
+                  <label for="titulo1" class="form-label fw-bold">Texto-equipe</label>
+                  <textarea name="titulo1" class="form-control" id="titulo1" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="row align-items-center mb-4">
+                <div class="col-6">
+                  <label for="titulo1" class="form-label fw-bold">Titulo-diferenciais</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                </div>
+                <div class="col-6">
+                  <label for="titulo1" class="form-label fw-bold">Texto-diferenciais</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                </div>
+              </div>
+              <div class="row align-items-center mb-4">
+                <div class="col-6">
+                  <label for="titulo1" class="form-label fw-bold">Titulo-evoluçãoObra</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                </div>
+                <div class="col-6">
+                  <label for="titulo1" class="form-label fw-bold">Texto-EvoluçãoObra</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                </div>
+              </div>
+              <div class="row align-items-center mb-4">
+                <div class="col-6">
+                  <label for="titulo1" class="form-label fw-bold">Status-texto</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                  <label for="texto1" class="form-label fw-bold">Status-Porcentagem</label>
+                  <textarea name="texto1" class="form-control" id="texto1" rows="3"></textarea>
+                  <label for="texto1" class="form-label fw-bold">Previsão de Entrega</label>
+                  <textarea name="texto1" class="form-control" id="texto1" rows="3"></textarea>
+                </div>
+                <div class="col-6">
+                  <label for="titulo1" class="form-label fw-bold">Área do terreno</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                  <label for="titulo1" class="form-label fw-bold">Área total</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                  <label for="titulo1" class="form-label fw-bold">Unidades</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                  <label for="titulo1" class="form-label fw-bold">Tipologias</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                </div>
+              </div>
+              <div class="row align-items-center mb-4">
+                <div class="col-6">
+                  <label for="titulo1" class="form-label fw-bold">Titulo-formulario</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                </div>
+                <div class="col-6">
+                  <label for="titulo1" class="form-label fw-bold">Texto-formulario</label>
+                  <input type="text" name="titulo1" class="form-control" id="titulo1">
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="btnSalvarBDComentario">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
 <footer class="fixed-bottom  text-light text-center p-3">
   <div class="row">
     <div class="col-10"></div>
@@ -365,61 +347,61 @@
 <script type="text/javascript" src="<?= Functions::urlBase('assets/fontawesome/js/all.min.js'); ?>"></script>
 
 <script>
-  const siteRoot = window.location.origin;
-  const url = `${siteRoot}/requests/select.php?table=sobre`;
-  fetch(url)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Erro na solicitação: ${response.statusText}`);
-      }
-      return response.json();
-    })
-    .then(data => {
-      if (data) {
-        for (let i = 1; i <= 4; i++) {//3
-          document.querySelector("#titulo" + i).value = data[0]['titulo' + i];
-        }
+  // const siteRoot = window.location.origin;
+  // const url = `${siteRoot}/requests/select.php?table=sobre`;
+  // fetch(url)
+  //   .then(response => {
+  //     if (!response.ok) {
+  //       throw new Error(`Erro na solicitação: ${response.statusText}`);
+  //     }
+  //     return response.json();
+  //   })
+  //   .then(data => {
+  //     if (data) {
+  //       for (let i = 1; i <= 4; i++) {//3
+  //         document.querySelector("#titulo" + i).value = data[0]['titulo' + i];
+  //       }
 
-        for (let i = 1; i <= 8; i++) {//11
-          document.querySelector("#texto" + i).value = data[0]['texto' + i];
-        }
+  //       for (let i = 1; i <= 8; i++) {//11
+  //         document.querySelector("#texto" + i).value = data[0]['texto' + i];
+  //       }
 
-        document.querySelector("#capa").src = siteRoot + "/" + data[0]['capa'];
-        document.querySelector("#foto-diferenciais").src = siteRoot + "/" + data[0]['imagem1'];
-        document.querySelector("#foto-processos").src = siteRoot + "/" + data[0]['imagem2'];
-
-
-      }
-    })
-    .catch(error => {
-      console.error('Erro durante a solicitação:', error);
-    });
+  //       document.querySelector("#capa").src = siteRoot + "/" + data[0]['capa'];
+  //       document.querySelector("#foto-diferenciais").src = siteRoot + "/" + data[0]['imagem1'];
+  //       document.querySelector("#foto-processos").src = siteRoot + "/" + data[0]['imagem2'];
 
 
-  const url2 = `${siteRoot}/requests/select.php?table=sobre_diferenciais`;
+  //     }
+  //   })
+  //   .catch(error => {
+  //     console.error('Erro durante a solicitação:', error);
+  //   });
 
-  fetch(url2)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Erro na solicitação: ${response.statusText}`);
-      }
-      return response.json();
-    })
-    .then(data => {
-      if (data) {
 
-        //document.querySelector("#capa").innerHTML = data[0]['capa'];
-        for (let i = 0; i < 6; i++) {//3
-          document.querySelector("#titulo_diferencial" + (i + 1)).value = data[i]['titulo'];
-          document.querySelector("#texto_diferencial" + (i + 1)).value = data[i]['texto'];
-        }
+  // const url2 = `${siteRoot}/requests/select.php?table=sobre_diferenciais`;
 
-      }
-    })
-    .catch(error => {
-      // Manipula erros durante a solicitação
-      console.error('Erro durante a solicitação:', error);
-    });
+  // fetch(url2)
+  //   .then(response => {
+  //     if (!response.ok) {
+  //       throw new Error(`Erro na solicitação: ${response.statusText}`);
+  //     }
+  //     return response.json();
+  //   })
+  //   .then(data => {
+  //     if (data) {
+
+  //       //document.querySelector("#capa").innerHTML = data[0]['capa'];
+  //       for (let i = 0; i < 6; i++) {//3
+  //         document.querySelector("#titulo_diferencial" + (i + 1)).value = data[i]['titulo'];
+  //         document.querySelector("#texto_diferencial" + (i + 1)).value = data[i]['texto'];
+  //       }
+
+  //     }
+  //   })
+  //   .catch(error => {
+  //     // Manipula erros durante a solicitação
+  //     console.error('Erro durante a solicitação:', error);
+  //   });
 </script>
 
 <script type="text/javascript">

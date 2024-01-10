@@ -81,7 +81,6 @@
 <script>
     siteRoot = window.location.origin;
     const urlfoot = siteRoot+'/requests/select.php?table=footer';
-    console.log(url);
     fetch(urlfoot)
         .then(response => {
             if (!response.ok) {

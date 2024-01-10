@@ -1,8 +1,8 @@
-<?php 
-require_once __DIR__ . '/header.php'; 
+<?php
+require_once __DIR__ . '/header.php';
 
-    $pdo = new Database();
-    $rows = $pdo->select("empreendimentos");
+$pdo = new Database();
+$rows = $pdo->select("empreendimentos");
 
 ?>
 
@@ -37,14 +37,6 @@ require_once __DIR__ . '/header.php';
         </div>
 
     </div>
-
-    <?php
-        for ($i=0; $i < sizeof($rows); $i++) { 
-    ?>
-        <h1 style="color: white"><?php echo $rows[$i]['name'] ?> </h1>
-    <?php
-        }
-    ?>
 
     <div class="div-btns-control-carousel">
         <button class="btn-control-carousel" type="button" data-bs-target="#carousel" data-bs-slide="prev">
@@ -118,14 +110,14 @@ require_once __DIR__ . '/header.php';
 
             <div>
                 <div class="card">
-                    <img src="<?= Functions::urlBase('assets/images/empreendimentoEntregue.jpg'); ?>">
+                    <img id="imagem-entregues">
                     <div class="card-body">
                         <div class="infos-empreendimentos-entregue">
                             <span class="status-empreendimentos-entregue">Entregue</span><br>
-                            <span class="name-empreendimentos-entregue">Porto Rico Risort</span><br>
+                            <span id="nome-entregues" class="name-empreendimentos-entregue"></span><br>
                             <span class="localizacao-empreendimentos-entregue">
                                 <img src="<?= Functions::urlBase('assets/icons/pinLocalizacao.svg'); ?>" class="me-1">
-                                Porto Rico - PR
+                                <span id="local-entregues"></span>
                             </span>
                         </div>
                     </div>
@@ -135,14 +127,14 @@ require_once __DIR__ . '/header.php';
 
             <div>
                 <div class="card">
-                    <img src="<?= Functions::urlBase('assets/images/empreendimentoEntregue.jpg'); ?>">
+                    <img id="imagem-entregues">
                     <div class="card-body">
                         <div class="infos-empreendimentos-entregue">
                             <span class="status-empreendimentos-entregue">Entregue</span><br>
-                            <span class="name-empreendimentos-entregue">Porto Rico Risort</span><br>
+                            <span id="nome-entregues" class="name-empreendimentos-entregue"></span><br>
                             <span class="localizacao-empreendimentos-entregue">
                                 <img src="<?= Functions::urlBase('assets/icons/pinLocalizacao.svg'); ?>" class="me-1">
-                                Porto Rico - PR
+                                <span id="local-entregues"></span>
                             </span>
                         </div>
                     </div>
@@ -152,14 +144,14 @@ require_once __DIR__ . '/header.php';
 
             <div>
                 <div class="card">
-                    <img src="<?= Functions::urlBase('assets/images/empreendimentoEntregue.jpg'); ?>">
+                    <img id="imagem-entregues">
                     <div class="card-body">
                         <div class="infos-empreendimentos-entregue">
                             <span class="status-empreendimentos-entregue">Entregue</span><br>
-                            <span class="name-empreendimentos-entregue">Porto Rico Risort</span><br>
+                            <span id="nome-entregues" class="name-empreendimentos-entregue"></span><br>
                             <span class="localizacao-empreendimentos-entregue">
                                 <img src="<?= Functions::urlBase('assets/icons/pinLocalizacao.svg'); ?>" class="me-1">
-                                Porto Rico - PR
+                                <span id="local-entregues"></span>
                             </span>
                         </div>
                     </div>
@@ -169,14 +161,14 @@ require_once __DIR__ . '/header.php';
 
             <div>
                 <div class="card">
-                    <img src="<?= Functions::urlBase('assets/images/empreendimentoEntregue.jpg'); ?>">
+                    <img id="imagem-entregues">
                     <div class="card-body">
                         <div class="infos-empreendimentos-entregue">
                             <span class="status-empreendimentos-entregue">Entregue</span><br>
-                            <span class="name-empreendimentos-entregue">Porto Rico Risort</span><br>
+                            <span id="nome-entregues" class="name-empreendimentos-entregue"></span><br>
                             <span class="localizacao-empreendimentos-entregue">
                                 <img src="<?= Functions::urlBase('assets/icons/pinLocalizacao.svg'); ?>" class="me-1">
-                                Porto Rico - PR
+                                <span id="local-entregues"></span>
                             </span>
                         </div>
                     </div>
@@ -186,14 +178,14 @@ require_once __DIR__ . '/header.php';
 
             <div>
                 <div class="card">
-                    <img src="<?= Functions::urlBase('assets/images/empreendimentoEntregue.jpg'); ?>">
+                    <img id="imagem-entregues">
                     <div class="card-body">
                         <div class="infos-empreendimentos-entregue">
                             <span class="status-empreendimentos-entregue">Entregue</span><br>
-                            <span class="name-empreendimentos-entregue">Porto Rico Risort</span><br>
+                            <span id="nome-entregues" class="name-empreendimentos-entregue"></span><br>
                             <span class="localizacao-empreendimentos-entregue">
                                 <img src="<?= Functions::urlBase('assets/icons/pinLocalizacao.svg'); ?>" class="me-1">
-                                Porto Rico - PR
+                                <span id="local-entregues"></span>
                             </span>
                         </div>
                     </div>
@@ -201,8 +193,23 @@ require_once __DIR__ . '/header.php';
                 </div>
             </div>
 
-        </div>
-    </div>
+            <div>
+                <div class="card">
+                    <img id="imagem-entregues">
+                    <div class="card-body">
+                        <div class="infos-empreendimentos-entregue">
+                            <span class="status-empreendimentos-entregue">Entregue</span><br>
+                            <span id="nome-entregues" class="name-empreendimentos-entregue"></span><br>
+                            <span class="localizacao-empreendimentos-entregue">
+                                <img src="<?= Functions::urlBase('assets/icons/pinLocalizacao.svg'); ?>" class="me-1">
+                                <span id="local-entregues"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <span class="card-border"></span>
+                </div>
+            </div>
+
 
     <div id="divBtns" class="mt-5">
         <button id="btnAnteriorEmpreendimentosEntregues" class="refletir">
@@ -219,9 +226,8 @@ require_once __DIR__ . '/header.php';
 <?php require_once __DIR__ . '/footer.php'; ?>
 
 <script>
-    const url1 = 'requests/select.php?table=empreendimentos';
+    const url1 = 'requests/select.php?table=empreendimentos_entregues';
 
-    // Realiza a solicitação usando o fetch
     fetch(url1)
         .then(response => {
             if (!response.ok) {
@@ -231,67 +237,18 @@ require_once __DIR__ . '/header.php';
         })
         .then(data => {
             if (data) {
-
-                //document.querySelector("#capa").innerHTML = data[0]['capa'];
                 console.log(data);
-                for (let i = 1; i <= 4; i++) {//3
-                    document.querySelector("#titulo" + i).innerHTML = data[0]['titulo' + i];
+                for (let i = 0; i < 6; i++) {
+                    document.querySelector("#imagem-entregues").src = data[i + 1]['imagem'];
+                    document.querySelector("#nome-entregues").innerHTML = data[i + 1]['nome'];
+                    document.querySelector("#local-entregues").innerHTML = data[i + 1]['localizacao'];
                 }
 
-                for (let i = 1; i <= 8; i++) {//11
-                    document.querySelector("#texto" + i).innerHTML = data[0]['texto' + i];
-                }
-
-                document.querySelector("#capa").src = data[0]['capa'];
-                document.querySelector("#logo").src = data[0]['logo'];
-                document.querySelector("#imagem").src = data[0]['imagem1'];
-                document.querySelector("#foto-processos").src = data[0]['imagem2'];
-
-
-                const config = {
-                    autoplay: false,
-                    ui: {
-                        image: data[0]['capa'],
-                    },
-                    sources: [
-                        {
-                            type: "mp4",
-                            src: data[0]['video'],
-                        }
-                    ],
-                };
-                const element = document.querySelector('#videoSobre');
-                const player = IndigoPlayer.init(element, config);
             }
         })
         .catch(error => {
             // Manipula erros durante a solicitação
             console.error('Erro durante a solicitação:', error);
         });
-
-    // const url2 = 'requests/select.php?table=sobre_diferenciais';
-
-    // fetch(url2)
-    //     .then(response => {
-    //         if (!response.ok) {
-    //             throw new Error(`Erro na solicitação: ${response.statusText}`);
-    //         }
-    //         return response.json();
-    //     })
-    //     .then(data => {
-    //         if (data) {
-
-    //             //document.querySelector("#capa").innerHTML = data[0]['capa'];
-    //             for (let i = 0; i < 6; i++) {//3
-    //                 document.querySelector("#titulo_diferencial" + (i + 1)).innerHTML = data[i]['titulo'];
-    //                 document.querySelector("#texto_diferencial" + (i + 1)).innerHTML = data[i]['texto'];
-    //             }
-
-    //         }
-    //     })
-    //     .catch(error => {
-    //         // Manipula erros durante a solicitação
-    //         console.error('Erro durante a solicitação:', error);
-    //     });
 
 </script>
