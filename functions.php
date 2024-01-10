@@ -1,7 +1,12 @@
 <?php
+
+include 'env.php';
+
 class Functions {
 
-    static function urlBase(string $file = '', string $baseUrl = 'prce.local.com') {
+    static function urlBase(string $file = '', string $baseUrl = '') {
+        $env = new Env();
+        $baseUrl =  $env->getUrl();
         $urlBase = !empty($_SERVER['HTTPS']) ? 'https://' : 'http://';
         $urlBase .= $baseUrl ?: $_SERVER['SERVER_NAME'];
     
