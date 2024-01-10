@@ -59,6 +59,7 @@ class Router
     private function isRouteProtected($route) {
         // Adicione aqui as rotas que requerem autenticação
         $protectedRoutes = array(
+            "admin",
             "admin/home",
             "admin/uploads",
             "admin/sobre",

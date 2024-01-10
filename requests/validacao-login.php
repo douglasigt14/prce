@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($username === $usuario_bd && $password === $senha_bd) {
         $_SESSION['user_authenticated'] = true;
-        header("Location: /sobre");
+        header("Location: /admin");
         exit;
     } else {
         // Credenciais inválidas
