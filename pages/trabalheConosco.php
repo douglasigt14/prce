@@ -16,9 +16,9 @@
 </div>
 
 <script>
-    const url = 'requests/select.php?table=trabalhe_conosco';
+    const urlTC = 'requests/select.php?table=trabalhe_conosco';
 
-    fetch(url)
+    fetch(urlTC)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Erro na solicitação: ${response.statusText}`);
