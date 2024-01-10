@@ -67,9 +67,9 @@ include_once 'functions.php';
 
     <script>
     let siteRoot = window.location.origin;
-    const url = siteRoot+'/requests/select.php?table=header';
+    const urlhead = siteRoot+'/requests/select.php?table=header';
 
-    fetch(url)
+    fetch(urlhead)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Erro na solicitação: ${response.statusText}`);

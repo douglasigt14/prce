@@ -27,6 +27,8 @@
         })
         .then(data => {
             if (data) {
+                
+                console.log(data);
                 document.querySelector("#fotoTrabalheConosco").src = data[0]['capa'];
                 document.querySelector("#titulo").innerHTML = data[0]['titulo'];
                 document.querySelector("#texto").innerHTML = data[0]['texto'];

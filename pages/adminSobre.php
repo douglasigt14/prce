@@ -29,7 +29,7 @@
         <div class="row g-3 mb-3 align-items-center">
           <div class="col-3"></div>
           <div class="col-6 align-items-center">
-            <label for="#" class="form-label fw-bold">Vídeo:</label><br>
+            <label for="video" class="form-label fw-bold">Vídeo:</label><br>
             <input type="file" class="form-control" name="video" />
           </div>
           <div class="col-3"></div>

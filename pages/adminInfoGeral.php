@@ -1,7 +1,7 @@
 <?php require_once __DIR__ . '/headerAdmin.php'; ?>
 
 <div class="conteiner-principal p-5">
-    <div class="row mt-3">
+    <div class="row w-100 mt-3">
         <h3>Info Geral</h3>
         <form action="<?= Functions::urlBase('requests/insertContato.php'); ?>" method="post"
             enctype="multipart/form-data">

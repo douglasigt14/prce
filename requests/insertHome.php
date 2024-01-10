@@ -1,25 +1,26 @@
 <?php
 
-include_once 'database.php';
+require_once '../database/Database.php';
 
 $rota = $_POST["rota"] ?? "";
 $dir = $_POST['dir'] ?? "/admin/uploads";
 
+$pdo = new Database();
 
 $payloadSobre = [];
 
     $payloadSobre['titulo'] =   $_POST['titulo'];
-    $payloadSobre['texto'] =   $_POST['texto'];
-    $payloadSobre['botao_texto'] =   $_POST['botao-texto'];
-    $payloadSobre['botao_link'] =   $_POST['botao-link'];
 
-if(isset($_FILES['capa']) && $_FILES['capa']['name'] != ""){
-    $payloadSobre['capa'] = uploadImg($_FILES['capa'], $dir);
+    $payloadSobre['texto'] =   $_POST['texto'];
+
+if(isset($_FILES['video']) && $_FILES['video']['name'] != ""){
+    $payloadSobre['video'] = uploadImg($_FILES['video'], $dir);
 }
 
-$rows = update("trabalhe_conosco",$payloadSobre, [ "id" => 1]);
+$rows = $pdo->update("homa_data",$payloadSobre, [ "id" => 1]);
 
 header("location: " .$rota);
+
 function uploadImg($file, $dirP){
     $baseDir = "../assets" . DIRECTORY_SEPARATOR . "uploads" . DIRECTORY_SEPARATOR;
     $uploadDir = $dirP;
@@ -36,3 +37,6 @@ function uploadImg($file, $dirP){
        return "Erro, o arquivo não pode ser enviado.<br>";
     }   
 }
+
+
+
