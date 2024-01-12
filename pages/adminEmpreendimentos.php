@@ -2,7 +2,7 @@
 
 
 $pdo = new Database();
-$empreendimentos = $pdo->select("carrousel_empreendimentos");
+$empreendimentos = $pdo->select("empreendimentos");
 
 ?>
 
@@ -14,10 +14,10 @@ $empreendimentos = $pdo->select("carrousel_empreendimentos");
       <input type="hidden" name="dir" value="sobre">
       <div class="row w-100">
         <div class="col-md-12">
-          <div class="w-100 d-flex align-items-center justify-content-center">
+          <div class="w-100 d-flex align-items-center justify-content-between">
             <h4 class="w-50">Empreendimentos</h4>
-            <button type="button" class="btn btn-primary w-50 mt-3 mb-3" data-bs-toggle="modal"
-              data-bs-target="#modalEmpreendimentos">Adicionar novo Empreendimento</button>
+            <button type="button" class="btn btn-primary btn-lg mt-3 mb-3" data-bs-toggle="modal"
+              data-bs-target="#modalEmpreendimentos"><i class="fa fa-plus"></i></button>
           </div>
           <div class="row align-items-center mb-4">
             <div class="col-12">
@@ -29,16 +29,17 @@ $empreendimentos = $pdo->select("carrousel_empreendimentos");
                   </tr>
                 </thead>
                 <tbody>
+                  <?php
+                    foreach ($empreendimentos as $key => $emp) {
+                  ?>
                   <tr>
-                    <td>NEST635</td>
+                    <td><?php echo $emp['name']?> </td>
                     <td><i class="fa fa-edit"></i> </td>
                     <td> <i class="fa fa-trash"></i></td>
                   </tr>
-                  <tr>
-                    <td>HAUS44</td>
-                    <td><i class="fa fa-edit"></i> </td>
-                    <td> <i class="fa fa-trash"></i></td>
-                  </tr>
+                  <?php
+                    }
+                  ?>
                 </tbody>
               </table>
             </div>
@@ -48,10 +49,10 @@ $empreendimentos = $pdo->select("carrousel_empreendimentos");
 
       <div class="row w-100">
         <div class="col-md-12">
-          <div class="w-100 d-flex align-items-center justify-content-center">
+          <div class="w-100 d-flex align-items-center justify-content-between">
             <h4 class="w-50">Carrousel de Empreendimentos Home</h4>
-            <button type="button" class="btn btn-primary w-50 mt-3 mb-3" data-bs-toggle="modal"
-              data-bs-target="#modalCarrousel">Adicionar novo</button>
+            <button type="button" class="btn btn-primary  btn-lg mt-3 mb-3" data-bs-toggle="modal"
+              data-bs-target="#modalCarrousel"><i class="fa fa-plus"></i></button>
           </div>
           <div class="row align-items-center mb-4">
             <div class="col-12">
@@ -88,10 +89,10 @@ $empreendimentos = $pdo->select("carrousel_empreendimentos");
 
       <div class="row w-100">
         <div class="col-md-12">
-          <div class="w-100 d-flex align-items-center justify-content-center">
+          <div class="w-100 d-flex align-items-center justify-content-between">
             <h4 class="w-50">Empreendimentos em Obras</h4>
-            <button type="button" class="btn btn-primary w-50 mt-3 mb-3" data-bs-toggle="modal"
-              data-bs-target="#modalObras">Adicionar novo</button>
+            <button type="button" class="btn btn-primary btn-lg  mt-3 mb-3" data-bs-toggle="modal"
+              data-bs-target="#modalObras"><i class="fa fa-plus"></i></button>
           </div>
           <div class="row align-items-center mb-4">
             <div class="col-12">
@@ -131,10 +132,10 @@ $empreendimentos = $pdo->select("carrousel_empreendimentos");
 
       <div class="row w-100">
         <div class="col-md-12">
-          <div class="w-100 d-flex align-items-center justify-content-center">
+          <div class="w-100 d-flex align-items-center justify-content-between">
             <h4 class="w-50">Empreendimentos Entregues</h4>
-            <button type="button" class="btn btn-primary w-50 mt-3 mb-3" data-bs-toggle="modal"
-              data-bs-target="#modalEntregues">Adicionar novo</button>
+            <button type="button" class="btn btn-primary btn-lg  mt-3 mb-3" data-bs-toggle="modal"
+              data-bs-target="#modalEntregues"><i class="fa fa-plus"></i></button>
           </div>
           <div class="row align-items-center mb-4">
             <div class="col-12">
@@ -339,10 +340,6 @@ $empreendimentos = $pdo->select("carrousel_empreendimentos");
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" id="btnSalvarBDComentario">Salvar</button>
       </div>
-      <di>
-        <button type="button" class="btn btn-primary mt-3 mb-3" data-bs-toggle="modal"
-          data-bs-target="#modalEmpreendimentos"><i class="fa fa-plus"></i></button>
-      </di>
     </div>
   </div>
 </div>
@@ -718,61 +715,7 @@ $empreendimentos = $pdo->select("carrousel_empreendimentos");
 <script type="text/javascript" src="<?= Functions::urlBase('assets/fontawesome/js/all.min.js'); ?>"></script>
 
 <script>
-  // const siteRoot = window.location.origin;
-  // const url = `${siteRoot}/requests/select.php?table=sobre`;
-  // fetch(url)
-  //   .then(response => {
-  //     if (!response.ok) {
-  //       throw new Error(`Erro na solicitação: ${response.statusText}`);
-  //     }
-  //     return response.json();
-  //   })
-  //   .then(data => {
-  //     if (data) {
-  //       for (let i = 1; i <= 4; i++) {//3
-  //         document.querySelector("#titulo" + i).value = data[0]['titulo' + i];
-  //       }
-
-  //       for (let i = 1; i <= 8; i++) {//11
-  //         document.querySelector("#texto" + i).value = data[0]['texto' + i];
-  //       }
-
-  //       document.querySelector("#capa").src = siteRoot + "/" + data[0]['capa'];
-  //       document.querySelector("#foto-diferenciais").src = siteRoot + "/" + data[0]['imagem1'];
-  //       document.querySelector("#foto-processos").src = siteRoot + "/" + data[0]['imagem2'];
-
-
-  //     }
-  //   })
-  //   .catch(error => {
-  //     console.error('Erro durante a solicitação:', error);
-  //   });
-
-
-  // const url2 = `${siteRoot}/requests/select.php?table=sobre_diferenciais`;
-
-  // fetch(url2)
-  //   .then(response => {
-  //     if (!response.ok) {
-  //       throw new Error(`Erro na solicitação: ${response.statusText}`);
-  //     }
-  //     return response.json();
-  //   })
-  //   .then(data => {
-  //     if (data) {
-
-  //       //document.querySelector("#capa").innerHTML = data[0]['capa'];
-  //       for (let i = 0; i < 6; i++) {//3
-  //         document.querySelector("#titulo_diferencial" + (i + 1)).value = data[i]['titulo'];
-  //         document.querySelector("#texto_diferencial" + (i + 1)).value = data[i]['texto'];
-  //       }
-
-  //     }
-  //   })
-  //   .catch(error => {
-  //     // Manipula erros durante a solicitação
-  //     console.error('Erro durante a solicitação:', error);
-  //   });
+  
 </script>
 
 <script type="text/javascript">

@@ -37,7 +37,7 @@ include_once 'functions.php';
             </a>
           </li>
           <li>
-            <a href="<?= Functions::urlBase('admin/sobre'); ?>" class="nav-link active link-body-emphasis">
+            <a href="<?= Functions::urlBase('admin/sobre'); ?>" class="nav-link link-body-emphasis">
               <i class="fa-solid fa-circle-info me-1"></i>
               Sobre
             </a>
@@ -86,4 +86,20 @@ include_once 'functions.php';
             </a>
           </li>
         </ul>
+<<<<<<< HEAD
     </div>
+=======
+    </div>
+
+    <script>
+        navLinks = document.querySelectorAll('.nav-link');
+
+        var urlAtual = window.location.href;
+
+        navLinks.forEach(function(navLink) {
+          if (urlAtual.includes(navLink.getAttribute('href'))) {
+              navLink.classList.add('active');
+          }
+        });
+    </script>
+>>>>>>> 54efc79fa25ae98d1d3ce6d45e599963e7029dc4
