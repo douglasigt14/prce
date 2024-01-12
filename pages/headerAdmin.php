@@ -86,9 +86,6 @@ include_once 'functions.php';
             </a>
           </li>
         </ul>
-<<<<<<< HEAD
-    </div>
-=======
     </div>
 
     <script>
@@ -102,4 +99,3 @@ include_once 'functions.php';
           }
         });
     </script>
->>>>>>> 54efc79fa25ae98d1d3ce6d45e599963e7029dc4
