@@ -3,13 +3,15 @@
 
 $pdo = new Database();
 $empreendimentos = $pdo->select("empreendimentos");
+$carrousel_empreendimentos = $pdo->select("carrousel_empreendimentos");
+
+$rota = "/admin/empreendimentos";
 
 ?>
 
 <div class="conteiner-principal p-5">
   <div class="row mt-3 w-100">
     <h3>Empreendimentos</h3>
-    <form action="<?= Functions::urlBase('requests/insertSobre.php'); ?>" method="post" enctype="multipart/form-data">
       <input type="hidden" name="rota" value="/admin/sobre">
       <input type="hidden" name="dir" value="sobre">
       <div class="row w-100">
@@ -24,7 +26,11 @@ $empreendimentos = $pdo->select("empreendimentos");
               <table class="table table-striped">
                 <thead>
                   <tr>
+                  <th scope="col">#</th>
                     <th scope="col">Empreendimento</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Apagar</th>
                     <td></td>
                   </tr>
                 </thead>
@@ -33,9 +39,14 @@ $empreendimentos = $pdo->select("empreendimentos");
                     foreach ($empreendimentos as $key => $emp) {
                   ?>
                   <tr>
+                     <td><?php echo $emp['id']?> </td>
                     <td><?php echo $emp['name']?> </td>
-                    <td><i class="fa fa-edit"></i> </td>
-                    <td> <i class="fa fa-trash"></i></td>
+                      <td><?php echo $emp['descricao']?> </td>
+                    <td><button class="btn btn-warning btn-sm">  <i class="fa fa-edit"></i> </button> </td>
+                    <td>
+                      <button class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> </button> 
+                      
+                    </td>
                   </tr>
                   <?php
                     }
@@ -50,7 +61,7 @@ $empreendimentos = $pdo->select("empreendimentos");
       <div class="row w-100">
         <div class="col-md-12">
           <div class="w-100 d-flex align-items-center justify-content-between">
-            <h4 class="w-50">Carrousel de Empreendimentos Home</h4>
+            <h4 class="w-50">Carrousel de Lançamentos</h4>
             <button type="button" class="btn btn-primary  btn-lg mt-3 mb-3" data-bs-toggle="modal"
               data-bs-target="#modalCarrousel"><i class="fa fa-plus"></i></button>
           </div>
@@ -59,27 +70,36 @@ $empreendimentos = $pdo->select("empreendimentos");
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th scope="col">Empreendimento</th>
-                    <th scope="col">Imagem</th>
+                    <th scope="col">#</th>
                     <th scope="col">Texto</th>
+                    <th scope="col">Id Empreendimento</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Apagar</th>
                     <td></td>
                   </tr>
                 </thead>
                 <tbody>
+                  <?php
+                    foreach ($carrousel_empreendimentos as $key => $c_emp) {
+                  ?>
                   <tr>
-                    <td>NEST635</td>
-                    <td>assets/images/slide.jpg</td>
-                    <td>Texto-sssss</td>
-                    <td><i class="fa fa-edit"></i> </td>
-                    <td> <i class="fa fa-trash"></i></td>
+                    <td><?php echo $c_emp['id']?> </td>
+                    <td><?php echo $c_emp['texto']?> </td>
+                    <td><?php echo $c_emp['idEmpreendimento']?> </td>
+                    <td><button class="btn btn-warning btn-sm">  <i class="fa fa-edit"></i> </button> </td>
+                    <td>
+                       <form action="<?= Functions::urlBase('requests/delete.php'); ?>" method="post" enctype="multipart/form-data">
+                          <input type="hidden" name="table" value='carrousel_empreendimentos'>
+                          <input type="hidden" name="id" value='<?php echo $c_emp['id']?>'>
+                          <input type="hidden" name="rota" value="<?php echo $rota;?>">
+                            <button class="btn btn-danger btn-sm" type="submit"> <i class="fa fa-trash"></i> </button> 
+                       </form>
+                      
+                    </td>
                   </tr>
-                  <tr>
-                    <td>HAUS44</td>
-                    <td>assets/images/slide.jpg</td>
-                    <td>Texto-sssss</td>
-                    <td><i class="fa fa-edit"></i> </td>
-                    <td> <i class="fa fa-trash"></i></td>
-                  </tr>
+                  <?php
+                    }
+                  ?>
                 </tbody>
               </table>
             </div>
@@ -112,16 +132,22 @@ $empreendimentos = $pdo->select("empreendimentos");
                     <td>assets/images/slide.jpg</td>
                     <td>assets/images/logoPalm786.png</td>
                     <td>Texto-sssss</td>
-                    <td><i class="fa fa-edit"></i> </td>
-                    <td> <i class="fa fa-trash"></i></td>
+                    <td><button class="btn btn-warning btn-sm">  <i class="fa fa-edit"></i> </button> </td>
+                    <td>
+                      <button class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> </button> 
+                      
+                    </td>
                   </tr>
                   <tr>
                     <td>HAUS44</td>
                     <td>assets/images/slide.jpg</td>
                     <td>assets/images/logoPalm786.png</td>
                     <td>Texto-sssss</td>
-                    <td><i class="fa fa-edit"></i> </td>
-                    <td> <i class="fa fa-trash"></i></td>
+                    <td><button class="btn btn-warning btn-sm">  <i class="fa fa-edit"></i> </button> </td>
+                    <td>
+                      <button class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> </button> 
+                      
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -540,12 +566,15 @@ $empreendimentos = $pdo->select("empreendimentos");
                 <input type="text" name="texto" class="form-control" id="texto">
               </div>
               <div class="col-6">
-                <label for="frutas">Escolha uma fruta:</label>
-                <select id="frutas">
-                  <option value="maca">Maçã</option>
-                  <option value="banana">Banana</option>
-                  <option value="laranja">Laranja</option>
-                  <option value="uva">Uva</option>
+                <label for="emp">Empreendimento:</label>
+                <select class="form-control" id="emp">
+                  <?php
+                    foreach ($empreendimentos as $key => $emp) {
+                  ?>
+                     <option value="<?php echo $emp['id'];?>"> <?php echo $emp['name'];?> </option>
+                  <?php
+                    }
+                  ?>
                 </select>
               </div>
 
