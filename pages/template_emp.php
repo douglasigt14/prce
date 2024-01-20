@@ -437,7 +437,7 @@ hmtl, body {
                                 </div>
                                 
                                 <div class="col-md-4" id="statusGeral">
-                                        <div class="circlechart" data-percentage="90" data-previsao="DEZEMBRO DE 2025" id="loaderStatusGeral"></div>
+                                        <div id="statusGeral1" class="circlechart" data-previsao="DEZEMBRO DE 2025" id="loaderStatusGeral"></div>
                                 </div>                   
 
                                 <div class="col-md-4" id="imagensEvolucaoObra">
@@ -583,6 +583,7 @@ hmtl, body {
                 document.querySelector("#unidades-evolucaoObra").innerHTML = data[0]['unidades_evolucaoObra'];
                 document.querySelector("#titulo-formulario").innerHTML = data[0]['titulo_formulario'];
                 document.querySelector("#texto-formulario").innerHTML = data[0]['texto_formulario'];
+                document.querySelector("#statusGeral1").data-percentage = parseInt(data[0]['status_porcentagem']);
                 
             }
         })
