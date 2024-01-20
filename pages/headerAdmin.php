@@ -60,6 +60,11 @@ include_once 'functions.php';
               Empreendimentos
             </a>
           </li>
+          <li>
+          <a href="<?= Functions::urlBase('admin/empreendimentos/detalhes'); ?>" class="nav-link link-body-emphasis">
+              <i class="fa-solid fa-building me-1"></i>
+              Empreendimentos Detalhes
+            </a>
           </li>
           <li>
             <a href="<?= Functions::urlBase('admin/info'); ?>" class="nav-link link-body-emphasis">
@@ -67,9 +72,15 @@ include_once 'functions.php';
               Informações gerais
             </a>
           </li>
+          <li>
+          <a href="<?= Functions::urlBase('admin/formularios'); ?>" class="nav-link link-body-emphasis">
+              <i class="fa-solid fa-building me-1"></i>
+              Formulários
+            </a>
+          </li>
           <hr>
           <li>
-            <a href="<?= Functions::urlBase('logout'); ?>"class="nav-link link-body-emphasis">
+            <a href="<?= Functions::urlBase('logout'); ?>" class="nav-link link-body-emphasis">
               <i class="fa-solid fa-right-from-bracket"></i>
               Sair
             </a>

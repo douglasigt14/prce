@@ -3,7 +3,7 @@ class Env {
     protected  $url;
 
     public function __construct() {
-        $this->url = 'localhost:8082';
+        $this->url = 'prce.local.com';
     }
 
     public  function getUrl(){
