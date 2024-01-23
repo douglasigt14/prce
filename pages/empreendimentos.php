@@ -6,10 +6,10 @@ require_once __DIR__ . '/header.php';
     <div class="carousel-inner">
 
         <div class="carousel-item active" data-bs-interval="10000">
-            <img src="<?= Functions::urlBase('assets/images/slide.jpg'); ?>" class="d-block w-100">
+            <img id="imagem-carousel" src="<?= Functions::urlBase('assets/images/slide.jpg'); ?>" class="d-block w-100">
             <div class="carousel-caption">
-                <h1>PALM 786 HOMECLUB - É só entrar. E morar.</h1>
-                <a href="#">Ver mais <img src="<?= Functions::urlBase('assets/icons/setaBtn.svg'); ?>"
+                <h1 id="titulo-carousel">PALM 786 HOMECLUB - É só entrar. E morar.</h1>
+                <a id="link-carousel" href="#">Ver mais <img src="<?= Functions::urlBase('assets/icons/setaBtn.svg'); ?>"
                         class="setaBtn"></a>
             </div>
         </div>
