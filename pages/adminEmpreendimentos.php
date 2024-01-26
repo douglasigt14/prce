@@ -83,7 +83,6 @@ $rota = "/admin/empreendimentos";
                   <th scope="col">Id Empreendimento</th>
                   <th scope="col">Editar</th>
                   <th scope="col">Apagar</th>
-                  <td></td>
                 </tr>
               </thead>
               <tbody>
